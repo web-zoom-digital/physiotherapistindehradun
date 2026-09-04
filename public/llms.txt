@@ -1,0 +1,39 @@
+# Physiotherapist in Dehradun
+
+> Professional, evidence-based physiotherapy and rehabilitation practice in Dehradun, Uttarakhand, India.
+
+## Identity & Clinical Focus
+- Website: https://physiotherapistindehradun.com
+- Identity: Multi-speciality physiotherapy practice and rehabilitation centre
+- Primary Location: 13, Rajpur Rd, near New Empire Cinema Complex, Clock Tower, Chukkuwala, Dehradun, Uttarakhand 248001
+- Secondary Branch: Rama Market, Thano Chowk, opposite Ranjit Singh Marg, Bhaniyawala, Dehradun, Uttarakhand 248140
+- Contact Phone: +91 92862 44489
+- Contact Email: info@ronexphysiotherapy.com
+- Operating Hours: Mon–Sat: 9:00 AM – 10:00 PM | Sun: 10:00 AM – 6:00 PM
+- Consultation Fee: Starting from ₹400
+
+## Key Clinical Services
+- Orthopedic Physiotherapy (Back Pain, Neck Pain, Knee Pain, Shoulder Pain, Slip Disc, Sciatica)
+- Neurological Rehabilitation (Stroke Recovery, Paralysis, Parkinson's Disease, Spinal Cord Injury, Balance Disorders)
+- Sports Physiotherapy (ACL Rehab, Muscle Strains, Ligament Sprains, Return-to-Sport Protocols)
+- Paediatric Physiotherapy (Cerebral Palsy, Developmental Delays, Birth Injuries)
+- Women's Health Physiotherapy (Pregnancy Back Pain, Pelvic Floor Recovery, Post-Partum Care)
+- Home Visit Physiotherapy (In-home care across Dehradun with portable electrotherapy equipment)
+- Post-Surgery Rehabilitation (Knee Replacement, Hip Replacement, ACL Surgery, Spinal Surgery)
+- Pain Management (Non-pharmacological management for chronic back, neck and joint pain)
+
+## Clinical Team
+- Dr. Om Prakash, BPT, MPT (Orthopaedics) — 10+ Years Experience
+- Dr. Nawal Soni, BPT, MPT (Neurology) — 6 Years Experience
+- Dr. Razia Khatoon, BPT, MPT (Paediatrics) — 8 Years Experience
+- Dr. Sonali Rawat, BPT, MPT (Sports) — 3 Years Experience
+- Dr. Shaurya Chhetri, BPT, MPT (Sports) — 3 Years Experience
+
+## Primary URLs & Sitemap
+- Website Root: https://physiotherapistindehradun.com
+- Sitemap: https://physiotherapistindehradun.com/sitemap.xml
+- Contact & Booking: https://physiotherapistindehradun.com/book-appointment
+- Services Directory: https://physiotherapistindehradun.com/services
+- Conditions Directory: https://physiotherapistindehradun.com/conditions
+- Team Directory: https://physiotherapistindehradun.com/team
+- Locations Directory: https://physiotherapistindehradun.com/locations
