@@ -338,7 +338,7 @@ export function Header() {
                         className="bg-[#D97B4F] hover:bg-[#B85E37] text-white px-4 py-2.5 rounded-2xl text-xs font-bold flex items-center gap-2 shadow-sm transition-all active:scale-95"
                       >
                         <FaCalendarCheck className="w-3.5 h-3.5 text-[#F5DCC8]" />
-                        <span>Book Appointment</span>
+                        <span className="text-white">Book Appointment</span>
                       </Link>
                     </div>
                   </div>
@@ -543,7 +543,7 @@ export function Header() {
                         className="bg-[#D97B4F] hover:bg-[#B85E37] text-white px-4 py-2.5 rounded-2xl text-xs font-bold flex items-center gap-2 shadow-sm transition-all active:scale-95"
                       >
                         <FaCalendarCheck className="w-3.5 h-3.5 text-[#F5DCC8]" />
-                        <span>Book Evaluation</span>
+                        <span className="text-white">Book Evaluation</span>
                       </Link>
                     </div>
                   </div>

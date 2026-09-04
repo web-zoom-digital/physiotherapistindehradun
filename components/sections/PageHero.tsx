@@ -14,10 +14,10 @@ interface PageHeroProps {
 
 export function PageHero({ title, subtitle, tag = 'Physiotherapy in Dehradun', breadcrumbItems }: PageHeroProps) {
   return (
-    <section className="relative bg-[#FAF9F7] border-b border-[#E8E4DF] pt-6 pb-12 md:pb-16 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-[#FDF2E9] via-[#FCDEC8] to-[#F9D6BD] pt-6 pb-16 md:pb-20 overflow-hidden">
       {/* Background Accent Gradients */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-[#D97B4F]/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#F5DCC8]/40 rounded-full blur-2xl -ml-16 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-[#D97B4F]/25 rounded-full blur-3xl -mr-28 -mt-28 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#F5DCC8]/90 rounded-full blur-3xl -ml-28 pointer-events-none" />
 
       <div className="container-custom relative z-10 space-y-6">
         <Breadcrumb items={breadcrumbItems} />
@@ -79,6 +79,16 @@ export function PageHero({ title, subtitle, tag = 'Physiotherapy in Dehradun', b
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Curved Bottom Edge */}
+      <div className="wave-bottom">
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0 30C360 60 1080 0 1440 30V60H0V30Z"
+            fill="#FFFFFF"
+          />
+        </svg>
       </div>
     </section>
   )

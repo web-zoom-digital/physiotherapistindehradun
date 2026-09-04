@@ -8,11 +8,11 @@ export function Footer() {
   return (
     <footer className="bg-[#2E2A26] text-white pt-14 pb-24 lg:pb-10 border-t border-[#D97B4F]/30">
       <div className="container-custom">
-        {/* Main 4-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-10 border-b border-[#443F3B]">
+        {/* Main Grid: 5 Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 pb-10 border-b border-[#443F3B]">
           
           {/* Column 1: Brand Logo, Description & Social Icons */}
-          <div className="lg:col-span-4 space-y-5">
+          <div className="lg:col-span-3 space-y-5">
             <Link href="/" className="flex items-center gap-3 group">
               <div className="w-10 h-10 rounded-xl bg-[#D97B4F] text-white flex items-center justify-center font-bold text-xl shadow-md group-hover:bg-[#C2683C] transition-colors">
                 <Activity className="w-6 h-6 text-white" />
@@ -27,7 +27,7 @@ export function Footer() {
               </div>
             </Link>
 
-            <p className="text-sm text-white leading-relaxed pr-2 ">
+            <p className="text-sm text-white leading-relaxed pr-2">
               RonEx Physiotherapy is a multi-speciality physiotherapy and rehabilitation centre in Dehradun, offering orthopedic, neuro, sports, pediatric, women&apos;s health and exercise-based rehabilitation services.
             </p>
 
@@ -72,12 +72,12 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Useful Links */}
+          {/* Column 2: Useful Links (h2 Tag in White) */}
           <div className="lg:col-span-2 space-y-4">
             <div className="border-b border-[#443F3B] pb-2">
-              <h3 className="text-base font-bold text-white tracking-wide">
-                Useful Links
-              </h3>
+              <h2 className="text-base font-bold text-white tracking-wide">
+                Quick Links
+              </h2>
             </div>
             <ul className="space-y-2 text-sm">
               <li>
@@ -125,71 +125,124 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Our Services */}
-          <div className="lg:col-span-3 space-y-4">
+          {/* Column 3: Our Services (h2 Tag in White) */}
+          <div className="lg:col-span-2 space-y-4">
             <div className="border-b border-[#443F3B] pb-2">
-              <h3 className="text-base font-bold text-white tracking-wide">
+              <h2 className="text-base font-bold text-white tracking-wide">
                 Our Services
-              </h3>
+              </h2>
             </div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/services/orthopedic-physiotherapy" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
                   <span className="text-[#D97B4F] font-bold">›</span>
-                  <span>Orthopedic Physiotherapy</span>
+                  <span>Orthopedic Physio</span>
                 </Link>
               </li>
               <li>
                 <Link href="/services/neuro-physiotherapy" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
                   <span className="text-[#D97B4F] font-bold">›</span>
-                  <span>Neuro Physiotherapy</span>
+                  <span>Neuro Physio</span>
                 </Link>
               </li>
               <li>
                 <Link href="/services/sports-physiotherapy" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
                   <span className="text-[#D97B4F] font-bold">›</span>
-                  <span>Sports Rehabilitation</span>
+                  <span>Sports Rehab</span>
                 </Link>
               </li>
               <li>
                 <Link href="/services/pediatric-physiotherapy" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
                   <span className="text-[#D97B4F] font-bold">›</span>
-                  <span>Pediatric Rehabilitation</span>
+                  <span>Pediatric Rehab</span>
                 </Link>
               </li>
               <li>
                 <Link href="/services/womens-health-physiotherapy" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
                   <span className="text-[#D97B4F] font-bold">›</span>
-                  <span>Women&apos;s Health Physio</span>
+                  <span>Women&apos;s Health</span>
                 </Link>
               </li>
               <li>
                 <Link href="/services/home-physiotherapy" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
                   <span className="text-[#D97B4F] font-bold">›</span>
-                  <span>Home Physiotherapy</span>
+                  <span>Home Physio</span>
                 </Link>
               </li>
               <li>
                 <Link href="/conditions/back-pain" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
                   <span className="text-[#D97B4F] font-bold">›</span>
-                  <span>Back Pain Treatment</span>
+                  <span>Back Pain Care</span>
                 </Link>
               </li>
               <li>
-                <Link href="/services/speech-therapy" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
+                <Link href="/services/pain-management" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
                   <span className="text-[#D97B4F] font-bold">›</span>
-                  <span>Speech Therapy</span>
+                  <span>Pain Management</span>
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 4: Contact Us */}
+          {/* Column 4: Our Locations (h2 Tag in White) */}
+          <div className="lg:col-span-2 space-y-4">
+            <div className="border-b border-[#443F3B] pb-2">
+              <h2 className="text-base font-bold text-white tracking-wide">
+                Our Locations
+              </h2>
+            </div>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/locations/rajpur-road" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
+                  <span className="text-[#D97B4F] font-bold">›</span>
+                  <span>Rajpur Road Main</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/bhaniyawala" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
+                  <span className="text-[#D97B4F] font-bold">›</span>
+                  <span>Bhaniyawala Branch</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/home-physiotherapy" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
+                  <span className="text-[#D97B4F] font-bold">›</span>
+                  <span>Home Visits Care</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
+                  <span className="text-[#D97B4F] font-bold">›</span>
+                  <span>Dehradun Centers</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/rajpur-road" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
+                  <span className="text-[#D97B4F] font-bold">›</span>
+                  <span>Clock Tower Area</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/rajpur-road" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
+                  <span className="text-[#D97B4F] font-bold">›</span>
+                  <span>EC Road &amp; Chukkuwala</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/bhaniyawala" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
+                  <span className="text-[#D97B4F] font-bold">›</span>
+                  <span>Thano Chowk Area</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 5: Contact Us (h2 Tag in White) */}
           <div className="lg:col-span-3 space-y-4">
             <div className="border-b border-[#443F3B] pb-2">
-              <h3 className="text-base font-bold text-white tracking-wide">
+              <h2 className="text-base font-bold text-white tracking-wide">
                 Contact Us
-              </h3>
+              </h2>
             </div>
             
             <div className="space-y-3 text-sm">

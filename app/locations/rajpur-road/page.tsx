@@ -1,15 +1,18 @@
 import React from 'react'
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
-import { Breadcrumb } from '@/components/ui/Breadcrumb'
+import { PageHero } from '@/components/sections/PageHero'
 import { CTAButton } from '@/components/ui/CTAButton'
 import { LocalBusinessSchema } from '@/components/schema/JsonLd'
-import { MapPin, Clock, ExternalLink } from 'lucide-react'
+import { MapPin, Clock, ExternalLink, ShieldCheck, Stethoscope, Activity, ArrowRight } from 'lucide-react'
 import { FaPhoneAlt } from 'react-icons/fa'
 import { BRANCHES, CONTACT } from '@/data/clinic'
 import { SERVICES } from '@/data/services'
 import { FAQAccordion } from '@/components/sections/FAQAccordion'
 import { FAQS } from '@/data/faqs'
+import { BLOG_POSTS } from '@/data/blog'
+import { LOCATION_IMAGES } from '@/data/locationImages'
 
 const branch = BRANCHES.rajpurRoad
 
@@ -19,11 +22,17 @@ export const metadata: Metadata = {
 }
 
 export default function RajpurRoadLocationPage() {
+  const images = LOCATION_IMAGES['rajpur-road']
+  const relatedBlogs = BLOG_POSTS.slice(0, 2)
+
   return (
     <>
       <LocalBusinessSchema branch="rajpurRoad" />
-      <Breadcrumb
-        items={[
+      <PageHero
+        title="Physiotherapy Clinic at Rajpur Road, Dehradun"
+        subtitle="Our primary physiotherapy and rehabilitation clinic is located on Rajpur Road near Clock Tower (Chukkuwala), providing central access for patients across Dehradun."
+        tag="Main Branch"
+        breadcrumbItems={[
           { name: 'Locations', url: '/locations' },
           { name: branch.name, url: `/locations/${branch.slug}` },
         ]}
@@ -31,32 +40,26 @@ export default function RajpurRoadLocationPage() {
 
       <section className="section-py bg-white">
         <div className="container-custom">
-          <div className="max-w-4xl space-y-4 mb-12">
-            <span className="section-label">Main Branch</span>
-            <h1 className="section-title">
-              Physiotherapy Clinic at Rajpur Road, Dehradun
-            </h1>
-            <p className="text-base text-[#4A4744] leading-relaxed">
-              Our primary physiotherapy and rehabilitation clinic is located on Rajpur Road near Clock Tower (Chukkuwala), providing central access for patients across Dehradun.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-16">
-            <div className="lg:col-span-8 space-y-8">
-              {/* Branch Specs */}
-              <div className="bg-[#FAF9F7] rounded-2xl p-6 border border-[#E8E4DF] space-y-4 shadow-sm">
-                <h2 className="text-lg font-bold text-[#2E2A26]">Clinic Details & Contact</h2>
-                <div className="space-y-2.5 text-xs text-[#4A4744]">
-                  <div className="flex items-start gap-2.5">
-                    <MapPin className="w-4 h-4 text-[#D97B4F] shrink-0 mt-0.5" />
+          {/* BLOCK 1: Content on LEFT, Image 1 on RIGHT */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
+            <div className="lg:col-span-6 space-y-6">
+              <span className="section-label">Clinic Information</span>
+              <h2 className="text-2xl lg:text-3xl font-bold text-[#2E2A26]">
+                Clinic Details &amp; Operating Hours
+              </h2>
+              <div className="bg-[#FAF9F7] rounded-2xl p-6 border border-[#E8E4DF] space-y-4 shadow-xs">
+                <div className="space-y-3 text-sm text-[#4A4744]">
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-5 h-5 text-[#D97B4F] shrink-0 mt-0.5" />
                     <span><strong>Address:</strong> {branch.fullAddress}</span>
                   </div>
-                  <div className="flex items-center gap-2.5">
-                    <FaPhoneAlt className="w-3.5 h-3.5 text-[#D97B4F] shrink-0" />
+                  <div className="flex items-center gap-3">
+                    <FaPhoneAlt className="w-4 h-4 text-[#D97B4F] shrink-0" />
                     <span><strong>Phone:</strong> {CONTACT.phone}</span>
                   </div>
-                  <div className="flex items-start gap-2.5">
-                    <Clock className="w-4 h-4 text-[#D97B4F] shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-3">
+                    <Clock className="w-5 h-5 text-[#D97B4F] shrink-0 mt-0.5" />
                     <span><strong>Operating Hours:</strong> Mon-Sat 9AM-10PM | Sun 10AM-6PM</span>
                   </div>
                 </div>
@@ -66,33 +69,89 @@ export default function RajpurRoadLocationPage() {
                     href={branch.directionsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-secondary py-2 px-4 text-xs inline-flex items-center gap-2"
+                    className="btn-secondary py-2.5 px-5 text-xs font-semibold inline-flex items-center gap-2"
                   >
                     <span>Get Directions on Google Maps</span>
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 </div>
               </div>
+            </div>
 
-              {/* Services Available */}
-              <div className="space-y-4">
-                <h2 className="text-xl font-bold text-[#2E2A26]">Services Available at Rajpur Road Branch</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {/* Image 1 on RIGHT Side */}
+            <div className="lg:col-span-6">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-[#E8E4DF] group">
+                <Image
+                  src={images[0]}
+                  alt="Realistic DSLR photo of Rajpur Road physiotherapy clinic in Dehradun"
+                  width={800}
+                  height={600}
+                  className="w-full h-[440px] object-cover transition-transform duration-500 group-hover:scale-105"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent flex flex-col justify-end p-6 text-white">
+                  <div className="flex items-center gap-2 bg-[#D97B4F] text-white text-xs font-semibold px-3 py-1 rounded-full w-max mb-2 shadow-sm">
+                    <Stethoscope className="w-4 h-4" />
+                    <span>DSLR Clinic View</span>
+                  </div>
+                  <h4 className="text-lg font-bold">Rajpur Road Main Clinic</h4>
+                  <p className="text-xs text-gray-200 mt-1">
+                    Central Dehradun location equipped with modern therapy &amp; rehabilitation setups.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* BLOCK 2: Image 2 on LEFT, Content on RIGHT */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
+            {/* Image 2 on LEFT Side */}
+            <div className="lg:col-span-6 order-2 lg:order-1">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-[#E8E4DF] group">
+                <Image
+                  src={images[1]}
+                  alt="Realistic DSLR photo of MPT doctor giving physiotherapy session at Rajpur Road Dehradun clinic"
+                  width={800}
+                  height={600}
+                  className="w-full h-[440px] object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent flex flex-col justify-end p-6 text-white">
+                  <div className="flex items-center gap-2 bg-[#D97B4F] text-white text-xs font-semibold px-3 py-1 rounded-full w-max mb-2 shadow-sm">
+                    <Activity className="w-4 h-4" />
+                    <span>Specialist Care</span>
+                  </div>
+                  <h4 className="text-lg font-bold">Hands-On Spine &amp; Joint Therapy</h4>
+                  <p className="text-xs text-gray-200 mt-1">
+                    Senior MPT doctor leading manual therapy, mobilization &amp; pain relief sessions.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
+              <span className="section-label">Available Care</span>
+              <h2 className="text-2xl lg:text-3xl font-bold text-[#2E2A26]">
+                Services &amp; Areas Served
+              </h2>
+
+              <div className="space-y-3">
+                <h3 className="text-sm font-bold text-[#2E2A26]">Services Available at Rajpur Road:</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {SERVICES.map((s) => (
                     <Link
                       key={s.slug}
                       href={`/services/${s.slug}`}
-                      className="p-3 rounded-lg border border-[#E8E4DF] hover:border-[#D97B4F] text-xs font-semibold text-[#2E2A26] hover:text-[#D97B4F] transition-colors"
+                      className="p-3 rounded-xl border border-[#E8E4DF] bg-[#FAF9F7] hover:border-[#D97B4F] text-xs font-semibold text-[#2E2A26] hover:text-[#D97B4F] transition-all flex items-center justify-between"
                     >
-                      {s.shortTitle}
+                      <span>{s.shortTitle}</span>
+                      <ArrowRight className="w-3.5 h-3.5 text-[#D97B4F]" />
                     </Link>
                   ))}
                 </div>
               </div>
 
-              {/* Nearby Areas */}
-              <div className="space-y-3">
-                <h2 className="text-lg font-bold text-[#2E2A26]">Nearby Dehradun Areas Served:</h2>
+              <div className="space-y-2 pt-2 border-t border-[#E8E4DF]">
+                <h3 className="text-xs font-bold text-[#2E2A26]">Nearby Dehradun Areas Served:</h3>
                 <div className="flex flex-wrap gap-2">
                   {branch.areas.map((area) => (
                     <span key={area} className="tag text-xs py-1 px-3">
@@ -101,42 +160,100 @@ export default function RajpurRoadLocationPage() {
                   ))}
                 </div>
               </div>
-
-              {/* Embedded Map */}
-              <div className="space-y-3 pt-4 border-t border-[#E8E4DF]">
-                <h2 className="text-lg font-bold text-[#2E2A26]">Branch Map Location</h2>
-                <div className="rounded-2xl overflow-hidden border border-[#E8E4DF] shadow-md h-80 w-full">
-                  <iframe
-                    title="Rajpur Road Clinic Location Map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.8967!2d78.0322!3d30.3255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929c546b4129b%3A0x2899478f77395ef3!2sClock%20Tower%2C%20Dehradun!5e0!3m2!1sen!2sin!4v1700000000000"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-
-              <div className="pt-6 border-t border-[#E8E4DF]">
-                <FAQAccordion faqs={FAQS.contact} title="Rajpur Road Branch FAQs" />
-              </div>
             </div>
+          </div>
 
-            <div className="lg:col-span-4 space-y-6">
-              <div className="bg-[#FAF9F7] rounded-2xl p-6 border border-[#E8E4DF] space-y-4 sticky top-24">
-                <h3 className="text-base font-bold text-[#2E2A26]">Book Session at Rajpur Road</h3>
-                <p className="text-xs text-gray-600 leading-relaxed">
-                  Schedule a consultation at our main Rajpur Road clinic or inquire about home visit options nearby.
-                </p>
-                <div className="space-y-2">
-                  <CTAButton variant="primary" className="w-full">
-                    Book Appointment
-                  </CTAButton>
-                  <CTAButton variant="whatsapp" className="w-full justify-center">
-                    WhatsApp Inquiry
-                  </CTAButton>
+          {/* Map Location Section */}
+          <div className="mb-20 space-y-4 max-w-4xl mx-auto text-center">
+            <span className="section-label">Map View</span>
+            <h2 className="text-2xl font-bold text-[#2E2A26]">Branch Map Location</h2>
+            <div className="rounded-2xl overflow-hidden border border-[#E8E4DF] shadow-md h-80 w-full">
+              <iframe
+                title="Rajpur Road Clinic Location Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.8967!2d78.0322!3d30.3255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929c546b4129b%3A0x2899478f77395ef3!2sClock%20Tower%2C%20Dehradun!5e0!3m2!1sen!2sin!4v1700000000000"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          {/* CTA Banner Card */}
+          <div className="bg-[#FAF9F7] rounded-2xl p-8 border border-[#E8E4DF] max-w-4xl mx-auto text-center space-y-4 mb-20 shadow-sm">
+            <div className="inline-flex items-center gap-2 bg-[#F5DCC8] text-[#D97B4F] px-3.5 py-1 rounded-full text-xs font-bold">
+              <ShieldCheck className="w-4 h-4" />
+              <span>Rajpur Road Clinic</span>
+            </div>
+            <h3 className="text-2xl font-bold text-[#2E2A26]">
+              Book Consultation at Rajpur Road
+            </h3>
+            <p className="text-sm text-[#4A4744] max-w-2xl mx-auto leading-relaxed">
+              Schedule your appointment with senior MPT doctor Dr. Om Prakash at our Rajpur Road branch or request dedicated home physiotherapy care.
+            </p>
+            <div className="pt-2 flex flex-wrap justify-center gap-4">
+              <CTAButton variant="primary" className="px-8 py-3 text-sm">
+                Book Consultation
+              </CTAButton>
+              <CTAButton variant="whatsapp" className="px-8 py-3 text-sm">
+                WhatsApp Inquiry
+              </CTAButton>
+            </div>
+          </div>
+
+          {/* BLOCK 3: CENTERED Related Articles & CENTERED FAQs */}
+          <div className="max-w-4xl mx-auto space-y-16 border-t border-[#E8E4DF] pt-16">
+            {/* Centered Health Articles */}
+            {relatedBlogs.length > 0 && (
+              <div className="space-y-8 text-center">
+                <div className="max-w-2xl mx-auto space-y-2">
+                  <span className="section-label">Educational Insights</span>
+                  <h2 className="text-2xl lg:text-3xl font-bold text-[#2E2A26]">
+                    Related Dehradun Physiotherapy Articles
+                  </h2>
+                  <p className="text-sm text-[#4A4744]">
+                    Read expert advice and clinical recovery guides written by our senior specialists.
+                  </p>
                 </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                  {relatedBlogs.map((b) => (
+                    <Link
+                      key={b.slug}
+                      href={`/blog/${b.slug}`}
+                      className="block p-6 rounded-2xl border border-[#E8E4DF] bg-white hover:border-[#D97B4F] transition-all hover:shadow-md space-y-2"
+                    >
+                      <span className="text-[11px] font-bold text-[#D97B4F] uppercase tracking-wider">Article</span>
+                      <h3 className="text-base font-bold text-[#2E2A26] line-clamp-2 leading-snug">
+                        {b.title}
+                      </h3>
+                      <p className="text-xs text-[#4A4744] line-clamp-3 leading-relaxed">
+                        {b.excerpt}
+                      </p>
+                      <div className="pt-2 flex items-center text-xs font-bold text-[#D97B4F] gap-1">
+                        Read Full Article <ArrowRight className="w-3.5 h-3.5" />
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Centered FAQs */}
+            <div className="space-y-8 text-center">
+              <div className="max-w-2xl mx-auto space-y-2">
+                <span className="section-label">Branch FAQ Guide</span>
+                <h2 className="text-2xl lg:text-3xl font-bold text-[#2E2A26]">
+                  Rajpur Road Branch FAQs
+                </h2>
+                <p className="text-sm text-[#4A4744]">
+                  Answers to common questions about visiting our Rajpur Road physiotherapy clinic.
+                </p>
+              </div>
+
+              <div className="text-left max-w-3xl mx-auto">
+                <FAQAccordion faqs={FAQS.contact} title="" />
               </div>
             </div>
           </div>

@@ -7,10 +7,11 @@ import { CONTACT, WHATSAPP_URL, BRANCHES } from '@/data/clinic'
 
 export function HeroSection() {
   return (
-    <section className="relative bg-[#FAF9F7] pt-12 pb-24 md:pt-16 md:pb-28 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-[#FDF2E9] via-[#FCDEC8] to-[#F9D6BD] pt-12 pb-24 md:pt-16 md:pb-28 overflow-hidden">
       {/* Decorative Background Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#D97B4F]/5 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
-      <div className="absolute bottom-10 left-0 w-80 h-80 bg-[#F5DCC8]/40 rounded-full blur-2xl -ml-20 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#D97B4F]/25 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none" />
+      <div className="absolute bottom-10 left-0 w-[450px] h-[450px] bg-[#F5DCC8]/90 rounded-full blur-3xl -ml-32 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/40 via-transparent to-transparent pointer-events-none" />
 
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -81,7 +82,7 @@ export function HeroSection() {
               {/* Image Frame */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
                 <img
-                  src="https://www.ronexphysiotherapy.com/blog/home-physiotherapy.png"
+                  src="/images/services/orthopedic-1.jpg"
                   alt="Physiotherapy session in Dehradun clinic"
                   className="w-full h-auto object-cover aspect-[4/3]"
                 />
