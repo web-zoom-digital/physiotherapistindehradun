@@ -78,6 +78,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: SITE_URL,
   },
+  icons: {
+    icon: [
+      { url: '/favicon.jpg', type: 'image/jpeg', sizes: '512x512' },
+    ],
+    apple: [
+      { url: '/favicon.jpg', sizes: '180x180', type: 'image/jpeg' },
+    ],
+    shortcut: '/favicon.jpg',
+  },
 }
 
 import { FloatingCTA } from '@/components/ui/FloatingCTA'
@@ -93,6 +102,9 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
       <head>
         <OrganizationSchema />
+        <link rel="icon" href="/favicon.jpg" type="image/jpeg" />
+        <link rel="apple-touch-icon" href="/favicon.jpg" />
+        <link rel="shortcut icon" href="/favicon.jpg" type="image/jpeg" />
       </head>
       <body className="min-h-screen flex flex-col font-sans relative">
         <a href="#main-content" className="skip-link">

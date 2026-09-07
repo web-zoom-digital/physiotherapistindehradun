@@ -137,7 +137,7 @@ export default function HomePage() {
       {/* 5. Core Physiotherapy Services */}
       <section className="section-py bg-[#FAF9F7]">
         <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
             <span className="section-label">Specialized Services</span>
             <h2 className="section-title">Comprehensive Physiotherapy Services in Dehradun</h2>
             <p className="text-base text-[#4A4744] leading-relaxed">
@@ -145,7 +145,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {SERVICES.map((service) => (
               <div key={service.slug} className="card p-6 flex flex-col justify-between">
                 <div className="space-y-3">
@@ -184,7 +184,7 @@ export default function HomePage() {
       {/* 6. Conditions Treated */}
       <section className="section-py bg-white">
         <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
             <span className="section-label">Topical Authority</span>
             <h2 className="section-title">Conditions We Assess & Manage</h2>
             <p className="text-base text-[#4A4744] leading-relaxed">
@@ -192,17 +192,17 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
             {CONDITIONS.map((cond) => (
               <Link
                 key={cond.slug}
                 href={`/conditions/${cond.slug}`}
                 className="p-4 rounded-xl border border-[#E8E4DF] bg-white hover:border-[#D97B4F] hover:shadow-md transition-all group"
               >
-                <h3 className="text-base font-semibold text-[#2E2A26] group-hover:text-[#D97B4F] transition-colors">
+                <h3 className="text-sm sm:text-base font-semibold text-[#2E2A26] group-hover:text-[#D97B4F] transition-colors leading-snug">
                   {cond.shortTitle}
                 </h3>
-                <p className="text-sm text-[#76726E] mt-1 line-clamp-2 leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#76726E] mt-1 line-clamp-2 leading-relaxed hidden sm:block">
                   {cond.symptoms[0]}
                 </p>
                 <span className="inline-flex items-center gap-1 text-xs text-[#D97B4F] font-semibold mt-2">
@@ -224,7 +224,7 @@ export default function HomePage() {
       {/* 7. Why Choose Us */}
       <section className="section-py bg-[#FAF9F7] border-y border-[#E8E4DF]">
         <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
             <span className="section-label">
               Clinical Quality
             </span>
@@ -273,7 +273,7 @@ export default function HomePage() {
       {/* 8. Treatment Approach */}
       <section className="section-py bg-white">
         <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
             <span className="section-label">Structured Pathway</span>
             <h2 className="section-title">How Our Physiotherapy Process Works</h2>
             <p className="text-base text-[#4A4744] leading-relaxed">
@@ -320,7 +320,7 @@ export default function HomePage() {
       {/* 9. Meet the Physiotherapists */}
       <section className="section-py bg-[#FAF9F7]">
         <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
             <span className="section-label">Verified Experience</span>
             <h2 className="section-title">Meet Our Specialist Physiotherapists</h2>
             <p className="text-sm text-[#4A4744]">
@@ -380,11 +380,11 @@ export default function HomePage() {
       {/* 10. Home Physiotherapy */}
       <section className="section-py bg-white">
         <div className="container-custom">
-          <div className="bg-[#F5DCC8]/50 rounded-3xl p-8 sm:p-12 border border-[#F5DCC8]">
+          <div className="bg-[#F5DCC8]/50 rounded-3xl p-5 sm:p-8 md:p-12 border border-[#F5DCC8]">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-7 space-y-4">
                 <span className="section-label">In-Home Rehabilitation</span>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-[#2E2A26]">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#2E2A26]">
                   Professional Home Physiotherapy in Dehradun
                 </h2>
                 <p className="text-sm text-[#4A4744] leading-relaxed">
@@ -453,7 +453,7 @@ export default function HomePage() {
       {/* 11. Dehradun Locations */}
       <section className="section-py bg-[#FAF9F7]">
         <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
             <span className="section-label">Verified Branches</span>
             <h2 className="section-title">Visit Our Physiotherapy Clinics in Dehradun</h2>
             <p className="text-sm text-[#4A4744]">
@@ -570,7 +570,7 @@ export default function HomePage() {
       {/* 13. Testimonials */}
       <section className="section-py bg-[#FAF9F7]">
         <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
             <span className="section-label">Verified Patient Care</span>
             <h2 className="section-title">What Patients Say About Our Care</h2>
             <p className="text-base text-[#4A4744] leading-relaxed">
@@ -665,8 +665,8 @@ export default function HomePage() {
           </div>
 
           <div className="text-center pt-8">
-            <Link href="/testimonials" className="btn-secondary py-2.5 px-6 text-base font-medium">
-              View All Patient Feedback & Google Business Profile Link
+            <Link href="/testimonials" className="btn-secondary py-2.5 px-5 text-sm font-medium">
+              View All Patient Feedback
             </Link>
           </div>
         </div>
@@ -675,7 +675,7 @@ export default function HomePage() {
       {/* 14. FAQs Section */}
       <section className="section-py bg-white">
         <div className="container-custom max-w-4xl">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
             <span className="section-label">Patient Clarifications</span>
             <h2 className="section-title">Frequently Asked Questions</h2>
             <p className="text-base text-[#4A4744] leading-relaxed">
@@ -689,7 +689,7 @@ export default function HomePage() {
       {/* 14.5. Clinic Locations & Maps Section */}
       <section className="section-py bg-[#FAF9F7] border-t border-[#E8E4DF]">
         <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
             <span className="section-label">Visit Our Clinics</span>
             <h2 className="section-title">Our Physiotherapy Clinic Locations in Dehradun</h2>
             <p className="text-base text-[#4A4744] leading-relaxed">
@@ -840,7 +840,7 @@ export default function HomePage() {
       {/* 15. Latest Health & Physiotherapy Blogs */}
       <section className="section-py bg-[#FAF9F7]">
         <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
             <span className="section-label">Patient Education</span>
             <h2 className="section-title">Latest Physiotherapy Articles & Health Guides</h2>
             <p className="text-base text-[#4A4744] leading-relaxed">
@@ -921,3 +921,4 @@ export default function HomePage() {
     </>
   )
 }
+

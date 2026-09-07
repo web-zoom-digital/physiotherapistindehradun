@@ -19,6 +19,9 @@ const config: Config = {
         },
         body: '#3A3A3A',
       },
+      screens: {
+        xs: '480px',
+      },
       fontFamily: {
         sans: ['var(--font-inter)', 'var(--font-manrope)', 'system-ui', 'sans-serif'],
         heading: ['var(--font-manrope)', 'var(--font-inter)', 'system-ui', 'sans-serif'],

@@ -54,8 +54,14 @@
   --font-weight-nav: 500;
 
   /* Spacing */
-  --section-py: 4rem;
-  --container-px: 1.25rem;
+  --section-py: 3rem;
+  --container-px: 1rem;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --container-px: 1.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -91,6 +97,14 @@ body {
   font-weight: var(--font-weight-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Extra bottom padding on mobile to avoid sticky bar overlap */
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+@media (max-width: 639px) {
+  body {
+    padding-bottom: 70px;
+  }
 }
 
 /* =============================================
@@ -524,6 +538,36 @@ a:hover {
   font-weight: 600;
   border-radius: 20px;
   border: 1px solid rgba(217, 123, 79, 0.2);
+}
+
+/* =============================================
+   DRAWER & ANIMATION UTILITIES
+   ============================================= */
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slideLeft {
+  animation: slideLeft 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out forwards;
 }
 
 /* =============================================

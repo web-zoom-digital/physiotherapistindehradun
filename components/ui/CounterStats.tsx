@@ -63,7 +63,7 @@ function SingleCounter({ end, prefix = '', suffix }: { end: number; prefix?: str
   }, [end, hasAnimated])
 
   return (
-    <div ref={elementRef} className="block text-3xl md:text-[2.25rem] font-bold text-[#D97B4F]">
+    <div ref={elementRef} className="block text-3xl md:text-[2.25rem] font-bold text-[#D97B4F] text-center leading-tight">
       {prefix}{count}{suffix}
     </div>
   )
@@ -73,11 +73,14 @@ export function CounterStats() {
   return (
     <section className="bg-white py-8 border-b border-[#E8E4DF] shadow-sm">
       <div className="container-custom">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {STATS.map((stat, idx) => (
-            <div key={idx} className="p-5 rounded-2xl bg-[#FAF9F7] border border-[#E8E4DF] hover:bg-white hover:border-[#D97B4F]/40 hover:shadow-xl hover:-translate-y-1.5 cursor-pointer transition-all duration-300">
+            <div
+              key={idx}
+              className="flex flex-col items-center justify-center text-center p-5 rounded-2xl bg-[#FAF9F7] border border-[#E8E4DF] hover:bg-white hover:border-[#D97B4F]/40 hover:shadow-xl hover:-translate-y-1.5 cursor-pointer transition-all duration-300 min-h-[110px]"
+            >
               <SingleCounter end={stat.end} prefix={stat.prefix} suffix={stat.suffix} />
-              <span className="text-sm text-[#4A4744] font-medium">{stat.label}</span>
+              <span className="text-sm text-[#4A4744] font-medium mt-1.5 leading-snug">{stat.label}</span>
             </div>
           ))}
         </div>

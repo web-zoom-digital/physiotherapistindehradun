@@ -8,6 +8,7 @@ import {
   X,
   ChevronDown,
   ChevronUp,
+  ChevronRight,
   Activity,
   Bone,
   Brain,
@@ -18,6 +19,10 @@ import {
   HeartPulse,
   ArrowRight,
   MapPin,
+  Info,
+  BookOpen,
+  PhoneCall,
+  Calendar,
 } from 'lucide-react'
 import { FaWhatsapp, FaPhoneAlt, FaCalendarCheck } from 'react-icons/fa'
 import { CONTACT, WHATSAPP_URL } from '@/data/clinic'
@@ -45,6 +50,7 @@ const getServiceIcon = (slug: string) => {
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileExpandedSection, setMobileExpandedSection] = useState<string | null>('locations')
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false)
   const [conditionsDropdownOpen, setConditionsDropdownOpen] = useState(false)
   const [locationsDropdownOpen, setLocationsDropdownOpen] = useState(false)
@@ -156,13 +162,12 @@ export function Header() {
             >
               <Link
                 href="/services"
-                className={`nav-link flex items-center gap-1.5 transition-all ${
-                  servicesDropdownOpen
+                className={`nav-link flex items-center gap-1.5 transition-all ${servicesDropdownOpen
                     ? 'bg-[#F5DCC8] text-[#B85E37] font-bold px-3 py-1.5 rounded-xl'
                     : isActive('/services')
-                    ? 'nav-link-active'
-                    : ''
-                }`}
+                      ? 'nav-link-active'
+                      : ''
+                  }`}
               >
                 <span>Services</span>
                 {servicesDropdownOpen ? (
@@ -354,13 +359,12 @@ export function Header() {
             >
               <Link
                 href="/conditions"
-                className={`nav-link flex items-center gap-1.5 transition-all ${
-                  conditionsDropdownOpen
+                className={`nav-link flex items-center gap-1.5 transition-all ${conditionsDropdownOpen
                     ? 'bg-[#F5DCC8] text-[#B85E37] font-bold px-3 py-1.5 rounded-xl'
                     : isActive('/conditions')
-                    ? 'nav-link-active'
-                    : ''
-                }`}
+                      ? 'nav-link-active'
+                      : ''
+                  }`}
               >
                 <span>Conditions</span>
                 {conditionsDropdownOpen ? (
@@ -559,13 +563,12 @@ export function Header() {
             >
               <Link
                 href="/locations"
-                className={`nav-link flex items-center gap-1.5 transition-all ${
-                  locationsDropdownOpen
+                className={`nav-link flex items-center gap-1.5 transition-all ${locationsDropdownOpen
                     ? 'bg-[#F5DCC8] text-[#B85E37] font-bold px-3 py-1.5 rounded-xl'
                     : isActive('/locations')
-                    ? 'nav-link-active'
-                    : ''
-                }`}
+                      ? 'nav-link-active'
+                      : ''
+                  }`}
               >
                 <span>Locations</span>
                 {locationsDropdownOpen ? (
@@ -672,113 +675,287 @@ export function Header() {
           </button>
         </div>
 
-        {/* Mobile Full Screen Menu Drawer */}
+        {/* Mobile Full Screen Menu Drawer matching reference design */}
         {mobileMenuOpen && (
-          <div className="fixed inset-0 z-[100] bg-[#FAF9F7] flex flex-col lg:hidden h-screen h-[100dvh] w-screen overflow-hidden font-sans">
-            {/* Drawer Header */}
-            <div className="bg-[#2E2A26] text-white px-5 py-4 flex items-center justify-between shadow-md shrink-0">
-              <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#D97B4F] text-white flex items-center justify-center font-bold text-xl shadow-md">
-                  <Activity className="w-6 h-6 text-white" />
-                </div>
+          <div className="fixed inset-0 z-[100] bg-black/40 backdrop-blur-xs flex justify-end lg:hidden font-sans animate-fadeIn">
+            {/* Backdrop click overlay */}
+            <div className="absolute inset-0" onClick={() => setMobileMenuOpen(false)} />
+
+            {/* Slide-over Drawer Panel */}
+            <div className="relative w-full max-w-md bg-white h-full flex flex-col shadow-2xl z-10 overflow-hidden animate-slideLeft">
+
+              {/* Drawer Header (Matching reference: Logo + Title/Subtitle on left, round X button on right) */}
+              <div className="px-5 py-4 border-b border-[#E8E4DF] flex items-center justify-between bg-white shrink-0">
+                <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-2xl bg-[#FDF6F0] border border-[#F5DCC8] flex items-center justify-center shrink-0 shadow-xs">
+                    <Activity className="w-6 h-6 text-[#D97B4F]" />
+                  </div>
+                  <div>
+                    <span className="text-base font-extrabold text-[#2E2A26] tracking-tight block leading-tight">
+                      Physiotherapist
+                    </span>
+                    <span className="text-xs font-semibold text-[#D97B4F] tracking-wider uppercase block">
+                      in Dehradun
+                    </span>
+                  </div>
+                </Link>
+
+                {/* Round Close Button (X) */}
+                <button
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-11 h-11 rounded-full bg-[#F0F2F5] hover:bg-[#E4E7EC] text-[#2E2A26] flex items-center justify-center transition-colors shadow-xs"
+                  aria-label="Close Navigation Menu"
+                >
+                  <X className="w-5 h-5 stroke-[2.5]" />
+                </button>
+              </div>
+
+              {/* Scrollable Drawer Content */}
+              <div className="flex-1 overflow-y-auto px-4 py-5 space-y-3">
+
+                {/* 1. Home Link */}
+                <Link
+                  href="/"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`flex items-center justify-between p-3.5 rounded-2xl border transition-all ${isActive('/') && pathname === '/'
+                      ? 'bg-[#FDF6F0] border-[#D97B4F] text-[#D97B4F]'
+                      : 'bg-white border-[#E8E4DF] hover:border-[#D97B4F]/60 text-[#2E2A26]'
+                    }`}
+                >
+                  <div className="flex items-center gap-3.5">
+                    <div className="w-11 h-11 rounded-2xl bg-[#F4F6FB] border border-[#E8E4DF]/60 flex items-center justify-center shrink-0 text-[#D97B4F]">
+                      <HomeIcon className="w-5 h-5" />
+                    </div>
+                    <span className="font-extrabold text-base tracking-tight">Home</span>
+                  </div>
+                  <ChevronRight className="w-4 h-4 text-gray-400" />
+                </Link>
+
+                {/* 2. Services Accordion */}
                 <div>
-                  <span className="text-base font-extrabold text-white tracking-tight block leading-tight">
-                    Physiotherapy
-                  </span>
-                  <span className="text-[10px] font-bold text-[#F5DCC8] tracking-widest uppercase block">
-                    DEHRADUN
-                  </span>
-                </div>
-              </Link>
-
-              <button
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-10 h-10 rounded-xl bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-colors"
-                aria-label="Close Navigation Menu"
-              >
-                <X className="w-6 h-6" />
-              </button>
-            </div>
-
-            {/* Scrollable Menu Items */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-5 pb-28">
-              {/* Primary Menu Links Stack */}
-              <div className="space-y-2">
-                {[
-                  { name: 'Home', url: '/' },
-                  { name: 'About Us', url: '/about' },
-                  { name: 'Doctors & Team', url: '/team' },
-                  { name: 'Health Blog', url: '/blog' },
-                  { name: 'Contact Us', url: '/contact' },
-                ].map((item) => {
-                  const active = isActive(item.url) && (item.url === '/' ? pathname === '/' : true)
-                  return (
-                    <Link
-                      key={item.url}
-                      href={item.url}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className={`flex items-center justify-between py-3.5 px-5 rounded-2xl font-bold text-sm transition-all ${
-                        active
-                          ? 'bg-[#D97B4F] text-white shadow-sm'
-                          : 'bg-white text-[#2E2A26] border border-[#E8E4DF] shadow-xs hover:border-[#D97B4F]'
+                  <button
+                    onClick={() =>
+                      setMobileExpandedSection(mobileExpandedSection === 'services' ? null : 'services')
+                    }
+                    className={`w-full flex items-center justify-between p-3.5 cursor-pointer rounded-2xl border transition-all ${mobileExpandedSection === 'services' || isActive('/services')
+                        ? 'bg-[#FDF6F0] border-[#D97B4F] text-[#2E2A26]'
+                        : 'bg-white border-[#E8E4DF] text-[#2E2A26]'
                       }`}
-                    >
-                      <span>{item.name}</span>
-                      {active && <span className="w-2 h-2 rounded-full bg-white shadow-xs" />}
-                    </Link>
-                  )
-                })}
-              </div>
-
-              {/* Services Section */}
-              <div className="space-y-3 pt-1">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="bg-[#D97B4F] text-white font-extrabold text-[11px] px-3 py-1 rounded-lg uppercase tracking-wider">
-                    SERVICES
-                  </span>
-                  <span className="bg-[#2E2A26] text-white font-extrabold text-[11px] px-3 py-1 rounded-lg uppercase tracking-wider">
-                    CORE THERAPIES
-                  </span>
-                </div>
-
-                <div className="space-y-2">
-                  {SERVICES.map((s) => (
-                    <Link
-                      key={s.slug}
-                      href={`/services/${s.slug}`}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="flex items-center gap-3.5 bg-white p-3.5 rounded-2xl border border-[#E8E4DF] shadow-xs hover:border-[#D97B4F] transition-all"
-                    >
-                      <div className="w-9 h-9 rounded-xl bg-[#F5DCC8] flex items-center justify-center shrink-0">
-                        {getServiceIcon(s.slug)}
+                  >
+                    <div className="flex items-center gap-3.5">
+                      <div className="w-11 h-11 rounded-2xl bg-[#F4F6FB] border border-[#E8E4DF]/60 flex items-center justify-center shrink-0 text-[#D97B4F]">
+                        <Activity className="w-5 h-5" />
                       </div>
-                      <span className="font-bold text-sm text-[#2E2A26]">{s.title}</span>
-                    </Link>
-                  ))}
+                      <span className="font-extrabold text-base tracking-tight">Services</span>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <span className="bg-[#F5DCC8] text-[#B85E37] text-xs font-extrabold px-3 py-1 rounded-full">
+                        6 Services
+                      </span>
+                      <ChevronRight
+                        className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${mobileExpandedSection === 'services' ? 'rotate-90 text-[#D97B4F]' : ''
+                          }`}
+                      />
+                    </div>
+                  </button>
+
+                  {/* Expanded Services Grid */}
+                  {mobileExpandedSection === 'services' && (
+                    <div className="bg-[#FAF9F7] border border-[#E8E4DF] rounded-2xl p-3.5 mt-2 space-y-3 animate-fadeIn">
+                      <div className="grid grid-cols-2 gap-2">
+                        {SERVICES.map((s) => (
+                          <Link
+                            key={s.slug}
+                            href={`/services/${s.slug}`}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="bg-white rounded-xl p-2.5 border border-[#E8E4DF] hover:border-[#D97B4F] flex items-center gap-2 text-xs font-bold text-[#2E2A26] shadow-xs transition-all hover:bg-[#FDF6F0]/60"
+                          >
+                            <div className="w-7 h-7 rounded-lg bg-[#FDF6F0] text-[#D97B4F] flex items-center justify-center shrink-0">
+                              {getServiceIcon(s.slug)}
+                            </div>
+                            <span className="truncate">{s.shortTitle}</span>
+                          </Link>
+                        ))}
+                      </div>
+
+                      <div className="pt-2.5 border-t border-dashed border-[#E8E4DF] text-center">
+                        <Link
+                          href="/services"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="text-xs font-extrabold text-[#D97B4F] hover:text-[#B85E37] inline-flex items-center gap-1 transition-colors py-1"
+                        >
+                          <span>View All 6 Services →</span>
+                        </Link>
+                      </div>
+                    </div>
+                  )}
                 </div>
+
+
+                {/* 4. Patient Guides / Conditions Accordion */}
+                <div>
+                  <button
+                    onClick={() =>
+                      setMobileExpandedSection(mobileExpandedSection === 'conditions' ? null : 'conditions')
+                    }
+                    className={`w-full flex items-center justify-between p-3.5 rounded-2xl border cursor-pointer transition-all ${mobileExpandedSection === 'conditions' || isActive('/conditions')
+                        ? 'bg-[#FDF6F0] border-[#D97B4F] text-[#2E2A26]'
+                        : 'bg-white border-[#E8E4DF] text-[#2E2A26]'
+                      }`}
+                  >
+                    <div className="flex items-center gap-3.5 cursor-pointer">
+                      <div className="w-11 h-11 rounded-2xl bg-[#F4F6FB] border border-[#E8E4DF]/60 flex items-center justify-center shrink-0 text-[#D97B4F] ">
+                        <HeartPulse className="w-5 h-5" />
+                      </div>
+                      <span className="font-extrabold text-base tracking-tight">Conditions</span>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <span className="bg-[#F5DCC8] text-[#B85E37] text-xs font-extrabold px-3 py-1 rounded-full">
+                        12 Guides
+                      </span>
+                      <ChevronRight
+                        className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${mobileExpandedSection === 'conditions' ? 'rotate-90 text-[#D97B4F]' : ''
+                          }`}
+                      />
+                    </div>
+                  </button>
+
+                  {/* Expanded Conditions Grid */}
+                  {mobileExpandedSection === 'conditions' && (
+                    <div className="bg-[#FAF9F7] border border-[#E8E4DF] rounded-2xl p-3.5 mt-2 space-y-3 animate-fadeIn">
+                      <div className="grid grid-cols-2 gap-2">
+                        {CONDITIONS.slice(0, 8).map((c) => (
+                          <Link
+                            key={c.slug}
+                            href={`/conditions/${c.slug}`}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="bg-white rounded-xl p-2.5 border border-[#E8E4DF] hover:border-[#D97B4F] flex items-center gap-2 text-xs font-bold text-[#2E2A26] shadow-xs transition-all hover:bg-[#FDF6F0]/60"
+                          >
+                            <Activity className="w-3.5 h-3.5 text-[#D97B4F] shrink-0" />
+                            <span className="truncate">{c.shortTitle}</span>
+                          </Link>
+                        ))}
+                      </div>
+
+                      <div className="pt-2.5 border-t border-dashed border-[#E8E4DF] text-center">
+                        <Link
+                          href="/conditions"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="text-xs font-extrabold text-[#D97B4F] hover:text-[#B85E37] inline-flex items-center gap-1 transition-colors py-1"
+                        >
+                          <span>Explore All 12 Patient Guides →</span>
+                        </Link>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* 5. About Us */}
+                <Link
+                  href="/about"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`flex items-center justify-between p-3.5 rounded-2xl border transition-all ${isActive('/about')
+                      ? 'bg-[#FDF6F0] border-[#D97B4F] text-[#D97B4F]'
+                      : 'bg-white border-[#E8E4DF] hover:border-[#D97B4F]/60 text-[#2E2A26]'
+                    }`}
+                >
+                  <div className="flex items-center gap-3.5">
+                    <div className="w-11 h-11 rounded-2xl bg-[#F4F6FB] border border-[#E8E4DF]/60 flex items-center justify-center shrink-0 text-[#D97B4F]">
+                      <Info className="w-5 h-5" />
+                    </div>
+                    <span className="font-extrabold text-base tracking-tight">About Us</span>
+                  </div>
+                  <ChevronRight className="w-4 h-4 text-gray-400" />
+                </Link>
+
+                {/* 6. Doctors & Team */}
+                <Link
+                  href="/team"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`flex items-center justify-between p-3.5 rounded-2xl border transition-all ${isActive('/team')
+                      ? 'bg-[#FDF6F0] border-[#D97B4F] text-[#D97B4F]'
+                      : 'bg-white border-[#E8E4DF] hover:border-[#D97B4F]/60 text-[#2E2A26]'
+                    }`}
+                >
+                  <div className="flex items-center gap-3.5">
+                    <div className="w-11 h-11 rounded-2xl bg-[#F4F6FB] border border-[#E8E4DF]/60 flex items-center justify-center shrink-0 text-[#D97B4F]">
+                      <UserCheck className="w-5 h-5" />
+                    </div>
+                    <span className="font-extrabold text-base tracking-tight">Doctors &amp; Team</span>
+                  </div>
+                  <ChevronRight className="w-4 h-4 text-gray-400" />
+                </Link>
+
+                {/* 7. Blog */}
+                <Link
+                  href="/blog"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`flex items-center justify-between p-3.5 rounded-2xl border transition-all ${isActive('/blog')
+                      ? 'bg-[#FDF6F0] border-[#D97B4F] text-[#D97B4F]'
+                      : 'bg-white border-[#E8E4DF] hover:border-[#D97B4F]/60 text-[#2E2A26]'
+                    }`}
+                >
+                  <div className="flex items-center gap-3.5">
+                    <div className="w-11 h-11 rounded-2xl bg-[#F4F6FB] border border-[#E8E4DF]/60 flex items-center justify-center shrink-0 text-[#D97B4F]">
+                      <BookOpen className="w-5 h-5" />
+                    </div>
+                    <span className="font-extrabold text-base tracking-tight">Blog</span>
+                  </div>
+                  <ChevronRight className="w-4 h-4 text-gray-400" />
+                </Link>
+
+                {/* 8. Contact Us */}
+                <Link
+                  href="/contact"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`flex items-center justify-between p-3.5 rounded-2xl border transition-all ${isActive('/contact')
+                      ? 'bg-[#FDF6F0] border-[#D97B4F] text-[#D97B4F]'
+                      : 'bg-white border-[#E8E4DF] hover:border-[#D97B4F]/60 text-[#2E2A26]'
+                    }`}
+                >
+                  <div className="flex items-center gap-3.5">
+                    <div className="w-11 h-11 rounded-2xl bg-[#F4F6FB] border border-[#E8E4DF]/60 flex items-center justify-center shrink-0 text-[#D97B4F]">
+                      <PhoneCall className="w-5 h-5" />
+                    </div>
+                    <span className="font-extrabold text-base tracking-tight">Contact Us</span>
+                  </div>
+                  <ChevronRight className="w-4 h-4 text-gray-400" />
+                </Link>
+
               </div>
 
-              {/* Specialized Care Section */}
-              <div className="space-y-3 pt-1">
-                <div className="flex items-center gap-2">
-                  <span className="bg-[#2E2A26] text-white font-extrabold text-[11px] px-3 py-1 rounded-lg uppercase tracking-wider">
-                    SPECIALIZED CARE
-                  </span>
-                </div>
-
+              {/* Bottom Sticky Action Footer */}
+              <div className="p-4 bg-white border-t border-[#E8E4DF] shrink-0 space-y-2.5">
+                <Link
+                  href="/book-appointment"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full bg-[#D97B4F] hover:bg-[#B85E37] text-white py-3.5 px-4 rounded-2xl font-extrabold text-sm flex items-center justify-center gap-2 shadow-md transition-all active:scale-[0.98]"
+                >
+                  <Calendar className="w-4 h-4" />
+                  <span>Book Appointment</span>
+                </Link>
                 <div className="grid grid-cols-2 gap-2">
-                  {CONDITIONS.slice(0, 6).map((c) => (
-                    <Link
-                      key={c.slug}
-                      href={`/conditions/${c.slug}`}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="bg-white p-3 rounded-2xl border border-[#E8E4DF] text-xs font-bold text-[#2E2A26] hover:border-[#D97B4F] transition-all block text-center shadow-xs"
-                    >
-                      {c.shortTitle}
-                    </Link>
-                  ))}
+                  <a
+                    href={`tel:${CONTACT.phoneRaw}`}
+                    className="py-2.5 px-3 rounded-xl border border-[#E8E4DF] bg-[#FAF9F7] hover:bg-[#F5DCC8]/40 text-[#2E2A26] text-xs font-bold flex items-center justify-center gap-2 transition-colors"
+                  >
+                    <FaPhoneAlt className="w-3.5 h-3.5 text-[#D97B4F]" />
+                    <span>Call Us</span>
+                  </a>
+                  <a
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-2.5 px-3 rounded-xl border border-[#25D366]/30 bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#1ebe5d] text-xs font-bold flex items-center justify-center gap-2 transition-colors"
+                  >
+                    <FaWhatsapp className="w-4 h-4 text-[#25D366]" />
+                    <span>WhatsApp</span>
+                  </a>
                 </div>
               </div>
+
             </div>
           </div>
         )}

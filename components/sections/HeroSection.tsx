@@ -7,7 +7,7 @@ import { CONTACT, WHATSAPP_URL, BRANCHES } from '@/data/clinic'
 
 export function HeroSection() {
   return (
-    <section className="relative bg-gradient-to-br from-[#FDF2E9] via-[#FCDEC8] to-[#F9D6BD] pt-12 pb-24 md:pt-16 md:pb-28 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-[#FDF2E9] via-[#FCDEC8] to-[#F9D6BD] pt-10 pb-20 md:pt-16 md:pb-28 overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#D97B4F]/25 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none" />
       <div className="absolute bottom-10 left-0 w-[450px] h-[450px] bg-[#F5DCC8]/90 rounded-full blur-3xl -ml-32 pointer-events-none" />
@@ -17,12 +17,12 @@ export function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Heading & CTAs */}
           <div className="lg:col-span-7 space-y-6 text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F5DCC8]/70 border border-[#D97B4F]/20 text-[#2E2A26] text-sm font-semibold shadow-xs">
-              <ShieldCheck className="w-4 h-4 text-[#D97B4F]" />
-              <span>Evidence-Based Physiotherapy & Rehabilitation • Dehradun</span>
+            <div className="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F5DCC8]/70 border border-[#D97B4F]/20 text-[#2E2A26] text-xs sm:text-sm font-semibold shadow-xs">
+              <ShieldCheck className="w-4 h-4 text-[#D97B4F] shrink-0" />
+              <span>Evidence-Based Physiotherapy &amp; Rehabilitation · Dehradun</span>
             </div>
 
-            <h1 className="text-3xl md:text-[3rem] font-bold text-[#2E2A26] leading-[1.2] tracking-tight">
+            <h1 className="text-[1.85rem] sm:text-3xl md:text-[3rem] font-bold text-[#2E2A26] leading-[1.2] tracking-tight">
               Physiotherapist in <span className="text-[#D97B4F]">Dehradun</span>
             </h1>
 
@@ -31,36 +31,38 @@ export function HeroSection() {
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-col xs:flex-row flex-wrap items-stretch xs:items-center gap-3 pt-2">
               <Link
                 href="/book-appointment"
-                className="btn-primary py-3.5 px-7 text-base shadow-md hover:shadow-lg font-medium"
+                className="btn-primary py-3 px-6 text-sm sm:text-base shadow-md hover:shadow-lg font-medium justify-center"
               >
-                <Calendar className="w-5 h-5" />
+                <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>Book a Consultation</span>
               </Link>
 
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-whatsapp py-3.5 px-6 text-base gap-2 font-medium"
-              >
-                <FaWhatsapp className="w-5 h-5" />
-                <span>WhatsApp Us</span>
-              </a>
+              <div className="flex gap-3">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-whatsapp py-3 px-5 text-sm sm:text-base gap-2 font-medium flex-1 xs:flex-none justify-center"
+                >
+                  <FaWhatsapp className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <span>WhatsApp</span>
+                </a>
 
-              <a
-                href={`tel:${CONTACT.phoneRaw}`}
-                className="btn-secondary py-3.5 px-6 text-base gap-2 font-medium"
-              >
-                <FaPhoneAlt className="w-4 h-4" />
-                <span>Call Now</span>
-              </a>
+                <a
+                  href={`tel:${CONTACT.phoneRaw}`}
+                  className="btn-secondary py-3 px-5 text-sm sm:text-base gap-2 font-medium flex-1 xs:flex-none justify-center"
+                >
+                  <FaPhoneAlt className="w-4 h-4" />
+                  <span>Call Now</span>
+                </a>
+              </div>
             </div>
 
             {/* Verified Trust Strip */}
-            <div className="pt-6 grid grid-cols-2 sm:grid-cols-3 gap-4 border-t border-[#E8E4DF] text-sm text-[#2E2A26]">
+            <div className="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-3 border-t border-[#E8E4DF] text-xs sm:text-sm text-[#2E2A26]">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#D97B4F] shrink-0" />
                 <span>2 Verified Clinics in Dehradun</span>
