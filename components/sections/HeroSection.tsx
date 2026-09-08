@@ -84,8 +84,8 @@ export function HeroSection() {
               {/* Image Frame */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
                 <img
-                  src="/images/services/orthopedic-1.jpg"
-                  alt="Physiotherapy session in Dehradun clinic"
+                  src="/images/conditions/back-pain-1.jpg"
+                  alt="Physiotherapy session for back pain in Dehradun clinic"
                   className="w-full h-auto object-cover aspect-[4/3]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#2E2A26]/40 via-transparent to-transparent" />

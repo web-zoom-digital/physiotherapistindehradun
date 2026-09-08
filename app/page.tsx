@@ -26,6 +26,7 @@ import { AppointmentForm } from '@/components/sections/AppointmentForm'
 import { LocalBusinessSchema } from '@/components/schema/JsonLd'
 import { SERVICES } from '@/data/services'
 import { CONDITIONS } from '@/data/conditions'
+import { CONDITION_IMAGES } from '@/data/conditionImages'
 import { TEAM } from '@/data/team'
 import { BLOG_POSTS } from '@/data/blog'
 import { FAQS } from '@/data/faqs'
@@ -192,25 +193,45 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-            {CONDITIONS.map((cond) => (
-              <Link
-                key={cond.slug}
-                href={`/conditions/${cond.slug}`}
-                className="p-4 rounded-xl border border-[#E8E4DF] bg-white hover:border-[#D97B4F] hover:shadow-md transition-all group"
-              >
-                <h3 className="text-sm sm:text-base font-semibold text-[#2E2A26] group-hover:text-[#D97B4F] transition-colors leading-snug">
-                  {cond.shortTitle}
-                </h3>
-                <p className="text-xs sm:text-sm text-[#76726E] mt-1 line-clamp-2 leading-relaxed hidden sm:block">
-                  {cond.symptoms[0]}
-                </p>
-                <span className="inline-flex items-center gap-1 text-xs text-[#D97B4F] font-semibold mt-2">
-                  <span>Learn more</span>
-                  <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
-                </span>
-              </Link>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {CONDITIONS.map((cond) => {
+              const condImage = CONDITION_IMAGES[cond.slug]?.[0] || '/images/conditions/back-pain-1.jpg'
+              return (
+                <Link
+                  key={cond.slug}
+                  href={`/conditions/${cond.slug}`}
+                  className="rounded-2xl border border-[#E8E4DF] bg-white overflow-hidden hover:border-[#D97B4F] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
+                >
+                  <div className="relative aspect-[4/3] w-full bg-gray-100 overflow-hidden border-b border-[#E8E4DF]">
+                    <img
+                      src={condImage}
+                      alt={`Physiotherapy ${cond.shortTitle} treatment in Dehradun`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    <span className="absolute bottom-2.5 left-3 bg-[#D97B4F] text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full shadow-xs">
+                      {cond.shortTitle}
+                    </span>
+                  </div>
+
+                  <div className="p-4 flex-1 flex flex-col justify-between space-y-3">
+                    <div>
+                      <h3 className="text-base font-bold text-[#2E2A26] group-hover:text-[#D97B4F] transition-colors leading-snug">
+                        {cond.shortTitle}
+                      </h3>
+                      <p className="text-xs text-[#76726E] mt-1.5 line-clamp-2 leading-relaxed">
+                        {cond.symptoms[0]}
+                      </p>
+                    </div>
+
+                    <span className="inline-flex items-center gap-1.5 text-xs text-[#D97B4F] font-bold pt-2 border-t border-[#E8E4DF]/60">
+                      <span>Explore {cond.shortTitle} Guide</span>
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </div>
+                </Link>
+              )
+            })}
           </div>
 
           <div className="text-center pt-8">

@@ -70,7 +70,7 @@ export function ConditionDetailContent({
             <div className="relative rounded-2xl overflow-hidden shadow-xl border border-[#E8E4DF] group">
               <Image
                 src={images[0]}
-                alt={`Realistic DSLR photo of ${condition.title} clinical assessment in Dehradun`}
+                alt={`Clinical photo of ${condition.title} clinical assessment in Dehradun`}
                 width={800}
                 height={600}
                 className="w-full h-[440px] object-cover transition-transform duration-500 group-hover:scale-105"
@@ -79,7 +79,7 @@ export function ConditionDetailContent({
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent flex flex-col justify-end p-6 text-white">
                 <div className="flex items-center gap-2 bg-[#D97B4F] text-white text-xs font-semibold px-3 py-1 rounded-full w-max mb-2 shadow-sm">
                   <Stethoscope className="w-4 h-4" />
-                  <span>DSLR Diagnostic Assessment</span>
+                  <span>Clinical Diagnostic Assessment</span>
                 </div>
                 <h4 className="text-lg font-bold">{condition.shortTitle} Clinical Evaluation</h4>
                 <p className="text-xs text-gray-200 mt-1">
@@ -97,7 +97,7 @@ export function ConditionDetailContent({
             <div className="relative rounded-2xl overflow-hidden shadow-xl border border-[#E8E4DF] group">
               <Image
                 src={images[1]}
-                alt={`Realistic DSLR photo of ${condition.title} exercise rehabilitation and treatment`}
+                alt={`Clinical photo of ${condition.title} exercise rehabilitation and treatment`}
                 width={800}
                 height={600}
                 className="w-full h-[440px] object-cover transition-transform duration-500 group-hover:scale-105"

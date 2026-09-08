@@ -33,7 +33,7 @@ export default function AboutPage() {
 
       <section className="section-py bg-white">
         <div className="container-custom">
-          {/* Patient-First Philosophy + Realistic DSLR Image */}
+          {/* Patient-First Philosophy + Realistic Clinical Image */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
             <div className="lg:col-span-6 space-y-4">
               <span className="section-label">Patient-Centered Care</span>
@@ -51,12 +51,12 @@ export default function AboutPage() {
               </p>
             </div>
 
-            {/* Realistic DSLR Photo of Clinic & Practice (Replaces the plain text box) */}
+            {/* Realistic Clinical Photo of Clinic & Practice (Replaces the plain text box) */}
             <div className="lg:col-span-6">
               <div className="relative rounded-2xl overflow-hidden shadow-xl border border-[#E8E4DF] group">
                 <Image
                   src="/images/about-clinical-standards.jpg"
-                  alt="Realistic DSLR photo of qualified physiotherapists conducting patient knee and joint evaluation in Dehradun clinic"
+                  alt="Qualified physiotherapists conducting patient knee and joint evaluation in Dehradun clinic"
                   width={800}
                   height={600}
                   className="w-full h-[420px] object-cover transition-transform duration-500 group-hover:scale-105"

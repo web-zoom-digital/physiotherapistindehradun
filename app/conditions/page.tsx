@@ -6,6 +6,7 @@ import { FAQAccordion } from '@/components/sections/FAQAccordion'
 import { CTAButton } from '@/components/ui/CTAButton'
 import { CONDITIONS } from '@/data/conditions'
 import { FAQS } from '@/data/faqs'
+import { CONDITION_IMAGES } from '@/data/conditionImages'
 import { ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -27,47 +28,61 @@ export default function ConditionsHubPage() {
       <section className="section-py bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {CONDITIONS.map((condition) => (
-              <div key={condition.slug} className="card p-6 flex flex-col justify-between space-y-4">
-                <div className="space-y-3">
-                  <span className="section-label mb-0">
-                    Patient Guide
-                  </span>
-                  <h2 className="text-xl font-semibold text-[#2E2A26]">
-                    <Link href={`/conditions/${condition.slug}`} className="hover:text-[#D97B4F] transition-colors">
-                      {condition.title}
-                    </Link>
-                  </h2>
-                  <p className="text-sm text-[#4A4744] line-clamp-3 leading-relaxed">
-                    {condition.description}
-                  </p>
+            {CONDITIONS.map((condition) => {
+              const conditionImg = CONDITION_IMAGES[condition.slug]?.[0] || '/images/conditions/back-pain-1.jpg'
+              return (
+                <div key={condition.slug} className="card overflow-hidden flex flex-col justify-between group">
+                  <div className="relative aspect-[16/10] w-full bg-gray-100 overflow-hidden border-b border-[#E8E4DF]">
+                    <img
+                      src={conditionImg}
+                      alt={`Physiotherapy ${condition.shortTitle} treatment in Dehradun`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    <span className="absolute bottom-3 left-3 bg-[#D97B4F] text-white text-[11px] font-bold px-2.5 py-1 rounded-md shadow-xs">
+                      {condition.shortTitle}
+                    </span>
+                  </div>
 
-                  <div className="pt-2 border-t border-[#E8E4DF]">
-                    <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">
-                      Common Symptoms:
-                    </h3>
-                    <ul className="text-xs text-gray-600 space-y-1">
-                      {condition.symptoms.slice(0, 3).map((sym, sIdx) => (
-                        <li key={sIdx} className="flex items-center gap-1.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#D97B4F]" />
-                          <span>{sym}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="p-6 space-y-3 flex-1 flex flex-col justify-between">
+                    <div className="space-y-2">
+                      <h2 className="text-xl font-bold text-[#2E2A26] group-hover:text-[#D97B4F] transition-colors leading-tight">
+                        <Link href={`/conditions/${condition.slug}`}>
+                          {condition.title}
+                        </Link>
+                      </h2>
+                      <p className="text-sm text-[#4A4744] line-clamp-3 leading-relaxed">
+                        {condition.description}
+                      </p>
+                    </div>
+
+                    <div className="pt-2 border-t border-[#E8E4DF] space-y-2">
+                      <h3 className="text-[11px] font-bold text-gray-400 uppercase tracking-wider">
+                        Key Symptoms:
+                      </h3>
+                      <ul className="text-xs text-[#4A4744] space-y-1">
+                        {condition.symptoms.slice(0, 3).map((sym, sIdx) => (
+                          <li key={sIdx} className="flex items-center gap-1.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#D97B4F] shrink-0" />
+                            <span className="truncate">{sym}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="pt-4 border-t border-[#E8E4DF] flex items-center justify-between">
+                      <Link
+                        href={`/conditions/${condition.slug}`}
+                        className="btn-primary py-2 px-4 text-xs font-semibold"
+                      >
+                        <span>Read Full Guide</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
-
-                <div className="pt-4 border-t border-[#E8E4DF] flex items-center justify-between">
-                  <Link
-                    href={`/conditions/${condition.slug}`}
-                    className="btn-primary py-2 px-4 text-sm font-medium"
-                  >
-                    <span>Read Full Guide</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
 
           <div className="mt-16 bg-[#FAF9F7] rounded-2xl p-8 border border-[#E8E4DF] text-center space-y-4 mb-16">
