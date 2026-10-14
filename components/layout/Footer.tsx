@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Mail, MapPin, Clock, Activity } from 'lucide-react'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp, FaPhoneAlt } from 'react-icons/fa'
 import { CLINIC_NAME, CONTACT, BRANCHES, SOCIAL, WHATSAPP_URL } from '@/data/clinic'
@@ -13,17 +14,15 @@ export function Footer() {
           
           {/* Column 1: Brand Logo, Description & Social Icons */}
           <div className="lg:col-span-3 space-y-5">
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-xl bg-[#D97B4F] text-white flex items-center justify-center font-bold text-xl shadow-md group-hover:bg-[#C2683C] transition-colors">
-                <Activity className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <span className="text-xl font-extrabold text-white tracking-tight block leading-tight">
-                  RonEx
-                </span>
-                <span className="text-[11px] font-medium text-[#F5DCC8] tracking-wide block">
-                  Multi-speciality physiotherapy centre
-                </span>
+            <Link href="/" className="inline-block group" aria-label="RonEx Physiotherapy Home">
+              <div className="bg-white px-3.5 py-2 rounded-xl inline-flex items-center shadow-md transition-all group-hover:scale-105">
+                <Image
+                  src="/logo.png"
+                  alt="RonEx Physiotherapy & Rehabilitation Center"
+                  width={170}
+                  height={66}
+                  className="h-11 w-auto object-contain"
+                />
               </div>
             </Link>
 
@@ -270,7 +269,7 @@ export function Footer() {
             </div>
 
             <div className="pt-3 border-t border-[#443F3B] space-y-3 text-xs">
-              <div>
+              {/* <div>
                 <span className="text-[#D97B4F] font-bold uppercase tracking-wider block mb-1">
                   Rajpur Road Branch (Main)
                 </span>
@@ -280,7 +279,7 @@ export function Footer() {
                     {BRANCHES.rajpurRoad.fullAddress}
                   </p>
                 </div>
-              </div>
+              </div> */}
 
               <div>
                 <span className="text-[#D97B4F] font-bold uppercase tracking-wider block mb-1">
@@ -302,7 +301,7 @@ export function Footer() {
         <div className="pt-8 pb-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Rajpur Road Map Card */}
-            <div className="relative rounded-2xl overflow-hidden border border-[#443F3B] shadow-lg group">
+            {/* <div className="relative rounded-2xl overflow-hidden border border-[#443F3B] shadow-lg group">
               <div className="absolute top-3 left-3 z-10 bg-[#2E2A26]/90 text-white font-bold text-xs uppercase px-3 py-1.5 rounded-lg border border-white/10 backdrop-blur-md shadow-md flex items-center gap-2">
                 <MapPin className="w-3.5 h-3.5 text-[#D97B4F]" />
                 <span>Rajpur Road Branch (Main)</span>
@@ -320,7 +319,7 @@ export function Footer() {
                   className="w-full h-full filter brightness-95 contrast-105 group-hover:brightness-100 transition-all duration-300"
                 />
               </div>
-            </div>
+            </div> */}
 
             {/* Bhaniyawala Map Card */}
             <div className="relative rounded-2xl overflow-hidden border border-[#443F3B] shadow-lg group">

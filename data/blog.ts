@@ -14,6 +14,22 @@ export interface BlogPost {
   metaTitle: string
   metaDescription: string
   tags: string[]
+  imageUrl?: string
+}
+
+export const BLOG_IMAGES: Record<string, string> = {
+  'when-to-see-physiotherapist-back-pain': '/images/conditions/back-pain-1.jpg',
+  'physiotherapy-knee-pain-dehradun': '/images/conditions/knee-pain-1.jpg',
+  'first-physiotherapy-session-what-to-expect': '/images/about-clinical-standards.jpg',
+  'stroke-rehabilitation-physiotherapy': '/images/conditions/stroke-rehabilitation-1.jpg',
+  'home-physiotherapy-dehradun-guide': '/images/services/home-physio-1.jpg',
+  'physiotherapy-neck-pain-cervical': '/images/conditions/neck-pain-1.jpg',
+  'sports-injury-rehabilitation-dehradun': '/images/services/sports-1.jpg',
+  'frozen-shoulder-treatment-physio': '/images/conditions/frozen-shoulder-1.jpg',
+}
+
+export function getBlogImage(slug: string): string {
+  return BLOG_IMAGES[slug] || '/images/about-clinical-standards.jpg'
 }
 
 export const BLOG_POSTS: BlogPost[] = [

@@ -29,7 +29,7 @@ export const TEAM: TeamMember[] = [
       'Musculoskeletal Disorders',
       'Manual Therapy',
     ],
-    imageUrl: 'https://www.ronexphysiotherapy.com/doctors/om-prakash.jpg',
+    imageUrl: '/images/doctors/om-prakash.jpg',
     services: ['orthopedic-physiotherapy', 'post-surgery-rehabilitation', 'pain-management'],
   },
   {
@@ -47,7 +47,7 @@ export const TEAM: TeamMember[] = [
       'Balance & Coordination Disorders',
       'Gait Training',
     ],
-    imageUrl: 'https://www.ronexphysiotherapy.com/doctors/nawal-soni.jpg',
+    imageUrl: '/images/doctors/nawal-soni.jpg',
     services: ['neuro-physiotherapy', 'home-physiotherapy'],
   },
   {
@@ -65,7 +65,7 @@ export const TEAM: TeamMember[] = [
       'Birth Injury Recovery',
       'Paediatric Sensory Integration',
     ],
-    imageUrl: 'https://www.ronexphysiotherapy.com/doctors/razia-khatoon.jpg',
+    imageUrl: '/images/doctors/razia-khatoon.jpg',
     services: ['pediatric-physiotherapy', 'home-physiotherapy'],
   },
   {
@@ -83,7 +83,7 @@ export const TEAM: TeamMember[] = [
       'Return-to-Sport Planning',
       'Athletic Performance',
     ],
-    imageUrl: 'https://www.ronexphysiotherapy.com/doctors/sonali-rawat.jpg',
+    imageUrl: '/images/doctors/sonali-rawat.jpg',
     services: ['sports-physiotherapy', 'post-surgery-rehabilitation'],
   },
   {
@@ -101,7 +101,7 @@ export const TEAM: TeamMember[] = [
       'Strength & Conditioning',
       'Athletic Conditioning',
     ],
-    imageUrl: 'https://www.ronexphysiotherapy.com/doctors/shaurya-chhetri.jpg',
+    imageUrl: '/images/doctors/shaurya-chhetri.jpg',
     services: ['sports-physiotherapy', 'pain-management'],
     linkedinUrl: 'https://www.linkedin.com/in/shaurya-chhetri-b9a571356/',
   },

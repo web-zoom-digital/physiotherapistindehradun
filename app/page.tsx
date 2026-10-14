@@ -33,6 +33,8 @@ import { FAQS } from '@/data/faqs'
 import { CONTACT, BRANCHES, HOURS, WHATSAPP_URL } from '@/data/clinic'
 
 import { CounterStats } from '@/components/ui/CounterStats'
+import { TestimonialSlider } from '@/components/sections/TestimonialSlider'
+import { BlogCard } from '@/components/sections/BlogCard'
 
 export default function HomePage() {
   return (
@@ -48,39 +50,46 @@ export default function HomePage() {
       {/* 4. About Clinic Section */}
       <section className="section-py bg-white">
         <div className="container-custom">
+          {/* Centered Section Header */}
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
+            <span className="section-label">Patient-Centered Care</span>
+            <h2 className="section-title">
+              Evidence-Based Physiotherapy &amp; Rehabilitation in Dehradun
+            </h2>
+            <p className="text-base text-[#4A4744] leading-relaxed">
+              Personalized physical therapy and targeted rehabilitation to restore movement, reduce pain and rebuild strength across Dehradun.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-6 space-y-5">
-              <span className="section-label">Patient-Centered Care</span>
-              <h2 className="section-title">
-                Evidence-Based Physiotherapy & Rehabilitation in Dehradun
-              </h2>
-              <p className="text-sm text-[#4A4744] leading-relaxed">
+            <div className="lg:col-span-6 space-y-5 text-center sm:text-left">
+              <p className="text-sm text-[#4A4744] leading-relaxed text-center sm:text-left">
                 Physiotherapy is an essential healthcare service designed to restore movement, reduce pain and rebuild strength after an injury, surgery or neurological diagnosis. At our Dehradun clinics, we believe every patient deserves a personalized, individual assessment rather than standard generalized exercises.
               </p>
-              <p className="text-sm text-[#4A4744] leading-relaxed">
+              <p className="text-sm text-[#4A4744] leading-relaxed text-center sm:text-left">
                 Our team of qualified Master of Physiotherapy (MPT) specialists works across orthopedic conditions, neurological rehabilitation, sports injuries, pediatric physical therapy and women&apos;s health. Whether you visit our main clinic on Rajpur Road, our Bhaniyawala branch, or receive home visit care, our focus remains on evidence-based treatment and functional patient recovery.
               </p>
 
               <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold text-[#2E2A26]">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#D97B4F]" />
+                <div className="flex items-center justify-center sm:justify-start gap-2 text-center sm:text-left">
+                  <CheckCircle2 className="w-4 h-4 text-[#D97B4F] shrink-0" />
                   <span>Comprehensive Physical Assessment</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#D97B4F]" />
+                <div className="flex items-center justify-center sm:justify-start gap-2 text-center sm:text-left">
+                  <CheckCircle2 className="w-4 h-4 text-[#D97B4F] shrink-0" />
                   <span>Hands-On Manual Therapy</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#D97B4F]" />
+                <div className="flex items-center justify-center sm:justify-start gap-2 text-center sm:text-left">
+                  <CheckCircle2 className="w-4 h-4 text-[#D97B4F] shrink-0" />
                   <span>Modern Electrotherapy Modalities</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#D97B4F]" />
+                <div className="flex items-center justify-center sm:justify-start gap-2 text-center sm:text-left">
+                  <CheckCircle2 className="w-4 h-4 text-[#D97B4F] shrink-0" />
                   <span>Personalized Home Exercises</span>
                 </div>
               </div>
 
-              <div className="pt-4">
+              <div className="pt-4 flex justify-center sm:justify-start">
                 <Link href="/about" className="btn-secondary py-2.5 px-6 text-sm">
                   Learn More About Our Clinic
                 </Link>
@@ -88,13 +97,13 @@ export default function HomePage() {
             </div>
 
             <div className="lg:col-span-6">
-              <div className="bg-[#FAF9F7] rounded-2xl p-6 sm:p-8 border border-[#E8E4DF] space-y-6">
-                <h3 className="text-xl font-semibold text-[#2E2A26]">
+              <div className="bg-[#FAF9F7] rounded-2xl p-6 sm:p-8 border border-[#E8E4DF] space-y-6 text-center sm:text-left">
+                <h3 className="text-xl font-semibold text-[#2E2A26] text-center sm:text-left">
                   Our Clinical Principles
                 </h3>
                 <div className="space-y-4">
-                  <div className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-xl bg-white text-[#D97B4F] flex items-center justify-center font-bold shrink-0 shadow-sm border border-[#E8E4DF]">
+                  <div className="flex flex-col items-center sm:flex-row sm:items-start text-center sm:text-left gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-white text-[#D97B4F] flex items-center justify-center font-bold shrink-0 shadow-sm border border-[#E8E4DF] mx-auto sm:mx-0">
                       1
                     </div>
                     <div>
@@ -105,8 +114,8 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  <div className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-xl bg-white text-[#D97B4F] flex items-center justify-center font-bold shrink-0 shadow-sm border border-[#E8E4DF]">
+                  <div className="flex flex-col items-center sm:flex-row sm:items-start text-center sm:text-left gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-white text-[#D97B4F] flex items-center justify-center font-bold shrink-0 shadow-sm border border-[#E8E4DF] mx-auto sm:mx-0">
                       2
                     </div>
                     <div>
@@ -117,8 +126,8 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  <div className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-xl bg-white text-[#D97B4F] flex items-center justify-center font-bold shrink-0 shadow-sm border border-[#E8E4DF]">
+                  <div className="flex flex-col items-center sm:flex-row sm:items-start text-center sm:text-left gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-white text-[#D97B4F] flex items-center justify-center font-bold shrink-0 shadow-sm border border-[#E8E4DF] mx-auto sm:mx-0">
                       3
                     </div>
                     <div>
@@ -146,27 +155,27 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
             {SERVICES.map((service) => (
-              <div key={service.slug} className="card p-6 flex flex-col justify-between">
-                <div className="space-y-3">
-                  <div className="w-12 h-12 rounded-xl bg-[#F5DCC8] text-[#D97B4F] flex items-center justify-center">
-                    <Activity className="w-6 h-6" />
+              <div key={service.slug} className="card p-3.5 sm:p-6 flex flex-col justify-between text-center sm:text-left h-full">
+                <div className="space-y-2 sm:space-y-3 flex flex-col items-center sm:items-start">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#F5DCC8] text-[#D97B4F] flex items-center justify-center mx-auto sm:mx-0 shrink-0">
+                    <Activity className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
-                  <h3 className="text-lg font-semibold text-[#2E2A26]">
+                  <h3 className="text-xs sm:text-lg font-bold text-[#2E2A26] text-center sm:text-left leading-snug">
                     {service.shortTitle}
                   </h3>
-                  <p className="text-sm text-[#4A4744] line-clamp-3 leading-relaxed">
+                  <p className="text-[11px] sm:text-sm text-[#4A4744] line-clamp-2 sm:line-clamp-3 leading-relaxed text-center sm:text-left hidden xs:block sm:block">
                     {service.description}
                   </p>
                 </div>
 
-                <div className="pt-6">
+                <div className="pt-3 sm:pt-6 flex justify-center sm:justify-start">
                   <Link
                     href={`/services/${service.slug}`}
-                    className="text-sm font-semibold text-[#D97B4F] hover:text-[#B85E37] flex items-center gap-1 group"
+                    className="text-xs sm:text-sm font-semibold text-[#D97B4F] hover:text-[#B85E37] flex items-center gap-1 group"
                   >
-                    <span>Read Service Guide</span>
+                    <span>Read Guide</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
@@ -174,8 +183,8 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="text-center pt-10">
-            <Link href="/services" className="btn-primary py-3 px-8 text-base font-medium">
+          <div className="text-center pt-8 sm:pt-10">
+            <Link href="/services" className="btn-primary py-3 px-8 text-sm sm:text-base font-medium">
               View All Physiotherapy Services
             </Link>
           </div>
@@ -193,40 +202,41 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
             {CONDITIONS.map((cond) => {
               const condImage = CONDITION_IMAGES[cond.slug]?.[0] || '/images/conditions/back-pain-1.jpg'
               return (
                 <Link
                   key={cond.slug}
                   href={`/conditions/${cond.slug}`}
-                  className="rounded-2xl border border-[#E8E4DF] bg-white overflow-hidden hover:border-[#D97B4F] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
+                  className="rounded-2xl border border-[#E8E4DF] bg-white overflow-hidden hover:border-[#D97B4F] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group h-full"
                 >
                   <div className="relative aspect-[4/3] w-full bg-gray-100 overflow-hidden border-b border-[#E8E4DF]">
                     <img
                       src={condImage}
                       alt={`Physiotherapy ${cond.shortTitle} treatment in Dehradun`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                    <span className="absolute bottom-2.5 left-3 bg-[#D97B4F] text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full shadow-xs">
+                    <span className="absolute bottom-2 left-2 sm:bottom-2.5 sm:left-3 bg-[#D97B4F] text-white text-[10px] sm:text-[11px] font-bold px-2 sm:px-2.5 py-0.5 rounded-full shadow-xs">
                       {cond.shortTitle}
                     </span>
                   </div>
 
-                  <div className="p-4 flex-1 flex flex-col justify-between space-y-3">
+                  <div className="p-3 sm:p-4 flex-1 flex flex-col justify-between space-y-2 sm:space-y-3 text-center sm:text-left">
                     <div>
-                      <h3 className="text-base font-bold text-[#2E2A26] group-hover:text-[#D97B4F] transition-colors leading-snug">
+                      <h3 className="text-xs sm:text-base font-bold text-[#2E2A26] group-hover:text-[#D97B4F] transition-colors leading-snug line-clamp-1 sm:line-clamp-none">
                         {cond.shortTitle}
                       </h3>
-                      <p className="text-xs text-[#76726E] mt-1.5 line-clamp-2 leading-relaxed">
+                      <p className="text-[11px] sm:text-xs text-[#76726E] mt-1 line-clamp-2 leading-relaxed hidden xs:block sm:block">
                         {cond.symptoms[0]}
                       </p>
                     </div>
 
-                    <span className="inline-flex items-center gap-1.5 text-xs text-[#D97B4F] font-bold pt-2 border-t border-[#E8E4DF]/60">
-                      <span>Explore {cond.shortTitle} Guide</span>
-                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                    <span className="inline-flex items-center justify-center sm:justify-start gap-1 text-[11px] sm:text-xs text-[#D97B4F] font-bold pt-1.5 sm:pt-2 border-t border-[#E8E4DF]/60">
+                      <span>Explore Guide</span>
+                      <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                     </span>
                   </div>
                 </Link>
@@ -235,7 +245,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center pt-8">
-            <Link href="/conditions" className="btn-secondary py-2.5 px-6 text-base font-medium">
+            <Link href="/conditions" className="btn-secondary py-2.5 px-6 text-sm sm:text-base font-medium">
               Explore All 12+ Condition Guides
             </Link>
           </div>
@@ -258,32 +268,32 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl p-6 sm:p-8 space-y-4 border border-[#E8E4DF] shadow-xs hover:border-[#D97B4F] hover:shadow-xl hover:-translate-y-1 cursor-pointer transition-all duration-300 group">
-              <div className="w-12 h-12 rounded-2xl bg-[#F5DCC8] text-[#D97B4F] flex items-center justify-center font-bold group-hover:bg-[#D97B4F] group-hover:text-white transition-colors">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 space-y-4 border border-[#E8E4DF] shadow-xs hover:border-[#D97B4F] hover:shadow-xl hover:-translate-y-1 cursor-pointer transition-all duration-300 group text-center sm:text-left flex flex-col items-center sm:items-start">
+              <div className="w-12 h-12 rounded-2xl bg-[#F5DCC8] text-[#D97B4F] flex items-center justify-center font-bold group-hover:bg-[#D97B4F] group-hover:text-white transition-colors mx-auto sm:mx-0">
                 <Users className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-[#2E2A26] group-hover:text-[#D97B4F] transition-colors">MPT Specialist Doctors</h3>
-              <p className="text-sm text-[#4A4744] leading-relaxed">
+              <h3 className="text-xl font-bold text-[#2E2A26] group-hover:text-[#D97B4F] transition-colors text-center sm:text-left">MPT Specialist Doctors</h3>
+              <p className="text-sm text-[#4A4744] leading-relaxed text-center sm:text-left">
                 Our clinic team consists of Master of Physiotherapy (MPT) qualified specialists in Orthopedics, Neurology, Sports and Pediatrics with years of verified clinical experience.
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 sm:p-8 space-y-4 border border-[#E8E4DF] shadow-xs hover:border-[#D97B4F] hover:shadow-xl hover:-translate-y-1 cursor-pointer transition-all duration-300 group">
-              <div className="w-12 h-12 rounded-2xl bg-[#F5DCC8] text-[#D97B4F] flex items-center justify-center font-bold group-hover:bg-[#D97B4F] group-hover:text-white transition-colors">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 space-y-4 border border-[#E8E4DF] shadow-xs hover:border-[#D97B4F] hover:shadow-xl hover:-translate-y-1 cursor-pointer transition-all duration-300 group text-center sm:text-left flex flex-col items-center sm:items-start">
+              <div className="w-12 h-12 rounded-2xl bg-[#F5DCC8] text-[#D97B4F] flex items-center justify-center font-bold group-hover:bg-[#D97B4F] group-hover:text-white transition-colors mx-auto sm:mx-0">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-[#2E2A26] group-hover:text-[#D97B4F] transition-colors">Evidence-Based Protocols</h3>
-              <p className="text-sm text-[#4A4744] leading-relaxed">
+              <h3 className="text-xl font-bold text-[#2E2A26] group-hover:text-[#D97B4F] transition-colors text-center sm:text-left">Evidence-Based Protocols</h3>
+              <p className="text-sm text-[#4A4744] leading-relaxed text-center sm:text-left">
                 We utilize verified therapeutic techniques — such as Maitland joint mobilization, Bobath concepts, PNF, dry needling and progressive exercise loading — avoiding unproven shortcuts.
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 sm:p-8 space-y-4 border border-[#E8E4DF] shadow-xs hover:border-[#D97B4F] hover:shadow-xl hover:-translate-y-1 cursor-pointer transition-all duration-300 group">
-              <div className="w-12 h-12 rounded-2xl bg-[#F5DCC8] text-[#D97B4F] flex items-center justify-center font-bold group-hover:bg-[#D97B4F] group-hover:text-white transition-colors">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 space-y-4 border border-[#E8E4DF] shadow-xs hover:border-[#D97B4F] hover:shadow-xl hover:-translate-y-1 cursor-pointer transition-all duration-300 group text-center sm:text-left flex flex-col items-center sm:items-start">
+              <div className="w-12 h-12 rounded-2xl bg-[#F5DCC8] text-[#D97B4F] flex items-center justify-center font-bold group-hover:bg-[#D97B4F] group-hover:text-white transition-colors mx-auto sm:mx-0">
                 <HomeIcon className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-[#2E2A26] group-hover:text-[#D97B4F] transition-colors">Clinic & Home Care</h3>
-              <p className="text-sm text-[#4A4744] leading-relaxed">
+              <h3 className="text-xl font-bold text-[#2E2A26] group-hover:text-[#D97B4F] transition-colors text-center sm:text-left">Clinic & Home Care</h3>
+              <p className="text-sm text-[#4A4744] leading-relaxed text-center sm:text-left">
                 Whether you visit our Rajpur Road clinic or require home visit physiotherapy for stroke, post-surgery or mobility restrictions, we deliver high-standard care across Dehradun.
               </p>
             </div>
@@ -302,35 +312,35 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 rounded-2xl bg-[#FAF9F7] border border-[#E8E4DF] space-y-3 cursor-pointer hover:bg-white hover:border-[#D97B4F]/40 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-              <span className="section-label">Step 1</span>
-              <h3 className="text-lg font-semibold text-[#2E2A26]">Comprehensive Evaluation</h3>
-              <p className="text-sm text-[#4A4744] leading-relaxed">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+            <div className="p-3.5 sm:p-6 rounded-xl sm:rounded-2xl bg-[#FAF9F7] border border-[#E8E4DF] space-y-2 sm:space-y-3 cursor-pointer hover:bg-white hover:border-[#D97B4F]/40 hover:shadow-xl hover:-translate-y-1 sm:hover:-translate-y-2 transition-all duration-300 text-center sm:text-left flex flex-col items-center sm:items-start justify-between h-full">
+              <span className="section-label text-[10px] sm:text-xs mb-0 mx-auto sm:mx-0">Step 1</span>
+              <h3 className="text-xs sm:text-lg font-bold text-[#2E2A26] text-center sm:text-left leading-snug">Comprehensive Evaluation</h3>
+              <p className="text-[11px] sm:text-sm text-[#4A4744] leading-relaxed text-center sm:text-left line-clamp-3 sm:line-clamp-none">
                 Detailed clinical history, posture analysis, joint mobility measurement and functional testing.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#FAF9F7] border border-[#E8E4DF] space-y-3 cursor-pointer hover:bg-white hover:border-[#D97B4F]/40 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-              <span className="section-label">Step 2</span>
-              <h3 className="text-lg font-semibold text-[#2E2A26]">Targeted Treatment Plan</h3>
-              <p className="text-sm text-[#4A4744] leading-relaxed">
+            <div className="p-3.5 sm:p-6 rounded-xl sm:rounded-2xl bg-[#FAF9F7] border border-[#E8E4DF] space-y-2 sm:space-y-3 cursor-pointer hover:bg-white hover:border-[#D97B4F]/40 hover:shadow-xl hover:-translate-y-1 sm:hover:-translate-y-2 transition-all duration-300 text-center sm:text-left flex flex-col items-center sm:items-start justify-between h-full">
+              <span className="section-label text-[10px] sm:text-xs mb-0 mx-auto sm:mx-0">Step 2</span>
+              <h3 className="text-xs sm:text-lg font-bold text-[#2E2A26] text-center sm:text-left leading-snug">Targeted Treatment Plan</h3>
+              <p className="text-[11px] sm:text-sm text-[#4A4744] leading-relaxed text-center sm:text-left line-clamp-3 sm:line-clamp-none">
                 Developing an individualized care plan combining hands-on manual therapy, electrotherapy and exercises.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#FAF9F7] border border-[#E8E4DF] space-y-3 cursor-pointer hover:bg-white hover:border-[#D97B4F]/40 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-              <span className="section-label">Step 3</span>
-              <h3 className="text-lg font-semibold text-[#2E2A26]">Guided Exercise Progression</h3>
-              <p className="text-sm text-[#4A4744] leading-relaxed">
+            <div className="p-3.5 sm:p-6 rounded-xl sm:rounded-2xl bg-[#FAF9F7] border border-[#E8E4DF] space-y-2 sm:space-y-3 cursor-pointer hover:bg-white hover:border-[#D97B4F]/40 hover:shadow-xl hover:-translate-y-1 sm:hover:-translate-y-2 transition-all duration-300 text-center sm:text-left flex flex-col items-center sm:items-start justify-between h-full">
+              <span className="section-label text-[10px] sm:text-xs mb-0 mx-auto sm:mx-0">Step 3</span>
+              <h3 className="text-xs sm:text-lg font-bold text-[#2E2A26] text-center sm:text-left leading-snug">Guided Exercise Progression</h3>
+              <p className="text-[11px] sm:text-sm text-[#4A4744] leading-relaxed text-center sm:text-left line-clamp-3 sm:line-clamp-none">
                 Supervised exercise sessions to systematically rebuild strength, flexibility, balance and coordination.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#FAF9F7] border border-[#E8E4DF] space-y-3 cursor-pointer hover:bg-white hover:border-[#D97B4F]/40 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-              <span className="section-label">Step 4</span>
-              <h3 className="text-lg font-semibold text-[#2E2A26]">Self-Management & Prevention</h3>
-              <p className="text-sm text-[#4A4744] leading-relaxed">
+            <div className="p-3.5 sm:p-6 rounded-xl sm:rounded-2xl bg-[#FAF9F7] border border-[#E8E4DF] space-y-2 sm:space-y-3 cursor-pointer hover:bg-white hover:border-[#D97B4F]/40 hover:shadow-xl hover:-translate-y-1 sm:hover:-translate-y-2 transition-all duration-300 text-center sm:text-left flex flex-col items-center sm:items-start justify-between h-full">
+              <span className="section-label text-[10px] sm:text-xs mb-0 mx-auto sm:mx-0">Step 4</span>
+              <h3 className="text-xs sm:text-lg font-bold text-[#2E2A26] text-center sm:text-left leading-snug">Self-Management & Prevention</h3>
+              <p className="text-[11px] sm:text-sm text-[#4A4744] leading-relaxed text-center sm:text-left line-clamp-3 sm:line-clamp-none">
                 Educating you on ergonomic habits, home exercise routines and strategies to prevent future flare-ups.
               </p>
             </div>
@@ -349,41 +359,42 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
             {TEAM.map((doctor) => (
-              <div key={doctor.slug} className="card p-6 flex flex-col justify-between">
-                <div className="space-y-4">
+              <div key={doctor.slug} className="card p-3 sm:p-6 flex flex-col justify-between text-center sm:text-left h-full">
+                <div className="space-y-2.5 sm:space-y-4">
                   <div className="relative aspect-square w-full rounded-xl overflow-hidden bg-gray-100 border border-gray-200">
                     <img
                       src={doctor.imageUrl}
                       alt={`${doctor.name} - Physiotherapist in Dehradun`}
                       className="w-full h-full object-cover object-top"
+                      loading="lazy"
                     />
                   </div>
                   <div>
-                    <span className="text-xs font-semibold text-[#D97B4F] block">
+                    <span className="text-[10px] sm:text-xs font-semibold text-[#D97B4F] block leading-tight">
                       {doctor.qualification} • {doctor.experience}
                     </span>
-                    <h3 className="text-lg font-bold text-[#2E2A26] mt-0.5">{doctor.name}</h3>
-                    <p className="text-xs text-gray-500 font-medium">{doctor.title}</p>
+                    <h3 className="text-xs sm:text-lg font-bold text-[#2E2A26] mt-0.5 leading-snug line-clamp-1">{doctor.name}</h3>
+                    <p className="text-[10px] sm:text-xs text-gray-500 font-medium line-clamp-1">{doctor.title}</p>
                   </div>
-                  <p className="text-xs text-[#4A4744] line-clamp-3 leading-relaxed">
+                  <p className="text-[11px] sm:text-xs text-[#4A4744] line-clamp-2 sm:line-clamp-3 leading-relaxed hidden sm:block">
                     {doctor.bio}
                   </p>
                 </div>
 
-                <div className="pt-6 flex items-center justify-between border-t border-[#E8E4DF] mt-4">
+                <div className="pt-3 sm:pt-6 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2 border-t border-[#E8E4DF] mt-3">
                   <Link
                     href="/team"
-                    className="text-xs font-bold text-[#D97B4F] hover:text-[#B85E37]"
+                    className="text-[11px] sm:text-xs font-bold text-[#D97B4F] hover:text-[#B85E37]"
                   >
-                    View Full Profile
+                    Profile
                   </Link>
                   <Link
                     href="/book-appointment"
-                    className="btn-primary py-1.5 px-3.5 text-xs"
+                    className="btn-primary py-1.5 px-3 text-[11px] sm:text-xs w-full sm:w-auto justify-center"
                   >
-                    Consult Doctor
+                    Consult
                   </Link>
                 </div>
               </div>
@@ -402,40 +413,43 @@ export default function HomePage() {
       <section className="section-py bg-white">
         <div className="container-custom">
           <div className="bg-[#F5DCC8]/50 rounded-3xl p-5 sm:p-8 md:p-12 border border-[#F5DCC8]">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-7 space-y-4">
-                <span className="section-label">In-Home Rehabilitation</span>
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#2E2A26]">
-                  Professional Home Physiotherapy in Dehradun
-                </h2>
-                <p className="text-sm text-[#4A4744] leading-relaxed">
-                  For patients recovering from stroke, major joint replacement surgery or severe mobility impairment, traveling to a clinic can be challenging. Our home visit physiotherapy service brings qualified physical therapists equipped with portable electrotherapy units directly to your home across Dehradun.
-                </p>
+            {/* Centered Heading for Home Physio */}
+            <div className="text-center max-w-3xl mx-auto mb-8 space-y-3">
+              <span className="section-label">In-Home Rehabilitation</span>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#2E2A26]">
+                Professional Home Physiotherapy in Dehradun
+              </h2>
+              <p className="text-sm text-[#4A4744] leading-relaxed">
+                For patients recovering from stroke, major joint replacement surgery or severe mobility impairment, traveling to a clinic can be challenging. Our home visit physiotherapy service brings qualified physical therapists equipped with portable electrotherapy units directly to your home across Dehradun.
+              </p>
+            </div>
 
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-7 space-y-4 text-center sm:text-left">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-semibold text-[#2E2A26]">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#D97B4F]" />
-                    <span>In-Home Stroke & Paralysis Care</span>
+                  <div className="flex items-center justify-center sm:justify-start gap-2 text-center sm:text-left">
+                    <CheckCircle2 className="w-4 h-4 text-[#D97B4F] shrink-0" />
+                    <span>In-Home Stroke &amp; Paralysis Care</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#D97B4F]" />
+                  <div className="flex items-center justify-center sm:justify-start gap-2 text-center sm:text-left">
+                    <CheckCircle2 className="w-4 h-4 text-[#D97B4F] shrink-0" />
                     <span>Post Knee/Hip Replacement Rehab</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#D97B4F]" />
+                  <div className="flex items-center justify-center sm:justify-start gap-2 text-center sm:text-left">
+                    <CheckCircle2 className="w-4 h-4 text-[#D97B4F] shrink-0" />
                     <span>Portable TENS / IFT / Ultrasound</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#D97B4F]" />
-                    <span>Elderly Mobility & Fall Prevention</span>
+                  <div className="flex items-center justify-center sm:justify-start gap-2 text-center sm:text-left">
+                    <CheckCircle2 className="w-4 h-4 text-[#D97B4F] shrink-0" />
+                    <span>Elderly Mobility &amp; Fall Prevention</span>
                   </div>
                 </div>
 
-                <div className="pt-4 flex flex-wrap gap-3">
+                <div className="pt-4 flex flex-wrap justify-center sm:justify-start gap-3">
                   <Link href="/services/home-physiotherapy" className="btn-primary py-2.5 px-6 text-sm">
                     Explore Home Visit Details
                   </Link>
-                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-whatsapp py-2.5 px-6 text-sm flex items-center gap-2">
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-whatsapp py-2.5 px-6 text-sm flex items-center justify-center gap-2">
                     <FaWhatsapp className="w-4 h-4" />
                     <span>Inquire Home Visit via WhatsApp</span>
                   </a>
@@ -443,9 +457,9 @@ export default function HomePage() {
               </div>
 
               <div className="lg:col-span-5">
-                <div className="bg-white rounded-2xl p-6 border border-[#E8E4DF] shadow-sm space-y-3">
-                  <h3 className="text-sm font-bold text-[#2E2A26]">Key Dehradun Areas Served for Home Visit:</h3>
-                  <div className="flex flex-wrap gap-1.5 text-xs">
+                <div className="bg-white rounded-2xl p-6 border border-[#E8E4DF] shadow-sm space-y-3 text-center sm:text-left">
+                  <h3 className="text-sm font-bold text-[#2E2A26] text-center sm:text-left">Key Dehradun Areas Served for Home Visit:</h3>
+                  <div className="flex flex-wrap justify-center sm:justify-start gap-1.5 text-xs">
                     {[
                       'Rajpur Road',
                       'Clock Tower',
@@ -484,26 +498,26 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Rajpur Road Branch */}
-            <div className="card p-6 space-y-4">
-              <div className="flex items-start justify-between">
+            <div className="card p-6 space-y-4 text-center sm:text-left">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-2">
                 <div>
                   <span className="text-xs font-bold text-[#D97B4F] uppercase tracking-wider block">Main Clinic</span>
                   <h3 className="text-lg font-bold text-[#2E2A26] mt-0.5">{BRANCHES.rajpurRoad.name}</h3>
                 </div>
-                <MapPin className="w-6 h-6 text-[#D97B4F]" />
+                <MapPin className="w-6 h-6 text-[#D97B4F] shrink-0" />
               </div>
 
-              <p className="text-xs text-[#4A4744] leading-relaxed">
+              <p className="text-xs text-[#4A4744] leading-relaxed text-center sm:text-left">
                 {BRANCHES.rajpurRoad.fullAddress}
               </p>
 
-              <div className="space-y-1.5 text-xs text-gray-600">
+              <div className="space-y-1.5 text-xs text-gray-600 text-center sm:text-left">
                 <p><strong>Timings:</strong> Mon-Sat 9AM-10PM | Sun 10AM-6PM</p>
-                <p className="flex items-center gap-1.5"><FaPhoneAlt className="w-3 h-3 text-[#D97B4F]" /> <strong>Phone:</strong> {CONTACT.phone}</p>
+                <p className="flex items-center justify-center sm:justify-start gap-1.5"><FaPhoneAlt className="w-3 h-3 text-[#D97B4F]" /> <strong>Phone:</strong> {CONTACT.phone}</p>
                 <p><strong>Nearby Areas:</strong> {BRANCHES.rajpurRoad.areas.join(', ')}</p>
               </div>
 
-              <div className="pt-2 flex flex-wrap gap-2">
+              <div className="pt-2 flex flex-wrap justify-center sm:justify-start gap-2">
                 <a
                   href={BRANCHES.rajpurRoad.directionsUrl}
                   target="_blank"
@@ -522,26 +536,26 @@ export default function HomePage() {
             </div>
 
             {/* Bhaniyawala Branch */}
-            <div className="card p-6 space-y-4">
-              <div className="flex items-start justify-between">
+            <div className="card p-6 space-y-4 text-center sm:text-left">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-2">
                 <div>
                   <span className="text-xs font-bold text-[#D97B4F] uppercase tracking-wider block">Branch Clinic</span>
                   <h3 className="text-lg font-bold text-[#2E2A26] mt-0.5">{BRANCHES.bhaniyawala.name}</h3>
                 </div>
-                <MapPin className="w-6 h-6 text-[#D97B4F]" />
+                <MapPin className="w-6 h-6 text-[#D97B4F] shrink-0" />
               </div>
 
-              <p className="text-xs text-[#4A4744] leading-relaxed">
+              <p className="text-xs text-[#4A4744] leading-relaxed text-center sm:text-left">
                 {BRANCHES.bhaniyawala.fullAddress}
               </p>
 
-              <div className="space-y-1.5 text-xs text-gray-600">
+              <div className="space-y-1.5 text-xs text-gray-600 text-center sm:text-left">
                 <p><strong>Timings:</strong> Mon-Sat 9AM-10PM | Sun 10AM-6PM</p>
-                <p className="flex items-center gap-1.5"><FaPhoneAlt className="w-3 h-3 text-[#D97B4F]" /> <strong>Phone:</strong> {CONTACT.phone}</p>
+                <p className="flex items-center justify-center sm:justify-start gap-1.5"><FaPhoneAlt className="w-3 h-3 text-[#D97B4F]" /> <strong>Phone:</strong> {CONTACT.phone}</p>
                 <p><strong>Nearby Areas:</strong> {BRANCHES.bhaniyawala.areas.join(', ')}</p>
               </div>
 
-              <div className="pt-2 flex flex-wrap gap-2">
+              <div className="pt-2 flex flex-wrap justify-center sm:justify-start gap-2">
                 <a
                   href={BRANCHES.bhaniyawala.directionsUrl}
                   target="_blank"
@@ -599,91 +613,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Row 1 */}
-            <div className="card p-6 space-y-3 cursor-pointer">
-              <div className="flex items-center gap-1 text-amber-500 text-sm">
-                {'★'.repeat(5)}
-              </div>
-              <p className="text-sm text-[#4A4744] leading-relaxed">
-                &ldquo;Excellent physiotherapy care! My back pain of 3 years was resolved in just 8 sessions with targeted manual therapy and core strengthening. Professional and caring staff.&rdquo;
-              </p>
-            </div>
-
-            <div className="card p-6 space-y-3 cursor-pointer">
-              <div className="flex items-center gap-1 text-amber-500 text-sm">
-                {'★'.repeat(5)}
-              </div>
-              <p className="text-sm text-[#4A4744] leading-relaxed">
-                &ldquo;My mother had a stroke and the home visit physiotherapy team was outstanding. Their patience, neuro-rehab exercises and gait training helped her walk independently again.&rdquo;
-              </p>
-            </div>
-
-            <div className="card p-6 space-y-3 cursor-pointer">
-              <div className="flex items-center gap-1 text-amber-500 text-sm">
-                {'★'.repeat(5)}
-              </div>
-              <p className="text-sm text-[#4A4744] leading-relaxed">
-                &ldquo;Highly effective treatment for severe cervical spondylosis and neck stiffness. Dr. Om Prakash explained every exercise clearly and relieved my pain within two weeks.&rdquo;
-              </p>
-            </div>
-
-            {/* Row 2 */}
-            <div className="card p-6 space-y-3 cursor-pointer">
-              <div className="flex items-center gap-1 text-amber-500 text-sm">
-                {'★'.repeat(5)}
-              </div>
-              <p className="text-sm text-[#4A4744] leading-relaxed">
-                &ldquo;Outstanding post-knee replacement rehabilitation at Rajpur Road clinic. Progressive exercise loading and gait training helped me walk without support.&rdquo;
-              </p>
-            </div>
-
-            <div className="card p-6 space-y-3 cursor-pointer">
-              <div className="flex items-center gap-1 text-amber-500 text-sm">
-                {'★'.repeat(5)}
-              </div>
-              <p className="text-sm text-[#4A4744] leading-relaxed">
-                &ldquo;Relieved my frozen shoulder stiffness completely. Professional Maitland joint mobilization technique and guided stretching exercises restored full range of motion.&rdquo;
-              </p>
-            </div>
-
-            <div className="card p-6 space-y-3 cursor-pointer">
-              <div className="flex items-center gap-1 text-amber-500 text-sm">
-                {'★'.repeat(5)}
-              </div>
-              <p className="text-sm text-[#4A4744] leading-relaxed">
-                &ldquo;Prompt and dedicated home visit physiotherapy for my father after hip surgery in Dehradun. Electrotherapy equipment and exercises brought directly to home.&rdquo;
-              </p>
-            </div>
-
-            {/* Row 3 */}
-            <div className="card p-6 space-y-3 cursor-pointer">
-              <div className="flex items-center gap-1 text-amber-500 text-sm">
-                {'★'.repeat(5)}
-              </div>
-              <p className="text-sm text-[#4A4744] leading-relaxed">
-                &ldquo;Best sports physiotherapy in Dehradun for ACL tear recovery. Biomechanical analysis, neuromuscular training, and agility drills helped me return to football safely.&rdquo;
-              </p>
-            </div>
-
-            <div className="card p-6 space-y-3 cursor-pointer">
-              <div className="flex items-center gap-1 text-amber-500 text-sm">
-                {'★'.repeat(5)}
-              </div>
-              <p className="text-sm text-[#4A4744] leading-relaxed">
-                &ldquo;Instant relief from acute sciatica leg shooting pain. Traction therapy, nerve gliding exercises, and posture correction made a huge difference in my daily life.&rdquo;
-              </p>
-            </div>
-
-            <div className="card p-6 space-y-3 cursor-pointer">
-              <div className="flex items-center gap-1 text-amber-500 text-sm">
-                {'★'.repeat(5)}
-              </div>
-              <p className="text-sm text-[#4A4744] leading-relaxed">
-                &ldquo;Extremely polite doctors, clean clinic atmosphere at Bhaniyawala branch, and modern modalities. Very happy with the systematic pain management approach.&rdquo;
-              </p>
-            </div>
-          </div>
+          <TestimonialSlider />
 
           <div className="text-center pt-8">
             <Link href="/testimonials" className="btn-secondary py-2.5 px-5 text-sm font-medium">
@@ -720,9 +650,9 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Branch 1: Rajpur Road Main Clinic */}
-            <div className="card p-6 sm:p-8 space-y-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300">
+            <div className="card p-6 sm:p-8 space-y-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 text-center sm:text-left">
               <div className="space-y-4">
-                <div className="flex items-center justify-between gap-3">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F5DCC8] text-[#D97B4F] text-xs font-bold uppercase tracking-wider">
                     <MapPin className="w-3.5 h-3.5" />
                     <span>Main Branch</span>
@@ -739,12 +669,12 @@ export default function HomePage() {
                   </p>
                 </div>
 
-                <div className="space-y-2 text-xs text-[#4A4744] pt-2 border-t border-[#E8E4DF]">
-                  <div className="flex items-center gap-2">
+                <div className="space-y-2 text-xs text-[#4A4744] pt-2 border-t border-[#E8E4DF] flex flex-col items-center sm:items-start">
+                  <div className="flex items-center justify-center sm:justify-start gap-2">
                     <Clock className="w-4 h-4 text-[#D97B4F] shrink-0" />
                     <span>{HOURS.weekdays.label} • {HOURS.sunday.label}</span>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center justify-center sm:justify-start gap-2">
                     <FaPhoneAlt className="w-3.5 h-3.5 text-[#D97B4F] shrink-0" />
                     <span>{CONTACT.phone}</span>
                   </div>
@@ -767,7 +697,7 @@ export default function HomePage() {
                   />
                 </div>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap justify-center sm:justify-start gap-3">
                   <a
                     href={BRANCHES.rajpurRoad.directionsUrl}
                     target="_blank"
@@ -788,9 +718,9 @@ export default function HomePage() {
             </div>
 
             {/* Branch 2: Bhaniyawala Branch */}
-            <div className="card p-6 sm:p-8 space-y-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300">
+            <div className="card p-6 sm:p-8 space-y-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 text-center sm:text-left">
               <div className="space-y-4">
-                <div className="flex items-center justify-between gap-3">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F5DCC8] text-[#D97B4F] text-xs font-bold uppercase tracking-wider">
                     <MapPin className="w-3.5 h-3.5" />
                     <span>Branch Clinic</span>
@@ -807,12 +737,12 @@ export default function HomePage() {
                   </p>
                 </div>
 
-                <div className="space-y-2 text-xs text-[#4A4744] pt-2 border-t border-[#E8E4DF]">
-                  <div className="flex items-center gap-2">
+                <div className="space-y-2 text-xs text-[#4A4744] pt-2 border-t border-[#E8E4DF] flex flex-col items-center sm:items-start">
+                  <div className="flex items-center justify-center sm:justify-start gap-2">
                     <Clock className="w-4 h-4 text-[#D97B4F] shrink-0" />
                     <span>{HOURS.weekdays.label} • {HOURS.sunday.label}</span>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center justify-center sm:justify-start gap-2">
                     <FaPhoneAlt className="w-3.5 h-3.5 text-[#D97B4F] shrink-0" />
                     <span>{CONTACT.phone}</span>
                   </div>
@@ -835,7 +765,7 @@ export default function HomePage() {
                   />
                 </div>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap justify-center sm:justify-start gap-3">
                   <a
                     href={BRANCHES.bhaniyawala.directionsUrl}
                     target="_blank"
@@ -869,32 +799,9 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {BLOG_POSTS.slice(0, 3).map((post) => (
-              <div key={post.slug} className="card p-6 flex flex-col justify-between">
-                <div className="space-y-3">
-                  <span className="section-label mb-0">{post.category}</span>
-                  <h3 className="text-lg font-semibold text-[#2E2A26] leading-tight">
-                    <Link href={`/blog/${post.slug}`} className="hover:text-[#D97B4F] transition-colors">
-                      {post.title}
-                    </Link>
-                  </h3>
-                  <p className="text-sm text-[#4A4744] line-clamp-3 leading-relaxed">
-                    {post.excerpt}
-                  </p>
-                </div>
-
-                <div className="pt-6 border-t border-[#E8E4DF] mt-4 flex items-center justify-between text-xs text-gray-500">
-                  <span>{post.readTime}</span>
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="font-bold text-[#D97B4F] hover:text-[#B85E37] flex items-center gap-1"
-                  >
-                    <span>Read Article</span>
-                    <ArrowRight className="w-3 h-3" />
-                  </Link>
-                </div>
-              </div>
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+            {BLOG_POSTS.slice(0, 4).map((post) => (
+              <BlogCard key={post.slug} post={post} />
             ))}
           </div>
 
@@ -910,22 +817,22 @@ export default function HomePage() {
       <section className="section-py bg-[#FAF9F7] border-t border-[#E8E4DF]">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-6 space-y-4">
+            <div className="lg:col-span-6 space-y-4 text-center lg:text-left">
               <span className="section-label">
                 Start Your Recovery Today
               </span>
               <h2 className="section-title">
                 Book a Consultation With a Specialist Physiotherapist in Dehradun
               </h2>
-              <p className="text-sm text-[#4A4744] leading-relaxed">
+              <p className="text-sm text-[#4A4744] leading-relaxed max-w-xl mx-auto lg:mx-0">
                 Whether you need in-clinic assessment at Rajpur Road or Bhaniyawala, or require home visit physiotherapy, we are here to support your recovery.
               </p>
-              <div className="pt-2 flex flex-wrap gap-3">
-                <a href={`tel:${CONTACT.phoneRaw}`} className="btn-primary py-3 px-6 text-sm flex items-center gap-2">
+              <div className="pt-2 flex flex-wrap justify-center lg:justify-start gap-3">
+                <a href={`tel:${CONTACT.phoneRaw}`} className="btn-primary">
                   <FaPhoneAlt className="w-3.5 h-3.5" />
                   <span>Call {CONTACT.phone}</span>
                 </a>
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-whatsapp py-3 px-6 text-sm flex items-center gap-2">
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
                   <FaWhatsapp className="w-4 h-4" />
                   <span>Chat on WhatsApp</span>
                 </a>

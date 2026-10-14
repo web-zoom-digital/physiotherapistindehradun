@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import {
   Menu,
@@ -124,18 +125,15 @@ export function Header() {
       <header className={`sticky top-0 z-50 bg-white/95 border-b border-[#E8E4DF] shadow-sm transition-all ${mobileMenuOpen ? '' : 'backdrop-blur-md'}`}>
         <div className="container-custom flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-[#D97B4F] text-white flex items-center justify-center font-bold text-xl shadow-md group-hover:bg-[#B85E37] transition-colors">
-              <Activity className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <span className="text-lg font-extrabold text-[#2E2A26] tracking-tight block leading-tight">
-                Physiotherapist
-              </span>
-              <span className="text-xs font-semibold text-[#D97B4F] tracking-wider uppercase block">
-                in Dehradun
-              </span>
-            </div>
+          <Link href="/" className="flex items-center group py-1.5" aria-label="RonEx Physiotherapy Home">
+            <Image
+              src="/logo.png"
+              alt="RonEx Physiotherapy & Rehabilitation Center"
+              width={190}
+              height={75}
+              className="h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -163,10 +161,10 @@ export function Header() {
               <Link
                 href="/services"
                 className={`nav-link flex items-center gap-1.5 transition-all ${servicesDropdownOpen
-                    ? 'bg-[#F5DCC8] text-[#B85E37] font-bold px-3 py-1.5 rounded-xl'
-                    : isActive('/services')
-                      ? 'nav-link-active'
-                      : ''
+                  ? 'bg-[#F5DCC8] text-[#B85E37] font-bold px-3 py-1.5 rounded-xl'
+                  : isActive('/services')
+                    ? 'nav-link-active'
+                    : ''
                   }`}
               >
                 <span>Services</span>
@@ -360,10 +358,10 @@ export function Header() {
               <Link
                 href="/conditions"
                 className={`nav-link flex items-center gap-1.5 transition-all ${conditionsDropdownOpen
-                    ? 'bg-[#F5DCC8] text-[#B85E37] font-bold px-3 py-1.5 rounded-xl'
-                    : isActive('/conditions')
-                      ? 'nav-link-active'
-                      : ''
+                  ? 'bg-[#F5DCC8] text-[#B85E37] font-bold px-3 py-1.5 rounded-xl'
+                  : isActive('/conditions')
+                    ? 'nav-link-active'
+                    : ''
                   }`}
               >
                 <span>Conditions</span>
@@ -564,10 +562,10 @@ export function Header() {
               <Link
                 href="/locations"
                 className={`nav-link flex items-center gap-1.5 transition-all ${locationsDropdownOpen
-                    ? 'bg-[#F5DCC8] text-[#B85E37] font-bold px-3 py-1.5 rounded-xl'
-                    : isActive('/locations')
-                      ? 'nav-link-active'
-                      : ''
+                  ? 'bg-[#F5DCC8] text-[#B85E37] font-bold px-3 py-1.5 rounded-xl'
+                  : isActive('/locations')
+                    ? 'nav-link-active'
+                    : ''
                   }`}
               >
                 <span>Locations</span>
@@ -686,18 +684,19 @@ export function Header() {
 
               {/* Drawer Header (Matching reference: Logo + Title/Subtitle on left, round X button on right) */}
               <div className="px-5 py-4 border-b border-[#E8E4DF] flex items-center justify-between bg-white shrink-0">
-                <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-2xl bg-[#FDF6F0] border border-[#F5DCC8] flex items-center justify-center shrink-0 shadow-xs">
-                    <Activity className="w-6 h-6 text-[#D97B4F]" />
-                  </div>
-                  <div>
-                    <span className="text-base font-extrabold text-[#2E2A26] tracking-tight block leading-tight">
-                      Physiotherapist
-                    </span>
-                    <span className="text-xs font-semibold text-[#D97B4F] tracking-wider uppercase block">
-                      in Dehradun
-                    </span>
-                  </div>
+                <Link
+                  href="/"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center py-1"
+                  aria-label="RonEx Physiotherapy Home"
+                >
+                  <Image
+                    src="/logo.png"
+                    alt="RonEx Physiotherapy & Rehabilitation Center"
+                    width={160}
+                    height={62}
+                    className="h-11 w-auto object-contain"
+                  />
                 </Link>
 
                 {/* Round Close Button (X) */}
@@ -718,8 +717,8 @@ export function Header() {
                   href="/"
                   onClick={() => setMobileMenuOpen(false)}
                   className={`flex items-center justify-between p-3.5 rounded-2xl border transition-all ${isActive('/') && pathname === '/'
-                      ? 'bg-[#FDF6F0] border-[#D97B4F] text-[#D97B4F]'
-                      : 'bg-white border-[#E8E4DF] hover:border-[#D97B4F]/60 text-[#2E2A26]'
+                    ? 'bg-[#FDF6F0] border-[#D97B4F] text-[#D97B4F]'
+                    : 'bg-white border-[#E8E4DF] hover:border-[#D97B4F]/60 text-[#2E2A26]'
                     }`}
                 >
                   <div className="flex items-center gap-3.5">
@@ -738,8 +737,8 @@ export function Header() {
                       setMobileExpandedSection(mobileExpandedSection === 'services' ? null : 'services')
                     }
                     className={`w-full flex items-center justify-between p-3.5 cursor-pointer rounded-2xl border transition-all ${mobileExpandedSection === 'services' || isActive('/services')
-                        ? 'bg-[#FDF6F0] border-[#D97B4F] text-[#2E2A26]'
-                        : 'bg-white border-[#E8E4DF] text-[#2E2A26]'
+                      ? 'bg-[#FDF6F0] border-[#D97B4F] text-[#2E2A26]'
+                      : 'bg-white border-[#E8E4DF] text-[#2E2A26]'
                       }`}
                   >
                     <div className="flex items-center gap-3.5">
@@ -800,8 +799,8 @@ export function Header() {
                       setMobileExpandedSection(mobileExpandedSection === 'conditions' ? null : 'conditions')
                     }
                     className={`w-full flex items-center justify-between p-3.5 rounded-2xl border cursor-pointer transition-all ${mobileExpandedSection === 'conditions' || isActive('/conditions')
-                        ? 'bg-[#FDF6F0] border-[#D97B4F] text-[#2E2A26]'
-                        : 'bg-white border-[#E8E4DF] text-[#2E2A26]'
+                      ? 'bg-[#FDF6F0] border-[#D97B4F] text-[#2E2A26]'
+                      : 'bg-white border-[#E8E4DF] text-[#2E2A26]'
                       }`}
                   >
                     <div className="flex items-center gap-3.5 cursor-pointer">
@@ -857,8 +856,8 @@ export function Header() {
                   href="/about"
                   onClick={() => setMobileMenuOpen(false)}
                   className={`flex items-center justify-between p-3.5 rounded-2xl border transition-all ${isActive('/about')
-                      ? 'bg-[#FDF6F0] border-[#D97B4F] text-[#D97B4F]'
-                      : 'bg-white border-[#E8E4DF] hover:border-[#D97B4F]/60 text-[#2E2A26]'
+                    ? 'bg-[#FDF6F0] border-[#D97B4F] text-[#D97B4F]'
+                    : 'bg-white border-[#E8E4DF] hover:border-[#D97B4F]/60 text-[#2E2A26]'
                     }`}
                 >
                   <div className="flex items-center gap-3.5">
@@ -875,8 +874,8 @@ export function Header() {
                   href="/team"
                   onClick={() => setMobileMenuOpen(false)}
                   className={`flex items-center justify-between p-3.5 rounded-2xl border transition-all ${isActive('/team')
-                      ? 'bg-[#FDF6F0] border-[#D97B4F] text-[#D97B4F]'
-                      : 'bg-white border-[#E8E4DF] hover:border-[#D97B4F]/60 text-[#2E2A26]'
+                    ? 'bg-[#FDF6F0] border-[#D97B4F] text-[#D97B4F]'
+                    : 'bg-white border-[#E8E4DF] hover:border-[#D97B4F]/60 text-[#2E2A26]'
                     }`}
                 >
                   <div className="flex items-center gap-3.5">
@@ -893,8 +892,8 @@ export function Header() {
                   href="/blog"
                   onClick={() => setMobileMenuOpen(false)}
                   className={`flex items-center justify-between p-3.5 rounded-2xl border transition-all ${isActive('/blog')
-                      ? 'bg-[#FDF6F0] border-[#D97B4F] text-[#D97B4F]'
-                      : 'bg-white border-[#E8E4DF] hover:border-[#D97B4F]/60 text-[#2E2A26]'
+                    ? 'bg-[#FDF6F0] border-[#D97B4F] text-[#D97B4F]'
+                    : 'bg-white border-[#E8E4DF] hover:border-[#D97B4F]/60 text-[#2E2A26]'
                     }`}
                 >
                   <div className="flex items-center gap-3.5">
@@ -911,8 +910,8 @@ export function Header() {
                   href="/contact"
                   onClick={() => setMobileMenuOpen(false)}
                   className={`flex items-center justify-between p-3.5 rounded-2xl border transition-all ${isActive('/contact')
-                      ? 'bg-[#FDF6F0] border-[#D97B4F] text-[#D97B4F]'
-                      : 'bg-white border-[#E8E4DF] hover:border-[#D97B4F]/60 text-[#2E2A26]'
+                    ? 'bg-[#FDF6F0] border-[#D97B4F] text-[#D97B4F]'
+                    : 'bg-white border-[#E8E4DF] hover:border-[#D97B4F]/60 text-[#2E2A26]'
                     }`}
                 >
                   <div className="flex items-center gap-3.5">

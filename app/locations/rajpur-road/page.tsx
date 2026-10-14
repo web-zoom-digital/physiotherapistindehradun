@@ -12,6 +12,7 @@ import { SERVICES } from '@/data/services'
 import { FAQAccordion } from '@/components/sections/FAQAccordion'
 import { FAQS } from '@/data/faqs'
 import { BLOG_POSTS } from '@/data/blog'
+import { BlogCard } from '@/components/sections/BlogCard'
 import { LOCATION_IMAGES } from '@/data/locationImages'
 
 const branch = BRANCHES.rajpurRoad
@@ -217,24 +218,9 @@ export default function RajpurRoadLocationPage() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                <div className="grid grid-cols-2 md:grid-cols-2 gap-3 sm:gap-6 text-left">
                   {relatedBlogs.map((b) => (
-                    <Link
-                      key={b.slug}
-                      href={`/blog/${b.slug}`}
-                      className="block p-6 rounded-2xl border border-[#E8E4DF] bg-white hover:border-[#D97B4F] transition-all hover:shadow-md space-y-2"
-                    >
-                      <span className="text-[11px] font-bold text-[#D97B4F] uppercase tracking-wider">Article</span>
-                      <h3 className="text-base font-bold text-[#2E2A26] line-clamp-2 leading-snug">
-                        {b.title}
-                      </h3>
-                      <p className="text-xs text-[#4A4744] line-clamp-3 leading-relaxed">
-                        {b.excerpt}
-                      </p>
-                      <div className="pt-2 flex items-center text-xs font-bold text-[#D97B4F] gap-1">
-                        Read Full Article <ArrowRight className="w-3.5 h-3.5" />
-                      </div>
-                    </Link>
+                    <BlogCard key={b.slug} post={b} />
                   ))}
                 </div>
               </div>

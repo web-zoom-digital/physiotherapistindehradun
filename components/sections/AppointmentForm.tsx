@@ -120,7 +120,7 @@ export function AppointmentForm() {
 
   return (
     <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-card border border-[#E8E4DF]">
-      <div className="mb-6">
+      <div className="mb-6 text-center sm:text-left">
         <h3 className="text-xl font-bold text-[#2E2A26]">Book Your Consultation</h3>
         <p className="text-xs text-gray-500 mt-1">
           Fill in your details below. Your exact information will be forwarded directly to WhatsApp for instant scheduling.

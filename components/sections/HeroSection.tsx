@@ -16,36 +16,38 @@ export function HeroSection() {
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Heading & CTAs */}
-          <div className="lg:col-span-7 space-y-6 text-left">
-            <div className="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F5DCC8]/70 border border-[#D97B4F]/20 text-[#2E2A26] text-xs sm:text-sm font-semibold shadow-xs">
-              <ShieldCheck className="w-4 h-4 text-[#D97B4F] shrink-0" />
-              <span>Evidence-Based Physiotherapy &amp; Rehabilitation · Dehradun</span>
+          <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div className="flex justify-center lg:justify-start">
+              <div className="inline-flex flex-wrap items-center justify-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F5DCC8]/70 border border-[#D97B4F]/20 text-[#2E2A26] text-xs sm:text-sm font-semibold shadow-xs text-center">
+                <ShieldCheck className="w-4 h-4 text-[#D97B4F] shrink-0" />
+                <span>Evidence-Based Physiotherapy &amp; Rehabilitation · Dehradun</span>
+              </div>
             </div>
 
-            <h1 className="text-[1.85rem] sm:text-3xl md:text-[3rem] font-bold text-[#2E2A26] leading-[1.2] tracking-tight">
+            <h1 className="text-[1.85rem] sm:text-3xl md:text-[3rem] font-bold text-[#2E2A26] leading-[1.2] tracking-tight text-center lg:text-left">
               Physiotherapist in <span className="text-[#D97B4F]">Dehradun</span>
             </h1>
 
-            <p className="text-base text-[#4A4744] leading-relaxed max-w-2xl">
+            <p className="text-base text-[#4A4744] leading-relaxed max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
               Personalized physiotherapy and rehabilitation care for back pain, knee pain, neurological conditions, sports injuries, pediatric challenges and post-surgery recovery. Convenient clinic consultations at Rajpur Road and Bhaniyawala, plus dedicated home visit physiotherapy.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col xs:flex-row flex-wrap items-stretch xs:items-center gap-3 pt-2">
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
               <Link
                 href="/book-appointment"
-                className="btn-primary py-3 px-6 text-sm sm:text-base shadow-md hover:shadow-lg font-medium justify-center"
+                className="btn-primary shadow-md hover:shadow-lg justify-center text-center w-full sm:w-auto"
               >
                 <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>Book a Consultation</span>
               </Link>
 
-              <div className="flex gap-3">
+              <div className="flex gap-2.5 sm:gap-3 justify-center w-full sm:w-auto">
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-whatsapp py-3 px-5 text-sm sm:text-base gap-2 font-medium flex-1 xs:flex-none justify-center"
+                  className="btn-whatsapp flex-1 sm:flex-none justify-center text-center"
                 >
                   <FaWhatsapp className="w-4 h-4 sm:w-5 sm:h-5" />
                   <span>WhatsApp</span>
@@ -53,7 +55,7 @@ export function HeroSection() {
 
                 <a
                   href={`tel:${CONTACT.phoneRaw}`}
-                  className="btn-secondary py-3 px-5 text-sm sm:text-base gap-2 font-medium flex-1 xs:flex-none justify-center"
+                  className="btn-secondary flex-1 sm:flex-none justify-center text-center"
                 >
                   <FaPhoneAlt className="w-4 h-4" />
                   <span>Call Now</span>
@@ -62,16 +64,16 @@ export function HeroSection() {
             </div>
 
             {/* Verified Trust Strip */}
-            <div className="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-3 border-t border-[#E8E4DF] text-xs sm:text-sm text-[#2E2A26]">
-              <div className="flex items-center gap-2">
+            <div className="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 border-t border-[#E8E4DF] text-xs sm:text-sm text-[#2E2A26]">
+              <div className="flex items-center justify-center lg:justify-start gap-2 text-center sm:text-left">
                 <CheckCircle2 className="w-4 h-4 text-[#D97B4F] shrink-0" />
                 <span>2 Verified Clinics in Dehradun</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center justify-center lg:justify-start gap-2 text-center sm:text-left">
                 <CheckCircle2 className="w-4 h-4 text-[#D97B4F] shrink-0" />
                 <span>MPT Specialist Doctors</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center justify-center lg:justify-start gap-2 text-center sm:text-left">
                 <CheckCircle2 className="w-4 h-4 text-[#D97B4F] shrink-0" />
                 <span>Home Visit Service Available</span>
               </div>
@@ -84,8 +86,8 @@ export function HeroSection() {
               {/* Image Frame */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
                 <img
-                  src="/images/conditions/back-pain-1.jpg"
-                  alt="Physiotherapy session for back pain in Dehradun clinic"
+                  src="/images/heroes/delhi-physio-hero.jpg"
+                  alt="Professional Indian physiotherapist providing rehabilitation therapy in modern clinic"
                   className="w-full h-auto object-cover aspect-[4/3]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#2E2A26]/40 via-transparent to-transparent" />

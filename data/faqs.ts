@@ -146,6 +146,22 @@ export const FAQS: Record<string, FAQ[]> = {
       question: 'How do you ensure hygiene and patient safety at your clinics?',
       answer: 'Patient safety is paramount. All electrotherapy equipment, treatment tables, and exercise areas at both our Rajpur Road and Bhaniyawala branches are thoroughly sanitized after every patient session following strict medical hygiene protocols.',
     },
+    {
+      question: 'What should I expect during my first physiotherapy appointment?',
+      answer: 'Your first session begins with a comprehensive 45–60 minute physical examination. Your MPT clinician will discuss your medical history, perform joint range-of-motion and muscle tests, analyze posture, pinpoint pain triggers, and clearly explain your diagnosis before commencing initial therapy.',
+    },
+    {
+      question: 'How is an individualized rehabilitation plan developed?',
+      answer: 'Rather than using pre-set exercise sheets, we create each care plan based on your specific functional goals, daily lifestyle, and clinical severity. We integrate manual joint mobilization, targeted electrotherapy, and progressive strengthening tailored to your pace.',
+    },
+    {
+      question: 'What should I bring to my physiotherapy consultation?',
+      answer: 'Please bring any recent medical reports, X-rays, MRI scans, or doctor referral slips related to your condition. We also recommend wearing comfortable, loose-fitting clothing that allows easy movement and examination of the affected joint or limb.',
+    },
+    {
+      question: 'Where are your clinics located and do you provide home visits in Dehradun?',
+      answer: 'Our main clinic is located at 13, Rajpur Road, near Clock Tower, Chukkuwala, Dehradun, and our second branch is at Rama Market, Thano Chowk, Bhaniyawala. We also provide dedicated home visit physiotherapy across Dehradun for post-surgical, elderly, and neurological patients who cannot travel.',
+    },
   ],
   team: [
     {
