@@ -192,15 +192,9 @@ export function Footer() {
             </div>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/locations/rajpur-road" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
-                  <span className="text-[#D97B4F] font-bold">›</span>
-                  <span>Rajpur Road Main</span>
-                </Link>
-              </li>
-              <li>
                 <Link href="/locations/bhaniyawala" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
                   <span className="text-[#D97B4F] font-bold">›</span>
-                  <span>Bhaniyawala Branch</span>
+                  <span>Bhaniyawala Clinic Center</span>
                 </Link>
               </li>
               <li>
@@ -212,25 +206,25 @@ export function Footer() {
               <li>
                 <Link href="/locations" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
                   <span className="text-[#D97B4F] font-bold">›</span>
-                  <span>Dehradun Centers</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations/rajpur-road" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
-                  <span className="text-[#D97B4F] font-bold">›</span>
-                  <span>Clock Tower Area</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations/rajpur-road" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
-                  <span className="text-[#D97B4F] font-bold">›</span>
-                  <span>EC Road &amp; Chukkuwala</span>
+                  <span>Clinic Directions</span>
                 </Link>
               </li>
               <li>
                 <Link href="/locations/bhaniyawala" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
                   <span className="text-[#D97B4F] font-bold">›</span>
                   <span>Thano Chowk Area</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/bhaniyawala" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
+                  <span className="text-[#D97B4F] font-bold">›</span>
+                  <span>Doiwala &amp; Jolly Grant</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/home-physiotherapy" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
+                  <span className="text-[#D97B4F] font-bold">›</span>
+                  <span>All Dehradun Areas</span>
                 </Link>
               </li>
             </ul>
@@ -269,21 +263,9 @@ export function Footer() {
             </div>
 
             <div className="pt-3 border-t border-[#443F3B] space-y-3 text-xs">
-              {/* <div>
-                <span className="text-[#D97B4F] font-bold uppercase tracking-wider block mb-1">
-                  Rajpur Road Branch (Main)
-                </span>
-                <div className="flex items-start gap-2 text-white">
-                  <MapPin className="w-4 h-4 text-[#D97B4F] shrink-0 mt-0.5" />
-                  <p className="leading-snug">
-                    {BRANCHES.rajpurRoad.fullAddress}
-                  </p>
-                </div>
-              </div> */}
-
               <div>
                 <span className="text-[#D97B4F] font-bold uppercase tracking-wider block mb-1">
-                  Bhaniyawala Branch
+                  Bhaniyawala Clinic Center
                 </span>
                 <div className="flex items-start gap-2 text-white">
                   <MapPin className="w-4 h-4 text-[#D97B4F] shrink-0 mt-0.5" />
@@ -297,29 +279,9 @@ export function Footer() {
 
         </div>
 
-        {/* 2 Interactive Google Maps Side-by-Side */}
+        {/* Interactive Google Map */}
         <div className="pt-8 pb-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Rajpur Road Map Card */}
-            {/* <div className="relative rounded-2xl overflow-hidden border border-[#443F3B] shadow-lg group">
-              <div className="absolute top-3 left-3 z-10 bg-[#2E2A26]/90 text-white font-bold text-xs uppercase px-3 py-1.5 rounded-lg border border-white/10 backdrop-blur-md shadow-md flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5 text-[#D97B4F]" />
-                <span>Rajpur Road Branch (Main)</span>
-              </div>
-              <div className="w-full h-56 sm:h-64">
-                <iframe
-                  title="Rajpur Road Main Branch Google Map"
-                  src="https://maps.google.com/maps?q=30.3255,78.0322&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen={false}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full h-full filter brightness-95 contrast-105 group-hover:brightness-100 transition-all duration-300"
-                />
-              </div>
-            </div> */}
+          <div className="max-w-3xl mx-auto">
 
             {/* Bhaniyawala Map Card */}
             <div className="relative rounded-2xl overflow-hidden border border-[#443F3B] shadow-lg group">

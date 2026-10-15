@@ -97,7 +97,7 @@ If you experience any of the following, seek urgent medical attention rather tha
 
 ## Physiotherapy in Dehradun
 
-If you are looking for physiotherapy assessment and treatment for back pain in Dehradun, sessions are available at our clinics on Rajpur Road and at Bhaniyawala, with home physiotherapy available for patients who cannot travel.
+If you are looking for physiotherapy assessment and treatment for back pain in Dehradun, sessions are available at our Bhaniyawala clinic center, with dedicated home visit physiotherapy available across Dehradun for patients who cannot travel.
 
 A physiotherapist can carry out a thorough assessment, discuss your symptoms and help you understand whether physiotherapy is the right option for you at this stage.
 
@@ -120,7 +120,7 @@ A physiotherapist can carry out a thorough assessment, discuss your symptoms and
     metaTitle: 'Physiotherapy for Knee Pain in Dehradun | Knee Pain Treatment Guide',
     metaDescription: 'What to expect from physiotherapy for knee pain. A practical guide from a Dehradun physiotherapist covering assessment, treatment and recovery for common knee conditions.',
     content: `
-Knee pain is something our physiotherapy team sees frequently at both the Rajpur Road and Bhaniyawala clinics. It affects people of all ages — from young athletes with ligament sprains to older adults managing osteoarthritis. Physiotherapy can be helpful for many types of knee pain, though the approach will vary depending on what is causing your symptoms.
+Knee pain is something our physiotherapy team sees frequently at our Bhaniyawala clinic center as well as during home visits across Dehradun. It affects people of all ages — from young athletes with ligament sprains to older adults managing osteoarthritis. Physiotherapy can be helpful for many types of knee pain, though the approach will vary depending on what is causing your symptoms.
 
 ## Common Causes of Knee Pain
 
@@ -170,7 +170,7 @@ Your physiotherapist will set realistic expectations at your first appointment b
 
 ## Knee Physiotherapy in Dehradun
 
-If you are managing knee pain in Dehradun, physiotherapy assessment is available at our Rajpur Road clinic and the Bhaniyawala branch. Home physiotherapy is also available for patients who find it difficult to travel, including those recovering from knee surgery.
+If you are managing knee pain in Dehradun, physiotherapy assessment is available at our Bhaniyawala clinic center. Dedicated home physiotherapy is also available across Dehradun for patients who find it difficult to travel, including those recovering from knee surgery.
 
 *This article is for general information only and is not a substitute for professional medical advice.*
     `,
@@ -251,7 +251,7 @@ This depends on the clinic and the physiotherapist's assessment of your situatio
 
 ## Physiotherapy Consultations in Dehradun
 
-Physiotherapy consultations are available at our Rajpur Road and Bhaniyawala clinics. Sessions are available seven days a week. If you are unable to travel, home physiotherapy visits can also be arranged. For initial enquiries, you can call or send a WhatsApp message to our team.
+Physiotherapy consultations are available at our Bhaniyawala clinic center. Sessions are available seven days a week. If you are unable to travel, home physiotherapy visits across Dehradun can also be arranged. For initial enquiries, you can call or send a WhatsApp message to our team.
 
 *This article is for general information only and is not a substitute for individual clinical advice.*
     `,
@@ -386,7 +386,7 @@ Our home physiotherapy team carries portable, clinical-grade equipment including
 
 ## Areas Covered by Home Physiotherapy in Dehradun
 
-Home physiotherapy visits are available across Dehradun, including Rajpur Road, Clock Tower, Chukkuwala, Dalanwala, GMS Road, Patel Nagar, Sahastradhara Road and other areas. For enquiries about coverage in specific parts of Dehradun or the surrounding region, please contact our team directly.
+Home physiotherapy visits are available across Dehradun, including Clock Tower, Chukkuwala, Dalanwala, GMS Road, Patel Nagar, Sahastradhara Road, Clement Town and all other residential areas. For enquiries about coverage in specific parts of Dehradun or the surrounding region, please contact our team directly.
 
 ## How to Book a Home Physiotherapy Visit
 
@@ -463,7 +463,7 @@ If your neck pain is accompanied by severe or rapidly progressing arm weakness, 
 
 ## Physiotherapy for Neck Pain in Dehradun
 
-Physiotherapy assessment for neck pain is available at our Rajpur Road and Bhaniyawala clinics in Dehradun. Home visits can also be arranged for patients who are unable to travel.
+Physiotherapy assessment for neck pain is available at our Bhaniyawala clinic center in Dehradun. Home visits can also be arranged across Dehradun for patients who are unable to travel.
 
 *This article is for general information only. Please consult a qualified physiotherapist or healthcare professional for individual advice about your symptoms.*
     `,
@@ -530,7 +530,7 @@ These are general estimates. Your physiotherapist will provide more specific gui
 
 ## Physiotherapy for Sports Injuries in Dehradun
 
-Our sports physiotherapy team at Rajpur Road provides assessment and rehabilitation for a wide range of sports injuries. Whether you are a competitive athlete or someone who exercises for health and enjoyment, we can develop a rehabilitation plan suited to your injury and your goals.
+Our sports physiotherapy team provides assessment and rehabilitation for a wide range of sports injuries at our Bhaniyawala center and through home rehabilitation across Dehradun. Whether you are a competitive athlete or someone who exercises for health and enjoyment, we can develop a rehabilitation plan suited to your injury and your goals.
 
 *This article is for general information and education. It is not a substitute for individual professional advice from a qualified physiotherapist.*
     `,
@@ -601,7 +601,7 @@ If your shoulder has become progressively stiffer and more painful over the past
 
 ## Shoulder Physiotherapy in Dehradun
 
-Physiotherapy assessment for frozen shoulder and other shoulder conditions is available at our Rajpur Road and Bhaniyawala clinics. Home visits can be arranged for patients who cannot travel to the clinic.
+Physiotherapy assessment for frozen shoulder and other shoulder conditions is available at our Bhaniyawala clinic center. Home visits can be arranged across Dehradun for patients who cannot travel to the clinic.
 
 *This article is for general information only and does not constitute medical advice.*
     `,

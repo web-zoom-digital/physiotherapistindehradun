@@ -580,32 +580,32 @@ export function Header() {
                 <div className="absolute top-full -left-28 pt-1 w-[540px] z-50 animate-fadeIn font-sans">
                   <div className="bg-white border border-[#E8E4DF] rounded-3xl shadow-2xl p-6 relative before:content-[''] before:absolute before:-top-4 before:left-0 before:right-0 before:h-6">
                     <span className="text-[11px] font-black text-gray-400 uppercase tracking-widest block mb-4">
-                      DEHRADUN CLINIC BRANCHES
+                      CLINIC & HOME PHYSIOTHERAPY CARE
                     </span>
                     <div className="grid grid-cols-2 gap-4">
-                      <Link
-                        href="/locations/rajpur-road"
-                        className="p-3.5 rounded-2xl bg-[#FAF9F7] hover:bg-[#F5DCC8]/50 border border-[#E8E4DF] hover:border-[#D97B4F] transition-all group space-y-1.5"
-                      >
-                        <div className="flex items-center gap-2 text-[#D97B4F] font-bold text-sm">
-                          <MapPin className="w-4 h-4 shrink-0" />
-                          <span>Rajpur Road Main Clinic</span>
-                        </div>
-                        <p className="text-xs text-[#76726E] leading-relaxed">
-                          Clock Tower, Chukkuwala, Rajpur Road, Dehradun.
-                        </p>
-                      </Link>
-
                       <Link
                         href="/locations/bhaniyawala"
                         className="p-3.5 rounded-2xl bg-[#FAF9F7] hover:bg-[#F5DCC8]/50 border border-[#E8E4DF] hover:border-[#D97B4F] transition-all group space-y-1.5"
                       >
                         <div className="flex items-center gap-2 text-[#D97B4F] font-bold text-sm">
                           <MapPin className="w-4 h-4 shrink-0" />
-                          <span>Bhaniyawala Branch</span>
+                          <span>Bhaniyawala Clinic Center</span>
                         </div>
                         <p className="text-xs text-[#76726E] leading-relaxed">
                           Rama Market, Thano Chowk, Bhaniyawala, Dehradun.
+                        </p>
+                      </Link>
+
+                      <Link
+                        href="/services/home-physiotherapy"
+                        className="p-3.5 rounded-2xl bg-[#FAF9F7] hover:bg-[#F5DCC8]/50 border border-[#E8E4DF] hover:border-[#D97B4F] transition-all group space-y-1.5"
+                      >
+                        <div className="flex items-center gap-2 text-[#D97B4F] font-bold text-sm">
+                          <HomeIcon className="w-4 h-4 shrink-0" />
+                          <span>Home Visit Physiotherapy</span>
+                        </div>
+                        <p className="text-xs text-[#76726E] leading-relaxed">
+                          Personalized home rehabilitation across all Dehradun areas.
                         </p>
                       </Link>
                     </div>
@@ -615,7 +615,7 @@ export function Header() {
                         href="/locations"
                         className="text-xs font-bold text-[#D97B4F] hover:text-[#B85E37] flex items-center gap-1"
                       >
-                        <span>Explore All Dehradun Branches &amp; Driving Directions</span>
+                        <span>Explore Clinic Location &amp; Driving Directions</span>
                         <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                     </div>

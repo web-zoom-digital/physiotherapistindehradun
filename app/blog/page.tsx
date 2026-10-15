@@ -223,7 +223,7 @@ export default function BlogHubPage() {
 
           <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
             Online articles provide general knowledge, but every injury is unique. Schedule an
-            accurate physical assessment at our Rajpur Road or Bhaniyawala clinic.
+            accurate physical assessment at our Bhaniyawala clinic center or request a home visit.
           </p>
 
           <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3.5 pt-4">
@@ -258,11 +258,7 @@ export default function BlogHubPage() {
           <div className="pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-gray-400">
             <div className="flex items-center gap-1.5">
               <MapPin className="w-4 h-4 text-[#D97B4F]" />
-              <span>Rajpur Road (near Clock Tower)</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <MapPin className="w-4 h-4 text-[#D97B4F]" />
-              <span>Bhaniyawala (near Jolly Grant)</span>
+              <span>Bhaniyawala Center (near Jolly Grant)</span>
             </div>
             <div className="flex items-center gap-1.5">
               <Clock className="w-4 h-4 text-[#D97B4F]" />

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: '%s | Physiotherapist in Dehradun',
   },
   description:
-    'Leading physiotherapy clinic in Dehradun offering evidence-based orthopedic, neurological, sports, pediatric and home visit physiotherapy. Clinics at Rajpur Road and Bhaniyawala.',
+    'Leading physiotherapy clinic in Dehradun offering evidence-based orthopedic, neurological, sports, pediatric and home visit physiotherapy. Clinic at Bhaniyawala and home care across Dehradun.',
   keywords: [
     'physiotherapist in dehradun',
     'physiotherapy in dehradun',

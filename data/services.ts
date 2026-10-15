@@ -34,7 +34,7 @@ export const SERVICES: Service[] = [
     relatedConditions: ['back-pain', 'knee-pain', 'neck-pain', 'shoulder-pain', 'joint-pain', 'frozen-shoulder', 'sciatica', 'slip-disc'],
     icon: 'Bone',
     metaTitle: 'Orthopedic Physiotherapy in Dehradun | Joint & Muscle Rehabilitation',
-    metaDescription: 'Orthopedic physiotherapy in Dehradun for back pain, knee pain, joint pain, shoulder pain and post-fracture recovery. Personalised assessment and treatment at Rajpur Road & Bhaniyawala.',
+    metaDescription: 'Orthopedic physiotherapy in Dehradun for back pain, knee pain, joint pain, shoulder pain and post-fracture recovery. Personalised assessment and treatment at Bhaniyawala clinic & home visits.',
   },
   {
     slug: 'neuro-physiotherapy',
@@ -76,7 +76,7 @@ export const SERVICES: Service[] = [
     relatedConditions: ['sports-injury', 'knee-pain', 'shoulder-pain', 'joint-pain'],
     icon: 'Zap',
     metaTitle: 'Sports Physiotherapy in Dehradun | Sports Injury Rehabilitation',
-    metaDescription: 'Sports physiotherapy in Dehradun for ACL injuries, muscle strains, ankle sprains, tendinopathy and return-to-sport programmes. Expert sports rehabilitation at Rajpur Road clinic.',
+    metaDescription: 'Sports physiotherapy in Dehradun for ACL injuries, muscle strains, ankle sprains, tendinopathy and return-to-sport programmes. Expert sports rehabilitation at Bhaniyawala clinic center.',
   },
   {
     slug: 'pediatric-physiotherapy',

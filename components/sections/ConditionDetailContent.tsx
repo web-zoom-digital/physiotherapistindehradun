@@ -175,7 +175,7 @@ export function ConditionDetailContent({
             Book {condition.shortTitle} Assessment in Dehradun
           </h3>
           <p className="text-xs sm:text-sm text-[#4A4744] max-w-2xl mx-auto leading-relaxed">
-            Consult our senior MPT specialists at our Rajpur Road or Bhaniyawala clinic in Dehradun, or request dedicated home physiotherapy visits.
+            Consult our senior MPT specialists at our Bhaniyawala clinic in Dehradun, or request dedicated home physiotherapy visits across Dehradun.
           </p>
           <div className="pt-2 flex flex-wrap justify-center gap-3">
             <CTAButton variant="primary" className="px-7 py-3 text-sm min-h-[46px]">

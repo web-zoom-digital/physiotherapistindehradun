@@ -29,7 +29,7 @@ export function HeroSection() {
             </h1>
 
             <p className="text-base text-[#4A4744] leading-relaxed max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
-              Personalized physiotherapy and rehabilitation care for back pain, knee pain, neurological conditions, sports injuries, pediatric challenges and post-surgery recovery. Convenient clinic consultations at Rajpur Road and Bhaniyawala, plus dedicated home visit physiotherapy.
+              Personalized physiotherapy and rehabilitation care for back pain, knee pain, neurological conditions, sports injuries, pediatric challenges and post-surgery recovery. Convenient clinic consultations at Bhaniyawala, plus dedicated home visit physiotherapy across Dehradun.
             </p>
 
             {/* CTAs */}
@@ -99,7 +99,7 @@ export function HeroSection() {
                   <Award className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-[#2E2A26]">Rajpur Rd & Bhaniyawala</p>
+                  <p className="text-xs font-bold text-[#2E2A26]">Bhaniyawala, Dehradun</p>
                   <p className="text-[11px] text-[#76726E]">Serving All Dehradun Areas</p>
                 </div>
               </div>
@@ -107,7 +107,7 @@ export function HeroSection() {
               {/* Floating Badge 2 */}
               <div className="absolute -top-4 -right-4 bg-[#2E2A26] text-white rounded-xl p-3 shadow-lg hidden sm:flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-[#D97B4F]" />
-                <span className="text-xs font-semibold">Rajpur Road Main Clinic</span>
+                <span className="text-xs font-semibold">Bhaniyawala Clinic Center</span>
               </div>
             </div>
           </div>

@@ -11,13 +11,13 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          primary: '#6D597A',
-          dark: '#3D3548',
-          light: '#EAE3F0',
-          hover: '#8B7397',
-          plum: '#5C4A6B',
+          primary: '#D97B4F',
+          dark: '#2E2A26',
+          light: '#F5DCC8',
+          hover: '#B85E37',
+          plum: '#B85E37',
         },
-        body: '#3A3A3A',
+        body: '#4A4744',
       },
       screens: {
         xs: '480px',

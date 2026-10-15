@@ -326,8 +326,8 @@ export default async function BlogPostPage({
                 </h3>
 
                 <p className="text-xs text-[#4A4744] leading-relaxed">
-                  Get evaluated by senior Master of Physiotherapy (MPT) specialists at our Rajpur
-                  Road or Bhaniyawala clinic in Dehradun.
+                  Get evaluated by senior Master of Physiotherapy (MPT) specialists at our Bhaniyawala
+                  clinic center or via home care across Dehradun.
                 </p>
 
                 <div className="space-y-2.5 pt-2">
@@ -362,7 +362,7 @@ export default async function BlogPostPage({
                 <div className="pt-4 border-t border-[#E8E4DF] space-y-2 text-[11px] text-[#76726E]">
                   <div className="flex items-center gap-1.5">
                     <MapPin className="w-3.5 h-3.5 text-[#D97B4F] shrink-0" />
-                    <span>Rajpur Road &amp; Bhaniyawala</span>
+                    <span>Bhaniyawala, Dehradun</span>
                   </div>
                   <div className="flex items-center gap-1.5">
                     <Clock className="w-3.5 h-3.5 text-[#D97B4F] shrink-0" />

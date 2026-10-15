@@ -14,23 +14,8 @@ export const CONTACT = {
 }
 
 export const BRANCHES = {
-  rajpurRoad: {
-    name: 'Rajpur Road (Main Branch)',
-    address: '13, Rajpur Road, near New Empire Cinema Complex, Clock Tower, Chukkuwala',
-    city: 'Dehradun',
-    state: 'Uttarakhand',
-    pincode: '248001',
-    country: 'India',
-    fullAddress: '13, Rajpur Rd, near New Empire Cinema Complex, Clock Tower, Chukkuwala, Dehradun, Uttarakhand 248001',
-    geo: { lat: 30.3255, lng: 78.0322 },
-    mapsUrl: 'https://www.google.com/maps?q=30.3255,78.0322',
-    directionsUrl: 'https://www.google.com/maps/dir//13,+Rajpur+Rd,+near+New+Empire+Cinema+Complex,+Clock+Tower,+Chukkuwala,+Dehradun,+Uttarakhand+248001',
-    slug: 'rajpur-road',
-    areas: ['Rajpur Road', 'Clock Tower', 'Chukkuwala', 'Dalanwala', 'Jakhan', 'Garhi Cantt'],
-    isMain: true,
-  },
   bhaniyawala: {
-    name: 'Bhaniyawala Branch',
+    name: 'Bhaniyawala Clinic Center',
     address: 'Rama Market, Thano Chowk, opposite Ranjit Singh Marg, Bhaniyawala',
     city: 'Dehradun',
     state: 'Uttarakhand',
@@ -41,8 +26,8 @@ export const BRANCHES = {
     mapsUrl: 'https://www.google.com/maps?q=30.186417,78.148636',
     directionsUrl: 'https://www.google.com/maps/dir//Rama+Market,+Thano+Chowk,+opposite+Ranjit+Singh+Marg,+Bhaniyawala,+Dehradun',
     slug: 'bhaniyawala',
-    areas: ['Bhaniyawala', 'Thano Chowk', 'Ranjit Singh Marg'],
-    isMain: false,
+    areas: ['Bhaniyawala', 'Thano Chowk', 'Ranjit Singh Marg', 'Doiwala', 'Rishikesh Road', 'Haridwar Bypass'],
+    isMain: true,
   },
 }
 

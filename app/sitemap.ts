@@ -14,7 +14,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/conditions',
     '/team',
     '/locations',
-    '/locations/rajpur-road',
     '/locations/bhaniyawala',
     '/testimonials',
     '/blog',

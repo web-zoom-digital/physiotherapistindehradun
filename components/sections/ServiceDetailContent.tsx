@@ -390,7 +390,7 @@ export function ServiceDetailContent({
             </h3>
 
             <p className="text-xs sm:text-sm text-[#4A4744] max-w-2xl mx-auto leading-relaxed">
-              Visit our Rajpur Road clinic near Clock Tower or our Bhaniyawala branch near Jolly Grant, or request dedicated home physiotherapy visits across Dehradun.
+              Visit our Bhaniyawala clinic center near Jolly Grant, or request dedicated home physiotherapy visits across Dehradun.
             </p>
 
             <div className="pt-2 flex flex-col sm:flex-row flex-wrap justify-center gap-3">

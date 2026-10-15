@@ -12,7 +12,7 @@ interface StatItem {
 const STATS: StatItem[] = [
   { end: 10, suffix: '+ Years', label: 'Senior Clinical Practice' },
   { end: 5, suffix: ' Specialist', label: 'MPT Certified Physiotherapists' },
-  { end: 2, suffix: ' Branches', label: 'Rajpur Road & Bhaniyawala' },
+  { end: 1, suffix: ' Advanced Center', label: 'Bhaniyawala & Home Care' },
   { end: 7, suffix: ' Days', label: 'Weekly Clinic Operations' },
 ]
 

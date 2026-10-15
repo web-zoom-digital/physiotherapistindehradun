@@ -14,7 +14,7 @@ const initialFormData = {
   service: '',
   condition: '',
   preferredDate: '',
-  preferredBranch: 'rajpur-road',
+  preferredBranch: 'bhaniyawala',
   visitType: 'clinic',
   message: '',
 }
@@ -35,10 +35,7 @@ export function AppointmentForm() {
     SERVICES.find((s) => s.slug === formData.service)?.shortTitle || formData.service
   const selectedConditionTitle =
     CONDITIONS.find((c) => c.slug === formData.condition)?.shortTitle || formData.condition
-  const selectedBranchTitle =
-    formData.preferredBranch === 'bhaniyawala'
-      ? BRANCHES.bhaniyawala.name
-      : BRANCHES.rajpurRoad.name
+  const selectedBranchTitle = BRANCHES.bhaniyawala.name
   const selectedVisitTypeTitle =
     formData.visitType === 'home'
       ? 'Home Visit Physiotherapy'
@@ -345,7 +342,7 @@ export function AppointmentForm() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label htmlFor="preferredBranch" className="form-label">
-                Preferred Clinic Branch
+                Clinic Location
               </label>
               <select
                 id="preferredBranch"
@@ -354,8 +351,7 @@ export function AppointmentForm() {
                 onChange={handleChange}
                 className="form-input"
               >
-                <option value="rajpur-road">Rajpur Road (Main Branch)</option>
-                <option value="bhaniyawala">Bhaniyawala Branch</option>
+                <option value="bhaniyawala">Bhaniyawala Clinic Center</option>
               </select>
             </div>
 

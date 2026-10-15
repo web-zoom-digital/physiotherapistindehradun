@@ -40,7 +40,7 @@ export const CONDITIONS: Condition[] = [
     relatedServices: ['orthopedic-physiotherapy', 'pain-management', 'home-physiotherapy'],
     relatedConditions: ['back-pain', 'shoulder-pain', 'joint-pain'],
     metaTitle: 'Neck Pain Physiotherapy in Dehradun | Cervical Pain Treatment',
-    metaDescription: 'Physiotherapy for neck pain in Dehradun. Treatment for cervical spondylosis, muscle stiffness, postural neck pain and nerve-related arm symptoms. Book an assessment at Rajpur Road or Bhaniyawala.',
+    metaDescription: 'Physiotherapy for neck pain in Dehradun. Treatment for cervical spondylosis, muscle stiffness, postural neck pain and nerve-related arm symptoms. Book an assessment at our Bhaniyawala clinic.',
   },
   {
     slug: 'sciatica',
@@ -54,7 +54,7 @@ export const CONDITIONS: Condition[] = [
     relatedServices: ['orthopedic-physiotherapy', 'pain-management', 'home-physiotherapy'],
     relatedConditions: ['back-pain', 'slip-disc', 'joint-pain'],
     metaTitle: 'Sciatica Physiotherapy in Dehradun | Sciatic Nerve Pain Treatment',
-    metaDescription: 'Physiotherapy for sciatica in Dehradun. Treatment for sciatic nerve pain, leg pain, numbness and tingling. Evidence-based assessment and management of sciatica at Rajpur Road & Bhaniyawala clinics.',
+    metaDescription: 'Physiotherapy for sciatica in Dehradun. Treatment for sciatic nerve pain, leg pain, numbness and tingling. Evidence-based assessment and management of sciatica at our Bhaniyawala clinic.',
   },
   {
     slug: 'slip-disc',
@@ -110,7 +110,7 @@ export const CONDITIONS: Condition[] = [
     relatedServices: ['orthopedic-physiotherapy', 'pain-management', 'home-physiotherapy'],
     relatedConditions: ['shoulder-pain', 'joint-pain'],
     metaTitle: 'Frozen Shoulder Physiotherapy in Dehradun | Adhesive Capsulitis Treatment',
-    metaDescription: 'Physiotherapy for frozen shoulder in Dehradun. Stage-appropriate treatment for adhesive capsulitis, shoulder stiffness and restricted shoulder movement. Expert physiotherapy at Rajpur Road & Bhaniyawala.',
+    metaDescription: 'Physiotherapy for frozen shoulder in Dehradun. Stage-appropriate treatment for adhesive capsulitis, shoulder stiffness and restricted shoulder movement. Expert physiotherapy at our Bhaniyawala clinic.',
   },
   {
     slug: 'joint-pain',

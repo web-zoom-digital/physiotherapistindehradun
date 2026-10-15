@@ -47,7 +47,7 @@ export function TeamGrid({ doctors }: TeamGridProps) {
   return (
     <div className="space-y-8 sm:space-y-12">
       {/* Category Filter Pills (Mobile-friendly horizontal scroll) */}
-      <div className="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-2 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0">
+      {/* <div className="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-2 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0">
         {CATEGORIES.map((cat) => {
           const isActive = selectedCategory === cat.id
           return (
@@ -64,7 +64,7 @@ export function TeamGrid({ doctors }: TeamGridProps) {
             </button>
           )
         })}
-      </div>
+      </div> */}
 
       {/* Doctor & Team Grid: Exactly 2 cards per row on mobile (grid-cols-2), 3 on desktop */}
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
@@ -85,13 +85,12 @@ export function TeamGrid({ doctors }: TeamGridProps) {
                     src={doctor.imageUrl}
                     alt={`${doctor.name} - ${doctor.title} at RonEx Physiotherapy Dehradun`}
                     fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 380px"
+                    sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 300px"
                     className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     priority={doctor.slug === 'dr-om-prakash'}
                   />
 
                   {/* Gradient Overlay for Text Legibility */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
 
                   {/* Specialization Badge Floating Top-Left */}
                   <div className="absolute top-2 sm:top-3 left-2 sm:left-3 bg-[#D97B4F] text-white text-[10px] sm:text-xs font-bold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full shadow-xs truncate max-w-[85%]">
@@ -136,14 +135,14 @@ export function TeamGrid({ doctors }: TeamGridProps) {
                   </div>
 
                   {/* Short Bio Snippet (Visible on Tablet & Desktop) */}
-                  <p className="text-xs text-[#4A4744] line-clamp-2 leading-relaxed hidden sm:block">
+                  {/* <p className="text-xs text-[#4A4744] line-clamp-2 leading-relaxed hidden sm:block">
                     {doctor.bio}
-                  </p>
+                  </p> */}
                 </div>
               </div>
 
               {/* Standardized Card Actions Footer */}
-              <div className="p-3 sm:p-5 pt-0 border-t border-gray-100 mt-2 space-y-2">
+              <div className="p-3 sm:p-5 pt-0  mt-2 space-y-2">
                 <Link
                   href={`/book-appointment?doctor=${doctor.slug}`}
                   className="btn-primary py-2 sm:py-2.5 px-2 sm:px-3 text-[11px] sm:text-xs font-bold w-full text-center flex items-center justify-center gap-1.5 shadow-xs"

@@ -39,7 +39,7 @@ import { BlogCard } from '@/components/sections/BlogCard'
 export default function HomePage() {
   return (
     <>
-      <LocalBusinessSchema branch="rajpurRoad" />
+      <LocalBusinessSchema branch="bhaniyawala" />
 
       {/* 2. Hero Section */}
       <HeroSection />
@@ -67,7 +67,7 @@ export default function HomePage() {
                 Physiotherapy is an essential healthcare service designed to restore movement, reduce pain and rebuild strength after an injury, surgery or neurological diagnosis. At our Dehradun clinics, we believe every patient deserves a personalized, individual assessment rather than standard generalized exercises.
               </p>
               <p className="text-sm text-[#4A4744] leading-relaxed text-center sm:text-left">
-                Our team of qualified Master of Physiotherapy (MPT) specialists works across orthopedic conditions, neurological rehabilitation, sports injuries, pediatric physical therapy and women&apos;s health. Whether you visit our main clinic on Rajpur Road, our Bhaniyawala branch, or receive home visit care, our focus remains on evidence-based treatment and functional patient recovery.
+                Our team of qualified Master of Physiotherapy (MPT) specialists works across orthopedic conditions, neurological rehabilitation, sports injuries, pediatric physical therapy and women&apos;s health. Whether you visit our clinic in Bhaniyawala or receive home visit care, our focus remains on evidence-based treatment and functional patient recovery.
               </p>
 
               <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold text-[#2E2A26]">
@@ -294,7 +294,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-bold text-[#2E2A26] group-hover:text-[#D97B4F] transition-colors text-center sm:text-left">Clinic & Home Care</h3>
               <p className="text-sm text-[#4A4744] leading-relaxed text-center sm:text-left">
-                Whether you visit our Rajpur Road clinic or require home visit physiotherapy for stroke, post-surgery or mobility restrictions, we deliver high-standard care across Dehradun.
+                Whether you visit our Bhaniyawala clinic center or require home visit physiotherapy for stroke, post-surgery or mobility restrictions, we deliver high-standard care across Dehradun.
               </p>
             </div>
           </div>
@@ -461,7 +461,7 @@ export default function HomePage() {
                   <h3 className="text-sm font-bold text-[#2E2A26] text-center sm:text-left">Key Dehradun Areas Served for Home Visit:</h3>
                   <div className="flex flex-wrap justify-center sm:justify-start gap-1.5 text-xs">
                     {[
-                      'Rajpur Road',
+                      'Bhaniyawala',
                       'Clock Tower',
                       'Dalanwala',
                       'Ballupur',
@@ -489,57 +489,19 @@ export default function HomePage() {
       <section className="section-py bg-[#FAF9F7]">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
-            <span className="section-label">Verified Branches</span>
-            <h2 className="section-title">Visit Our Physiotherapy Clinics in Dehradun</h2>
+            <span className="section-label">Verified Clinic Location</span>
+            <h2 className="section-title">Visit Our Physiotherapy Clinic in Dehradun</h2>
             <p className="text-sm text-[#4A4744]">
-              We operate two modern, well-equipped clinic branches located for easy access across Dehradun.
+              Our modern, well-equipped clinic center in Bhaniyawala provides advanced rehabilitation, along with dedicated home visit physiotherapy across Dehradun.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Rajpur Road Branch */}
-            <div className="card p-6 space-y-4 text-center sm:text-left">
-              <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-2">
-                <div>
-                  <span className="text-xs font-bold text-[#D97B4F] uppercase tracking-wider block">Main Clinic</span>
-                  <h3 className="text-lg font-bold text-[#2E2A26] mt-0.5">{BRANCHES.rajpurRoad.name}</h3>
-                </div>
-                <MapPin className="w-6 h-6 text-[#D97B4F] shrink-0" />
-              </div>
-
-              <p className="text-xs text-[#4A4744] leading-relaxed text-center sm:text-left">
-                {BRANCHES.rajpurRoad.fullAddress}
-              </p>
-
-              <div className="space-y-1.5 text-xs text-gray-600 text-center sm:text-left">
-                <p><strong>Timings:</strong> Mon-Sat 9AM-10PM | Sun 10AM-6PM</p>
-                <p className="flex items-center justify-center sm:justify-start gap-1.5"><FaPhoneAlt className="w-3 h-3 text-[#D97B4F]" /> <strong>Phone:</strong> {CONTACT.phone}</p>
-                <p><strong>Nearby Areas:</strong> {BRANCHES.rajpurRoad.areas.join(', ')}</p>
-              </div>
-
-              <div className="pt-2 flex flex-wrap justify-center sm:justify-start gap-2">
-                <a
-                  href={BRANCHES.rajpurRoad.directionsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-secondary py-2 px-4 text-xs"
-                >
-                  Get Google Maps Directions
-                </a>
-                <Link
-                  href={`/locations/${BRANCHES.rajpurRoad.slug}`}
-                  className="btn-primary py-2 px-4 text-xs"
-                >
-                  Branch Page
-                </Link>
-              </div>
-            </div>
-
             {/* Bhaniyawala Branch */}
             <div className="card p-6 space-y-4 text-center sm:text-left">
               <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-2">
                 <div>
-                  <span className="text-xs font-bold text-[#D97B4F] uppercase tracking-wider block">Branch Clinic</span>
+                  <span className="text-xs font-bold text-[#D97B4F] uppercase tracking-wider block">Clinic Center</span>
                   <h3 className="text-lg font-bold text-[#2E2A26] mt-0.5">{BRANCHES.bhaniyawala.name}</h3>
                 </div>
                 <MapPin className="w-6 h-6 text-[#D97B4F] shrink-0" />
@@ -572,6 +534,42 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
+
+            {/* Home Visit Physiotherapy Card */}
+            <div className="card p-6 space-y-4 text-center sm:text-left">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-2">
+                <div>
+                  <span className="text-xs font-bold text-[#D97B4F] uppercase tracking-wider block">At-Home Rehabilitation</span>
+                  <h3 className="text-lg font-bold text-[#2E2A26] mt-0.5">Home Visit Physiotherapy Care</h3>
+                </div>
+                <HomeIcon className="w-6 h-6 text-[#D97B4F] shrink-0" />
+              </div>
+
+              <p className="text-xs text-[#4A4744] leading-relaxed text-center sm:text-left">
+                Dedicated home care physiotherapy for elderly patients, stroke rehabilitation, post-surgery recovery, and mobility challenges across all Dehradun residential neighborhoods.
+              </p>
+
+              <div className="space-y-1.5 text-xs text-gray-600 text-center sm:text-left">
+                <p><strong>Availability:</strong> 7 Days a Week (By Prior Appointment)</p>
+                <p className="flex items-center justify-center sm:justify-start gap-1.5"><FaPhoneAlt className="w-3 h-3 text-[#D97B4F]" /> <strong>Phone:</strong> {CONTACT.phone}</p>
+                <p><strong>Coverage:</strong> All major localities &amp; residential areas in Dehradun</p>
+              </div>
+
+              <div className="pt-2 flex flex-wrap justify-center sm:justify-start gap-2">
+                <Link
+                  href="/services/home-physiotherapy"
+                  className="btn-secondary py-2 px-4 text-xs"
+                >
+                  Home Care Details
+                </Link>
+                <Link
+                  href="/book-appointment"
+                  className="btn-primary py-2 px-4 text-xs"
+                >
+                  Request Home Visit
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -583,14 +581,14 @@ export default function HomePage() {
             <span className="section-label">Find Us On Map</span>
             <h2 className="section-title">Location & Navigation</h2>
             <p className="text-sm text-[#4A4744]">
-              Located conveniently at Rajpur Road, Chukkuwala, near New Empire Cinema Complex, Clock Tower.
+              Located conveniently at Rama Market, Thano Chowk, opposite Ranjit Singh Marg, Bhaniyawala, Dehradun.
             </p>
           </div>
 
           <div className="rounded-2xl overflow-hidden border border-[#E8E4DF] shadow-md h-96 w-full">
             <iframe
-              title="Clinic Location Map - Rajpur Road Dehradun"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.8967!2d78.0322!3d30.3255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929c546b4129b%3A0x2899478f77395ef3!2sClock%20Tower%2C%20Dehradun!5e0!3m2!1sen!2sin!4v1700000000000"
+              title="Clinic Location Map - Bhaniyawala Dehradun"
+              src="https://maps.google.com/maps?q=30.186417,78.148636&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -641,89 +639,21 @@ export default function HomePage() {
       <section className="section-py bg-[#FAF9F7] border-t border-[#E8E4DF]">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
-            <span className="section-label">Visit Our Clinics</span>
-            <h2 className="section-title">Our Physiotherapy Clinic Locations in Dehradun</h2>
+            <span className="section-label">Visit Our Clinic</span>
+            <h2 className="section-title">Our Physiotherapy Clinic Location in Dehradun</h2>
             <p className="text-base text-[#4A4744] leading-relaxed">
-              We operate two fully equipped, modern physiotherapy centers in Dehradun. Choose your nearest branch for in-person consultation or directions.
+              Visit our fully equipped, modern physiotherapy center in Bhaniyawala, Dehradun. Contact us for consultation or easy driving directions.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Branch 1: Rajpur Road Main Clinic */}
+          <div className="max-w-3xl mx-auto">
+            {/* Bhaniyawala Branch */}
             <div className="card p-6 sm:p-8 space-y-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 text-center sm:text-left">
               <div className="space-y-4">
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F5DCC8] text-[#D97B4F] text-xs font-bold uppercase tracking-wider">
                     <MapPin className="w-3.5 h-3.5" />
-                    <span>Main Branch</span>
-                  </div>
-                  <span className="text-xs font-semibold text-[#D97B4F]">Clock Tower Area</span>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold text-[#2E2A26]">
-                    {BRANCHES.rajpurRoad.name}
-                  </h3>
-                  <p className="text-sm text-[#4A4744] mt-1 leading-relaxed">
-                    {BRANCHES.rajpurRoad.fullAddress}
-                  </p>
-                </div>
-
-                <div className="space-y-2 text-xs text-[#4A4744] pt-2 border-t border-[#E8E4DF] flex flex-col items-center sm:items-start">
-                  <div className="flex items-center justify-center sm:justify-start gap-2">
-                    <Clock className="w-4 h-4 text-[#D97B4F] shrink-0" />
-                    <span>{HOURS.weekdays.label} • {HOURS.sunday.label}</span>
-                  </div>
-                  <div className="flex items-center justify-center sm:justify-start gap-2">
-                    <FaPhoneAlt className="w-3.5 h-3.5 text-[#D97B4F] shrink-0" />
-                    <span>{CONTACT.phone}</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Map Iframe 1 */}
-              <div className="space-y-4 pt-2">
-                <div className="w-full h-64 rounded-2xl overflow-hidden border border-[#E8E4DF] shadow-xs">
-                  <iframe
-                    title="Rajpur Road Physiotherapy Clinic Dehradun Google Map"
-                    src="https://maps.google.com/maps?q=30.3255,78.0322&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen={false}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="w-full h-full"
-                  />
-                </div>
-
-                <div className="flex flex-wrap justify-center sm:justify-start gap-3">
-                  <a
-                    href={BRANCHES.rajpurRoad.directionsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-primary py-2.5 px-5 text-sm flex-1 justify-center gap-2 font-medium"
-                  >
-                    <span>Get Directions</span>
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                  <Link
-                    href="/locations/rajpur-road"
-                    className="btn-secondary py-2.5 px-5 text-sm flex-1 justify-center font-medium"
-                  >
-                    View Branch Details
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Branch 2: Bhaniyawala Branch */}
-            <div className="card p-6 sm:p-8 space-y-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 text-center sm:text-left">
-              <div className="space-y-4">
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F5DCC8] text-[#D97B4F] text-xs font-bold uppercase tracking-wider">
-                    <MapPin className="w-3.5 h-3.5" />
-                    <span>Branch Clinic</span>
+                    <span>Clinic Center</span>
                   </div>
                   <span className="text-xs font-semibold text-[#D97B4F]">Thano Chowk Area</span>
                 </div>
@@ -749,9 +679,9 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Map Iframe 2 */}
+              {/* Map Iframe */}
               <div className="space-y-4 pt-2">
-                <div className="w-full h-64 rounded-2xl overflow-hidden border border-[#E8E4DF] shadow-xs">
+                <div className="w-full h-72 rounded-2xl overflow-hidden border border-[#E8E4DF] shadow-xs">
                   <iframe
                     title="Bhaniyawala Physiotherapy Clinic Dehradun Google Map"
                     src="https://maps.google.com/maps?q=30.186417,78.148636&t=&z=15&ie=UTF8&iwloc=&output=embed"
@@ -776,7 +706,7 @@ export default function HomePage() {
                     <ExternalLink className="w-4 h-4" />
                   </a>
                   <Link
-                    href="/locations/bhaniyawala"
+                    href={`/locations/${BRANCHES.bhaniyawala.slug}`}
                     className="btn-secondary py-2.5 px-5 text-sm flex-1 justify-center font-medium"
                   >
                     View Branch Details
@@ -825,7 +755,7 @@ export default function HomePage() {
                 Book a Consultation With a Specialist Physiotherapist in Dehradun
               </h2>
               <p className="text-sm text-[#4A4744] leading-relaxed max-w-xl mx-auto lg:mx-0">
-                Whether you need in-clinic assessment at Rajpur Road or Bhaniyawala, or require home visit physiotherapy, we are here to support your recovery.
+                Whether you need in-clinic assessment at Bhaniyawala or require home visit physiotherapy, we are here to support your recovery.
               </p>
               <div className="pt-2 flex flex-wrap justify-center lg:justify-start gap-3">
                 <a href={`tel:${CONTACT.phoneRaw}`} className="btn-primary">

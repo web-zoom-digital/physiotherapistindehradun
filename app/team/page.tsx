@@ -44,14 +44,14 @@ import { FAQS } from '@/data/faqs'
 export const metadata: Metadata = {
   title: 'Our Specialist Physiotherapists in Dehradun | Team Credentials & MPT Doctors',
   description:
-    'Meet our verified team of Master of Physiotherapy (MPT) specialists in Dehradun. Expert orthopedic, neurological, sports, and pediatric rehabilitation doctors at Rajpur Road & Bhaniyawala.',
+    'Meet our verified team of Master of Physiotherapy (MPT) specialists in Dehradun. Expert orthopedic, neurological, sports, and pediatric rehabilitation doctors at Bhaniyawala clinic center and home physiotherapy.',
   alternates: {
     canonical: `${SITE_URL}/team`,
   },
   openGraph: {
     title: 'Specialist Physiotherapists in Dehradun | Team Credentials',
     description:
-      'Learn about our qualified MPT clinical team in Dehradun. Specialists in Orthopedics, Neurology, Pediatrics, and Sports physical therapy at Rajpur Road & Bhaniyawala.',
+      'Learn about our qualified MPT clinical team in Dehradun. Specialists in Orthopedics, Neurology, Pediatrics, and Sports physical therapy at Bhaniyawala clinic center and home care.',
     url: `${SITE_URL}/team`,
     type: 'website',
   },
@@ -367,7 +367,7 @@ export default function TeamPage() {
                     Hands-On Joint Mobilization &amp; Functional Recovery
                   </h3>
                   <p className="text-xs text-gray-200 mt-1">
-                    Direct specialist care at our Rajpur Road and Bhaniyawala clinics, plus home
+                    Direct specialist care at our Bhaniyawala clinic center, plus home
                     visits across Dehradun.
                   </p>
                 </div>
@@ -413,7 +413,7 @@ export default function TeamPage() {
           </h2>
 
           <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
-            Book an appointment at our Rajpur Road or Bhaniyawala clinic, or inquire about dedicated
+            Book an appointment at our Bhaniyawala clinic center, or inquire about dedicated
             home visit physiotherapy across Dehradun.
           </p>
 
@@ -449,11 +449,7 @@ export default function TeamPage() {
           <div className="pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-6 text-xs text-gray-400">
             <div className="flex items-center gap-1.5">
               <MapPin className="w-4 h-4 text-[#D97B4F]" />
-              <span>Rajpur Road (near Clock Tower)</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <MapPin className="w-4 h-4 text-[#D97B4F]" />
-              <span>Bhaniyawala (near Jolly Grant)</span>
+              <span>Bhaniyawala Center (near Jolly Grant)</span>
             </div>
             <div className="flex items-center gap-1.5">
               <Clock className="w-4 h-4 text-[#D97B4F]" />

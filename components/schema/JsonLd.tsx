@@ -15,16 +15,16 @@ export function OrganizationSchema() {
     description: 'Leading physiotherapy clinic in Dehradun offering orthopedic, neurological, sports, pediatric and home physiotherapy.',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: BRANCHES.rajpurRoad.address,
-      addressLocality: BRANCHES.rajpurRoad.city,
-      addressRegion: BRANCHES.rajpurRoad.state,
-      postalCode: BRANCHES.rajpurRoad.pincode,
+      streetAddress: BRANCHES.bhaniyawala.address,
+      addressLocality: BRANCHES.bhaniyawala.city,
+      addressRegion: BRANCHES.bhaniyawala.state,
+      postalCode: BRANCHES.bhaniyawala.pincode,
       addressCountry: 'IN',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: BRANCHES.rajpurRoad.geo.lat,
-      longitude: BRANCHES.rajpurRoad.geo.lng,
+      latitude: BRANCHES.bhaniyawala.geo.lat,
+      longitude: BRANCHES.bhaniyawala.geo.lng,
     },
     openingHoursSpecification: HOURS.schema,
     priceRange: '₹₹',
@@ -46,7 +46,7 @@ export function OrganizationSchema() {
   )
 }
 
-export function LocalBusinessSchema({ branch = 'rajpurRoad' }: { branch?: 'rajpurRoad' | 'bhaniyawala' }) {
+export function LocalBusinessSchema({ branch = 'bhaniyawala' }: { branch?: 'bhaniyawala' }) {
   const branchData = BRANCHES[branch]
   const schema = {
     '@context': 'https://schema.org',
@@ -154,10 +154,10 @@ export function PersonSchema({
     },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: BRANCHES.rajpurRoad.address,
-      addressLocality: BRANCHES.rajpurRoad.city,
-      addressRegion: BRANCHES.rajpurRoad.state,
-      postalCode: BRANCHES.rajpurRoad.pincode,
+      streetAddress: BRANCHES.bhaniyawala.address,
+      addressLocality: BRANCHES.bhaniyawala.city,
+      addressRegion: BRANCHES.bhaniyawala.state,
+      postalCode: BRANCHES.bhaniyawala.pincode,
       addressCountry: 'IN',
     },
   }
@@ -177,7 +177,7 @@ export function AboutPageSchema() {
     '@id': `${SITE_URL}/about#webpage`,
     url: `${SITE_URL}/about`,
     name: `About Us | ${CLINIC_NAME}`,
-    description: 'Learn about RonEx Physiotherapy in Dehradun. Meet our team of MPT specialist doctors in Orthopedic, Neuro, Pediatric, and Sports rehabilitation with clinics at Rajpur Road and Bhaniyawala.',
+    description: 'Learn about RonEx Physiotherapy in Dehradun. Meet our team of MPT specialist doctors in Orthopedic, Neuro, Pediatric, and Sports rehabilitation with clinic at Bhaniyawala and home physiotherapy across Dehradun.',
     isPartOf: {
       '@type': 'WebSite',
       '@id': `${SITE_URL}/#website`,
@@ -192,10 +192,10 @@ export function AboutPageSchema() {
       telephone: CONTACT.phone,
       address: {
         '@type': 'PostalAddress',
-        streetAddress: BRANCHES.rajpurRoad.address,
-        addressLocality: BRANCHES.rajpurRoad.city,
-        addressRegion: BRANCHES.rajpurRoad.state,
-        postalCode: BRANCHES.rajpurRoad.pincode,
+        streetAddress: BRANCHES.bhaniyawala.address,
+        addressLocality: BRANCHES.bhaniyawala.city,
+        addressRegion: BRANCHES.bhaniyawala.state,
+        postalCode: BRANCHES.bhaniyawala.pincode,
         addressCountry: 'IN',
       },
     },

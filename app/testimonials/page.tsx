@@ -17,7 +17,7 @@ export default function TestimonialsPage() {
     <>
       <PageHero
         title="Patient Testimonials & Verified Reviews"
-        subtitle="We value patient feedback and are committed to maintaining transparent clinical care standards across our Rajpur Road and Bhaniyawala clinics."
+        subtitle="We value patient feedback and are committed to maintaining transparent clinical care standards across our Bhaniyawala clinic and home visits."
         tag="Verified Patient Feedback"
         breadcrumbItems={[{ name: 'Testimonials', url: '/testimonials' }]}
       />
@@ -36,7 +36,7 @@ export default function TestimonialsPage() {
               </p>
               <div className="pt-2 border-t border-[#E8E4DF] flex justify-between items-center text-xs">
                 <strong className="text-[#2E2A26]">Priya Sharma</strong>
-                <span className="text-gray-500">Back Pain Rehabilitation • Rajpur Road Clinic</span>
+                <span className="text-gray-500">Back Pain Rehabilitation • Bhaniyawala Clinic</span>
               </div>
             </div>
 

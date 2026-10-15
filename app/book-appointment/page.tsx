@@ -11,7 +11,7 @@ import { FAQS } from '@/data/faqs'
 export const metadata: Metadata = {
   title: 'Book a Physiotherapy Appointment in Dehradun | Online Booking',
   description:
-    'Schedule a consultation with a qualified physiotherapist in Dehradun. Choose clinic consultation at Rajpur Road or Bhaniyawala, or request home physiotherapy.',
+    'Schedule a consultation with a qualified physiotherapist in Dehradun. Choose clinic consultation at Bhaniyawala or request home physiotherapy across Dehradun.',
 }
 
 export default function BookAppointmentPage() {
@@ -19,7 +19,7 @@ export default function BookAppointmentPage() {
     <>
       <PageHero
         title="Book a Physiotherapy Appointment in Dehradun"
-        subtitle="Schedule your clinical consultation at Rajpur Road or Bhaniyawala, or request home visit physiotherapy care."
+        subtitle="Schedule your clinical consultation at our Bhaniyawala center, or request home visit physiotherapy care."
         tag="Online Appointment Booking"
         breadcrumbItems={[{ name: 'Book Appointment', url: '/book-appointment' }]}
       />

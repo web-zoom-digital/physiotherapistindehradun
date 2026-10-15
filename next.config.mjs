@@ -10,6 +10,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/locations/rajpur-road',
+        destination: '/locations/bhaniyawala',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

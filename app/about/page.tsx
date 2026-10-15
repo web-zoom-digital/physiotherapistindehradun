@@ -54,14 +54,14 @@ import { FAQS } from '@/data/faqs'
 export const metadata: Metadata = {
   title: 'About Us | RonEx Physiotherapy & Rehabilitation Clinic in Dehradun',
   description:
-    'Discover RonEx Physiotherapy in Dehradun. Meet our qualified team of Master of Physiotherapy (MPT) specialists in Orthopedic, Neuro, Pediatric, and Sports care. Clinics at Rajpur Road & Bhaniyawala.',
+    'Discover RonEx Physiotherapy in Dehradun. Meet our qualified team of Master of Physiotherapy (MPT) specialists in Orthopedic, Neuro, Pediatric, and Sports care. Clinic center at Bhaniyawala & dedicated home care across Dehradun.',
   alternates: {
     canonical: `${SITE_URL}/about`,
   },
   openGraph: {
     title: 'About RonEx Physiotherapy Clinic in Dehradun | MPT Specialists',
     description:
-      'Learn about our patient-first philosophy, clinical standards, and qualified MPT physiotherapists in Dehradun. 2 clinics at Rajpur Road and Bhaniyawala, plus dedicated home care.',
+      'Learn about our patient-first philosophy, clinical standards, and qualified MPT physiotherapists in Dehradun. Modern clinic center at Bhaniyawala, plus dedicated home care across Dehradun.',
     url: `${SITE_URL}/about`,
     type: 'website',
   },
@@ -201,7 +201,7 @@ export default function AboutPage() {
                     <Award className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-[#2E2A26]">Rajpur Rd &amp; Bhaniyawala</p>
+                    <p className="text-xs font-bold text-[#2E2A26]">Bhaniyawala, Dehradun</p>
                     <p className="text-[11px] text-[#76726E]">Serving All Dehradun Areas</p>
                   </div>
                 </div>
@@ -239,7 +239,7 @@ export default function AboutPage() {
             <h2 className="section-title">Built on Clinical Excellence &amp; Patient Dignity</h2>
             <p className="text-sm sm:text-base text-[#4A4744] leading-relaxed mt-2">
               How our practice grew from a clinical desire for individualized physical therapy into
-              two dedicated rehabilitation centres serving patients across Dehradun.
+              a dedicated rehabilitation centre and home care service serving patients across Dehradun.
             </p>
           </div>
 
@@ -247,7 +247,7 @@ export default function AboutPage() {
             {/* Story Text & Milestones */}
             <div className="lg:col-span-6 space-y-4 sm:space-y-5 text-center sm:text-left">
               <p className="text-sm sm:text-base text-[#4A4744] leading-relaxed">
-                Founded in {FOUNDING_YEAR} on Rajpur Road near Clock Tower in Dehradun,{' '}
+                Founded in {FOUNDING_YEAR} in Dehradun,{' '}
                 <strong>RonEx Physiotherapy</strong> was established with a singular mission: to
                 move away from the rushed, assembly-line model where patients are attached to generic
                 machines with minimal physical assessment.
@@ -259,11 +259,10 @@ export default function AboutPage() {
                 Master of Physiotherapy (MPT) clinician before any treatment commences.
               </p>
               <p className="text-sm sm:text-base text-[#4A4744] leading-relaxed">
-                As patient demand grew, we established our second branch at Bhaniyawala to provide
-                accessible clinical rehabilitation for residents near Jolly Grant, Thano Chowk, and
-                Ranjit Singh Marg. Today, our multidisciplinary team provides in-clinic consultations
-                as well as dedicated home visit physiotherapy for bedbound, elderly, and post-op
-                individuals across Dehradun.
+                Our clinic center at Bhaniyawala provides accessible clinical rehabilitation for
+                residents near Jolly Grant, Thano Chowk, and Ranjit Singh Marg. Today, our
+                multidisciplinary team provides in-clinic consultations as well as dedicated home
+                visit physiotherapy for bedbound, elderly, and post-op individuals across Dehradun.
               </p>
 
               {/* 4 Milestones Cards in Exact 2-Column Mobile Grid */}
@@ -276,19 +275,19 @@ export default function AboutPage() {
                     Founded in Dehradun
                   </span>
                   <span className="text-[10px] sm:text-[11px] text-[#76726E] block mt-0.5">
-                    Rajpur Road near Clock Tower
+                    Evidence-Based Clinical Practice
                   </span>
                 </div>
 
                 <div className="bg-[#FAF9F7] p-3.5 sm:p-4 rounded-2xl border border-[#E8E4DF] text-center sm:text-left">
                   <span className="text-xl sm:text-2xl font-extrabold text-[#D97B4F] block">
-                    2 Branches
+                    Modern Center
                   </span>
                   <span className="text-[11px] sm:text-xs font-semibold text-[#2E2A26] block mt-0.5">
-                    Physical Clinics
+                    Clinic &amp; Home Care
                   </span>
                   <span className="text-[10px] sm:text-[11px] text-[#76726E] block mt-0.5">
-                    Rajpur Rd &amp; Bhaniyawala
+                    Bhaniyawala, Dehradun
                   </span>
                 </div>
 
@@ -733,11 +732,10 @@ export default function AboutPage() {
                   <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <h3 className="text-xs sm:text-lg font-bold text-[#2E2A26] leading-snug">
-                  4. 2 Accessible Clinics
+                  4. Modern Clinic Facility
                 </h3>
                 <p className="text-[11px] sm:text-sm text-[#4A4744] leading-relaxed line-clamp-3 sm:line-clamp-none">
-                  Central clinic at Rajpur Road near Clock Tower and spacious branch at Bhaniyawala
-                  serving outer corridors.
+                  Modern clinic center at Bhaniyawala equipped with specialized rehabilitation modalities and private assessment suites.
                 </p>
               </div>
             </div>
@@ -884,8 +882,8 @@ export default function AboutPage() {
             <span className="section-label">Verified Experiences</span>
             <h2 className="section-title">Patient Testimonials &amp; Trust Signals</h2>
             <p className="text-sm sm:text-base text-[#4A4744] leading-relaxed mt-2">
-              Authentic recovery journeys shared by patients treated at our Rajpur Road clinic,
-              Bhaniyawala branch, and through our home visit rehabilitation program.
+              Authentic recovery journeys shared by patients treated at our Bhaniyawala clinic center
+              and through our home visit rehabilitation program.
             </p>
           </div>
 
@@ -940,7 +938,7 @@ export default function AboutPage() {
           </h2>
 
           <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
-            Schedule a comprehensive evaluation at our Rajpur Road or Bhaniyawala clinic, or inquire
+            Schedule a comprehensive evaluation at our Bhaniyawala clinic, or inquire
             about home visit physiotherapy across Dehradun.
           </p>
 
@@ -976,11 +974,7 @@ export default function AboutPage() {
           <div className="pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-gray-400">
             <div className="flex items-center gap-1.5">
               <MapPin className="w-4 h-4 text-[#D97B4F]" />
-              <span>Rajpur Road (near Clock Tower)</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <MapPin className="w-4 h-4 text-[#D97B4F]" />
-              <span>Bhaniyawala (near Jolly Grant)</span>
+              <span>Bhaniyawala Center (near Jolly Grant)</span>
             </div>
             <div className="flex items-center gap-1.5">
               <Clock className="w-4 h-4 text-[#D97B4F]" />

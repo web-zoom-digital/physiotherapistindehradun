@@ -12,11 +12,11 @@ export const FAQS: Record<string, FAQ[]> = {
   home: [
     {
       question: 'What physiotherapy services do you offer in Dehradun?',
-      answer: 'We offer orthopedic physiotherapy, neuro physiotherapy, sports physiotherapy, paediatric physiotherapy, women\'s health physiotherapy, home physiotherapy, post-surgery rehabilitation and pain management. Sessions are available at our Rajpur Road and Bhaniyawala clinics, as well as at home for suitable patients.',
+      answer: 'We offer orthopedic physiotherapy, neuro physiotherapy, sports physiotherapy, paediatric physiotherapy, women\'s health physiotherapy, home physiotherapy, post-surgery rehabilitation and pain management. Sessions are available at our Bhaniyawala clinic center, as well as at home across Dehradun for suitable patients.',
     },
     {
       question: 'Where is the physiotherapy clinic located in Dehradun?',
-      answer: 'Our main clinic is at 13, Rajpur Road, near New Empire Cinema Complex, Clock Tower, Chukkuwala, Dehradun. We also have a second branch at Rama Market, Thano Chowk, opposite Ranjit Singh Marg, Bhaniyawala, Dehradun.',
+      answer: 'Our clinic center is at Rama Market, Thano Chowk, opposite Ranjit Singh Marg, Bhaniyawala, Dehradun. We also provide dedicated home visit physiotherapy across all areas of Dehradun.',
     },
     {
       question: 'Do you provide home physiotherapy in Dehradun?',
@@ -28,7 +28,7 @@ export const FAQS: Record<string, FAQ[]> = {
     },
     {
       question: 'What are the clinic opening hours?',
-      answer: 'Both clinics are open Monday to Saturday, 9:00 AM to 10:00 PM, and Sunday 10:00 AM to 6:00 PM.',
+      answer: 'Our clinic is open Monday to Saturday, 9:00 AM to 10:00 PM, and Sunday 10:00 AM to 6:00 PM.',
     },
     {
       question: 'Do you offer neuro physiotherapy for stroke patients?',
@@ -117,8 +117,8 @@ export const FAQS: Record<string, FAQ[]> = {
   ],
   contact: [
     {
-      question: 'How do I get to the Rajpur Road clinic?',
-      answer: 'The Rajpur Road clinic is at 13, Rajpur Road, near New Empire Cinema Complex, Clock Tower, Chukkuwala, Dehradun. It is accessible from the main Rajpur Road and is near Clock Tower, which is a central landmark in Dehradun.',
+      question: 'How do I get to the Bhaniyawala clinic center?',
+      answer: 'The clinic is at Rama Market, Thano Chowk, opposite Ranjit Singh Marg, Bhaniyawala, Dehradun. It is easily accessible with direct road connectivity from Doiwala, Jolly Grant, and surrounding Dehradun regions.',
     },
     {
       question: 'What is the best way to contact the clinic?',
@@ -126,7 +126,7 @@ export const FAQS: Record<string, FAQ[]> = {
     },
     {
       question: 'Is parking available at the clinic?',
-      answer: 'Street parking is available near the Rajpur Road clinic. Please contact us for specific parking guidance.',
+      answer: 'Yes, convenient parking is available at our Bhaniyawala clinic center. Please contact us if you need specific driving directions.',
     },
   ],
   about: [
@@ -144,7 +144,7 @@ export const FAQS: Record<string, FAQ[]> = {
     },
     {
       question: 'How do you ensure hygiene and patient safety at your clinics?',
-      answer: 'Patient safety is paramount. All electrotherapy equipment, treatment tables, and exercise areas at both our Rajpur Road and Bhaniyawala branches are thoroughly sanitized after every patient session following strict medical hygiene protocols.',
+      answer: 'Patient safety is paramount. All electrotherapy equipment, treatment tables, and exercise areas at our Bhaniyawala clinic center are thoroughly sanitized after every patient session following strict medical hygiene protocols.',
     },
     {
       question: 'What should I expect during my first physiotherapy appointment?',
@@ -160,7 +160,7 @@ export const FAQS: Record<string, FAQ[]> = {
     },
     {
       question: 'Where are your clinics located and do you provide home visits in Dehradun?',
-      answer: 'Our main clinic is located at 13, Rajpur Road, near Clock Tower, Chukkuwala, Dehradun, and our second branch is at Rama Market, Thano Chowk, Bhaniyawala. We also provide dedicated home visit physiotherapy across Dehradun for post-surgical, elderly, and neurological patients who cannot travel.',
+      answer: 'Our clinic center is located at Rama Market, Thano Chowk, opposite Ranjit Singh Marg, Bhaniyawala, Dehradun. We also provide dedicated home visit physiotherapy across Dehradun for post-surgical, elderly, and neurological patients who cannot travel.',
     },
   ],
   team: [
@@ -180,7 +180,7 @@ export const FAQS: Record<string, FAQ[]> = {
   testimonials: [
     {
       question: 'Are patient reviews and ratings on this website verified?',
-      answer: 'Yes, all testimonials reflect authentic feedback shared by verified patients who received treatment at our Rajpur Road or Bhaniyawala clinics, or via home visit care. You can also view our live Google Business Profile reviews.',
+      answer: 'Yes, all testimonials reflect authentic feedback shared by verified patients who received treatment at our Bhaniyawala clinic center, or via home visit care. You can also view our live Google Business Profile reviews.',
     },
     {
       question: 'Can I speak to a former patient before starting my treatment?',
@@ -189,12 +189,12 @@ export const FAQS: Record<string, FAQ[]> = {
   ],
   locations: [
     {
-      question: 'Which clinic branch should I visit in Dehradun?',
-      answer: 'If you reside near Central Dehradun, Dalanwala, Rajpur Road, or Clock Tower, our Rajpur Road clinic is most convenient. If you are near Doiwala, Jolly Grant, or Thano, our Bhaniyawala branch is ideal.',
+      question: 'Where can I consult a physiotherapist in Dehradun?',
+      answer: 'You can visit our modern clinic center at Rama Market, Thano Chowk, Bhaniyawala, or request dedicated home visit physiotherapy across all residential areas in Dehradun.',
     },
     {
       question: 'Is home visit physiotherapy available near my area in Dehradun?',
-      answer: 'Our home visit physiotherapy team covers all major areas including Rajpur Road, Dalanwala, GMS Road, Ballupur, Prem Nagar, Dharampur, Race Course, and Bhaniyawala. Contact us to verify coverage for your specific location.',
+      answer: 'Our home visit physiotherapy team covers all major areas including Dalanwala, GMS Road, Ballupur, Prem Nagar, Dharampur, Race Course, Clock Tower, Doiwala, and Bhaniyawala. Contact us to verify coverage for your specific location.',
     },
   ],
   conditions: [

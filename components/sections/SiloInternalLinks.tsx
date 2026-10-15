@@ -101,19 +101,19 @@ export function SiloInternalLinks({ currentCategory = 'general', currentSlug }: 
             <ul className="space-y-2 text-xs">
               <li>
                 <Link
-                  href={`/locations/${BRANCHES.rajpurRoad.slug}`}
+                  href={`/locations/${BRANCHES.bhaniyawala.slug}`}
                   className="flex items-center justify-between text-[#4A4744] hover:text-[#D97B4F] font-medium transition-colors"
                 >
-                  <span>Rajpur Road Clinic (Main Branch)</span>
+                  <span>Bhaniyawala Clinic Center</span>
                   <ChevronRight className="w-3 h-3 text-gray-400" />
                 </Link>
               </li>
               <li>
                 <Link
-                  href={`/locations/${BRANCHES.bhaniyawala.slug}`}
+                  href="/locations"
                   className="flex items-center justify-between text-[#4A4744] hover:text-[#D97B4F] font-medium transition-colors"
                 >
-                  <span>Bhaniyawala Clinic Branch</span>
+                  <span>Clinic Location &amp; Directions</span>
                   <ChevronRight className="w-3 h-3 text-gray-400" />
                 </Link>
               </li>

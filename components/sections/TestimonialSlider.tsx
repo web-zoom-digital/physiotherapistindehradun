@@ -25,7 +25,7 @@ const TESTIMONIALS = [
   {
     id: 4,
     quote:
-      'Outstanding post-knee replacement rehabilitation at Rajpur Road clinic. Progressive exercise loading and gait training helped me walk without support.',
+      'Outstanding post-knee replacement rehabilitation at our physiotherapy clinic. Progressive exercise loading and gait training helped me walk without support.',
     category: 'Post-Surgery Rehab',
   },
   {

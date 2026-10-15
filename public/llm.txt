@@ -3,8 +3,8 @@
 Clinic: Physiotherapist in Dehradun
 Location: Dehradun, Uttarakhand, India
 Phone: +91 92862 44489
-Main Address: 13, Rajpur Road, Clock Tower, Chukkuwala, Dehradun 248001
-Branch Address: Rama Market, Thano Chowk, Bhaniyawala, Dehradun 248140
+Main Address: Rama Market, Thano Chowk, opposite Ranjit Singh Marg, Bhaniyawala, Dehradun 248140
+Service Coverage: Bhaniyawala Clinic Center & Home Visit Physiotherapy across all Dehradun residential areas
 Hours: Mon-Sat 9AM-10PM, Sun 10AM-6PM
 
 Specialties:
