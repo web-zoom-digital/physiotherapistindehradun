@@ -162,10 +162,10 @@ export default function HomePage() {
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#F5DCC8] text-[#D97B4F] flex items-center justify-center mx-auto sm:mx-0 shrink-0">
                     <Activity className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
-                  <h3 className="text-xs sm:text-lg font-bold text-[#2E2A26] text-center sm:text-left leading-snug">
+                  <h3 className="text-xs sm:text-lg font-bold text-[#2E2A26] text-center sm:text-left">
                     {service.shortTitle}
                   </h3>
-                  <p className="text-[11px] sm:text-sm text-[#4A4744] line-clamp-2 sm:line-clamp-3 leading-relaxed text-center sm:text-left hidden xs:block sm:block">
+                  <p className="text-[11px] sm:text-sm text-[#4A4744] line-clamp-1 sm:line-clamp-1 leading-relaxed text-center sm:text-left hidden xs:block sm:block">
                     {service.description}
                   </p>
                 </div>

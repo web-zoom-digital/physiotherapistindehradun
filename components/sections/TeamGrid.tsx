@@ -18,6 +18,7 @@ import { CONTACT, WHATSAPP_URL } from '@/data/clinic'
 
 interface TeamGridProps {
   doctors: TeamMember[]
+  imageAspect?: string
 }
 
 const CATEGORIES = [
@@ -28,7 +29,7 @@ const CATEGORIES = [
   { id: 'sports', label: 'Sports & Performance' },
 ]
 
-export function TeamGrid({ doctors }: TeamGridProps) {
+export function TeamGrid({ doctors, imageAspect = 'aspect-square' }: TeamGridProps) {
   const [selectedCategory, setSelectedCategory] = useState('all')
 
   const filteredDoctors = doctors.filter((doc) => {
@@ -79,8 +80,8 @@ export function TeamGrid({ doctors }: TeamGridProps) {
               className="card flex flex-col justify-between overflow-hidden bg-white border border-[#E8E4DF] hover:border-[#D97B4F]/40 hover:shadow-xl transition-all duration-300 group rounded-2xl"
             >
               <div>
-                {/* Doctor Portrait Image Container with 4:5 Portrait Aspect Ratio */}
-                <div className="relative aspect-[4/5] w-full overflow-hidden bg-gray-50 border-b border-[#E8E4DF]">
+                {/* Doctor Portrait Image Container with balanced aspect ratio */}
+                <div className={`relative ${imageAspect} w-full overflow-hidden bg-gray-50 border-b border-[#E8E4DF]`}>
                   <Image
                     src={doctor.imageUrl}
                     alt={`${doctor.name} - ${doctor.title} at RonEx Physiotherapy Dehradun`}

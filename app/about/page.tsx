@@ -650,8 +650,8 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* Render TeamGrid with Exact 2-Column Mobile Grid and Local 4:5 Portraits */}
-          <TeamGrid doctors={TEAM} />
+          {/* Render TeamGrid with balanced square portraits */}
+          <TeamGrid doctors={TEAM} imageAspect="aspect-square" />
 
           <div className="text-center pt-8 sm:pt-10">
             <Link href="/team" className="btn-secondary py-3 px-7 text-sm font-semibold gap-2">

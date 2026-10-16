@@ -215,7 +215,7 @@ export default function ServicesHubPage() {
                 >
                   <div>
                     {/* Responsive Image Container with 4:3 Aspect Ratio */}
-                    <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-50 border-b border-[#E8E4DF]">
+                    <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-50 ">
                       <Image
                         src={serviceImg}
                         alt={`${service.title} in Dehradun`}
@@ -224,7 +224,7 @@ export default function ServicesHubPage() {
                         className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                         loading="lazy"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                      {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" /> */}
 
                       {/* Category Badge Floating Top-Left */}
                       <div className="absolute top-2 sm:top-3 left-2 sm:left-3 bg-[#D97B4F] text-white text-[9px] sm:text-xs font-bold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full shadow-xs truncate max-w-[85%]">
@@ -235,12 +235,12 @@ export default function ServicesHubPage() {
                     {/* Card Content */}
                     <div className="p-3 sm:p-5 space-y-2 sm:space-y-3">
                       <div>
-                        <h2 className="text-xs sm:text-base font-bold text-[#2E2A26] group-hover:text-[#D97B4F] transition-colors leading-snug line-clamp-1">
+                        <h2 className="text-xs sm:text-base font-bold text-[#2E2A26] group-hover:text-[#D97B4F] transition-colors ">
                           <Link href={`/services/${service.slug}`} className="hover:underline">
                             {service.shortTitle}
                           </Link>
                         </h2>
-                        <p className="text-[11px] sm:text-xs font-semibold text-[#D97B4F] mt-0.5 line-clamp-1">
+                        <p className="text-[11px] sm:text-xs font-semibold text-[#D97B4F] mt-0.5 line-clamp-2">
                           {service.tagline}
                         </p>
                       </div>
@@ -258,7 +258,7 @@ export default function ServicesHubPage() {
                           {service.conditions.slice(0, 2).map((c, cIdx) => (
                             <span
                               key={cIdx}
-                              className="text-[9px] sm:text-[10px] bg-[#FAF9F7] border border-[#E8E4DF] text-[#4A4744] px-1.5 sm:px-2 py-0.5 rounded-md font-medium truncate max-w-[120px] sm:max-w-none"
+                              className="text-[9px] sm:text-[10px] bg-[#FAF9F7] border border-[#E8E4DF] text-[#4A4744] px-1.5 sm:px-2 py-0.5 rounded-md font-medium  max-w-[120px] sm:max-w-none"
                             >
                               {c}
                             </span>
