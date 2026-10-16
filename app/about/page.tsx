@@ -121,45 +121,43 @@ export default function AboutPage() {
                 across our two Dehradun clinics and dedicated home visits.
               </p>
 
-              {/* Action Buttons with Standardized 44-48px Touch Heights */}
-              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+              {/* Action Buttons with Standardized Fixed Dimensions */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 w-full sm:max-w-[480px] mx-auto lg:mx-0">
                 <Link
                   href="/book-appointment"
-                  className="btn-primary min-h-[46px] shadow-md hover:shadow-lg justify-center text-center w-full sm:w-auto"
+                  className="btn-primary w-full h-12 min-h-[48px] px-4 justify-center text-center shadow-md hover:shadow-lg text-sm sm:text-[15px] font-semibold"
                 >
-                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                   <span>Book an Appointment</span>
                 </Link>
 
                 <Link
                   href="/services"
-                  className="btn-secondary min-h-[46px] justify-center text-center w-full sm:w-auto gap-2"
+                  className="btn-secondary w-full h-12 min-h-[48px] px-4 justify-center text-center gap-2 text-sm sm:text-[15px] font-semibold bg-white/60"
                 >
                   <span>Explore Our Services</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 shrink-0" />
                 </Link>
 
-                <div className="flex gap-2.5 sm:gap-3 justify-center w-full sm:w-auto">
-                  <a
-                    href={WHATSAPP_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-whatsapp min-h-[46px] flex-1 sm:flex-none justify-center text-center"
-                    aria-label="Contact clinic via WhatsApp"
-                  >
-                    <FaWhatsapp className="w-4 h-4 sm:w-5 sm:h-5" />
-                    <span>WhatsApp</span>
-                  </a>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-whatsapp w-full h-12 min-h-[48px] px-4 justify-center text-center shadow-sm hover:shadow-md text-sm sm:text-[15px] font-semibold"
+                  aria-label="Contact clinic via WhatsApp"
+                >
+                  <FaWhatsapp className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
+                  <span>WhatsApp</span>
+                </a>
 
-                  <a
-                    href={`tel:${CONTACT.phoneRaw}`}
-                    className="btn-secondary min-h-[46px] flex-1 sm:flex-none justify-center text-center"
-                    aria-label="Call clinic directly"
-                  >
-                    <FaPhoneAlt className="w-4 h-4" />
-                    <span>Call Helpline</span>
-                  </a>
-                </div>
+                <a
+                  href={`tel:${CONTACT.phoneRaw}`}
+                  className="btn-secondary w-full h-12 min-h-[48px] px-4 justify-center text-center text-sm sm:text-[15px] font-semibold bg-white/60"
+                  aria-label="Call clinic directly"
+                >
+                  <FaPhoneAlt className="w-4 h-4 shrink-0" />
+                  <span>Call Helpline</span>
+                </a>
               </div>
 
               {/* Verified Trust Strip */}
