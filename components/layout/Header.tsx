@@ -887,6 +887,7 @@ export function Header() {
                   <ChevronRight className="w-4 h-4 text-gray-400" />
                 </Link>
 
+
                 {/* 7. Blog */}
                 <Link
                   href="/blog"

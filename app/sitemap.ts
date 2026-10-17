@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/locations',
     '/locations/bhaniyawala',
     '/testimonials',
+    '/video',
     '/blog',
     '/faq',
     '/contact',

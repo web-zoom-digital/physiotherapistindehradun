@@ -35,8 +35,13 @@ import { CONTACT, BRANCHES, HOURS, WHATSAPP_URL } from '@/data/clinic'
 import { CounterStats } from '@/components/ui/CounterStats'
 import { TestimonialSlider } from '@/components/sections/TestimonialSlider'
 import { BlogCard } from '@/components/sections/BlogCard'
+import { VideoSection } from '@/components/sections/VideoSection'
+import { getVideos } from '@/lib/videos'
 
 export default function HomePage() {
+  const allVideos = getVideos()
+  const featuredVideos = allVideos.slice(0, 4)
+
   return (
     <>
       <LocalBusinessSchema branch="bhaniyawala" />
@@ -190,6 +195,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* 5.5. Treatment & Clinical Videos Section */}
+      <VideoSection videos={featuredVideos} totalCount={allVideos.length} />
 
       {/* 6. Conditions Treated */}
       <section className="section-py bg-white">

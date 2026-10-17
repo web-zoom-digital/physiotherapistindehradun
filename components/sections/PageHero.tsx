@@ -13,6 +13,11 @@ interface PageHeroProps {
   breadcrumbItems: { name: string; url: string }[]
   heroImage?: string
   heroImageAlt?: string
+  primaryCta?: {
+    text: string
+    href: string
+    icon?: React.ReactNode
+  }
 }
 
 export function PageHero({
@@ -22,6 +27,7 @@ export function PageHero({
   breadcrumbItems,
   heroImage,
   heroImageAlt,
+  primaryCta,
 }: PageHeroProps) {
   return (
     <section className="relative bg-gradient-to-br from-[#FDF2E9] via-[#FCDEC8] to-[#F9D6BD] pt-6 pb-16 md:pb-24 overflow-hidden">
@@ -51,11 +57,11 @@ export function PageHero({
             {/* Standardized 44-48px Touch Buttons */}
             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center sm:justify-start gap-2.5 sm:gap-3 pt-2">
               <Link
-                href="/book-appointment"
+                href={primaryCta?.href || "/book-appointment"}
                 className="btn-primary min-h-[46px] py-2.5 px-6 text-sm sm:text-base font-semibold shadow-md hover:shadow-lg gap-2 w-full sm:w-auto justify-center"
               >
-                <Calendar className="w-4 h-4" />
-                <span>Book Consultation</span>
+                {primaryCta?.icon || <Calendar className="w-4 h-4" />}
+                <span>{primaryCta?.text || "Book Consultation"}</span>
               </Link>
 
               <div className="flex gap-2.5 w-full sm:w-auto">

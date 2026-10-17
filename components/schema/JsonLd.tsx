@@ -244,3 +244,34 @@ export function ServiceSchema({
   )
 }
 
+export function VideoCollectionSchema({
+  videos,
+}: {
+  videos: { title: string; description: string; url: string; posterUrl?: string }[]
+}) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Clinical Physiotherapy Videos & Demonstrations | RonEx Physiotherapy Dehradun',
+    description:
+      'Watch real clinical therapy sessions, patient rehabilitation exercises, and guided physical assessments in Dehradun.',
+    url: `${SITE_URL}/video`,
+    hasPart: videos.slice(0, 10).map((video) => ({
+      '@type': 'VideoObject',
+      name: video.title,
+      description: video.description,
+      contentUrl: `${SITE_URL}${video.url}`,
+      thumbnailUrl: video.posterUrl ? `${SITE_URL}${video.posterUrl}` : `${SITE_URL}/images/heroes/services-hero.jpg`,
+      uploadDate: '2026-09-01T00:00:00+05:30',
+    })),
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+

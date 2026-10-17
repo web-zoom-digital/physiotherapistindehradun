@@ -110,6 +110,12 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/video" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
+                  <span className="text-[#D97B4F] font-bold">›</span>
+                  <span>Videos &amp; Media</span>
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="text-white hover:text-[#D97B4F] transition-colors flex items-center gap-1.5">
                   <span className="text-[#D97B4F] font-bold">›</span>
                   <span>Contact Us</span>
