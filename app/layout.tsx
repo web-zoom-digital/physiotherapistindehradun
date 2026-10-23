@@ -1,10 +1,14 @@
 import type { Metadata } from 'next'
 import { Inter, Manrope } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { OrganizationSchema } from '@/components/schema/JsonLd'
 import { SITE_NAME, SITE_URL } from '@/data/clinic'
+import { FloatingCTA } from '@/components/ui/FloatingCTA'
+import { MobileStickyBar } from '@/components/ui/MobileStickyBar'
+import { SiloInternalLinks } from '@/components/sections/SiloInternalLinks'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -92,10 +96,6 @@ export const metadata: Metadata = {
   },
 }
 
-import { FloatingCTA } from '@/components/ui/FloatingCTA'
-import { MobileStickyBar } from '@/components/ui/MobileStickyBar'
-import { SiloInternalLinks } from '@/components/sections/SiloInternalLinks'
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -110,6 +110,18 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon.jpg" type="image/jpeg" />
       </head>
       <body className="min-h-screen flex flex-col font-sans relative">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-V2GV4FPND0"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-V2GV4FPND0');
+          `}
+        </Script>
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
