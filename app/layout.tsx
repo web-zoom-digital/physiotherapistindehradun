@@ -78,6 +78,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: SITE_URL,
   },
+  verification: {
+    google: 'POvYu7t_VX0s54dJ3a7iLeHKnt11S2GDcBfC_PXyHvY',
+  },
   icons: {
     icon: [
       { url: '/favicon.jpg', type: 'image/jpeg', sizes: '512x512' },
